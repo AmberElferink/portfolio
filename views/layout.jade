@@ -1,7 +1,25 @@
 doctype html
-html
+html(lang="en")
   head
-    title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
+    title Amber Elferink - #{title}
+    block stylesheets
+      link(rel='stylesheet', href='/stylesheets/style.css')
+      link(rel='stylesheet', href='/stylesheets/navbar.css')
+    block scripts
   body
+    block headerImg
+      a(href='/')
+        img(src="https://via.placeholder.com/1920x300")#headerImage
+    block navbar
+      nav.header
+        <a href="#default" class="logo">Amber Elferink</a>
+        <div class="header-right">
+        <a class="active" href="#home">Home</a>
+        <a href="/contact">Contact</a>
+        <a href="/projects">Projects</a>
+        </div>
+
     block content
+    block foot
+      #footer
+        p some footer content
