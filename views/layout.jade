@@ -4,23 +4,46 @@ html(lang="en")
     title Amber Elferink - #{title}
     block stylesheets
       link(rel='stylesheet', href='/stylesheets/style.css')
-      link(rel='stylesheet', href='/stylesheets/navbar.css')
+      link(rel='stylesheet', id='bootstrap-css', href='/stylesheets/bootstrap.css')
+     
+
     block scripts
+      script(async, defer, src='/javascripts/jquery.js')
+      <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+      <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+
   body
     block headerImg
       a(href='/')
         img(src="https://via.placeholder.com/1920x300")#headerImage
     block navbar
-      nav.header
-        <a href="/" class="logo">Amber Elferink</a>
-        <div class="header-right">
-        <a class="active" href="/">Home</a>
-        <a href="/contact">Contact</a>
-        <a href="/projects">Projects</a>
-        </div>
+      // Navigation
+      nav.navbar.navbar-expand-lg.navbar-dark.bg-dark.fixed-top
+        .container
+          a.navbar-brand(href='/') Portfolio - Amber Elferink
+          button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarResponsive', aria-controls='navbarResponsive', aria-expanded='false', aria-label='Toggle navigation')
+            span.navbar-toggler-icon
+          #navbarResponsive.collapse.navbar-collapse
+            ul.navbar-nav.ml-auto
+              li.nav-item.active
+                a.nav-link(href='/')
+                  | Home
+                  span.sr-only (current)
+              li.nav-item
+                a.nav-link(href='/about') About
+              li.nav-item
+                a.nav-link(href='/projects') Projects
+              li.nav-item
+                a.nav-link(href='/contact') Contact
 
+
+  div.container
     block content
+        h1.page-header #{title}
     
     block foot
-      #footer
-        p some footer content
+      hr
+      footer
+        p.
+          Amber Elferink
+            
