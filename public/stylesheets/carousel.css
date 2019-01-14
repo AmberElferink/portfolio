@@ -69,6 +69,21 @@
 /**
   MEDIA QUERIES
 */
+/* Small devices (tablets, 200px and down) */
+@media (min-width: 200px) { 
+  #quote-carousel 
+  {
+    text-align: center;
+    margin-bottom: 0;
+    padding: 0 40px 30px 40px;
+  }
+  .col-sm-3 {
+    max-width: none;
+    width: auto;
+  }
+  
+}
+
 
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) { 
