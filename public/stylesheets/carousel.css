@@ -96,6 +96,9 @@
     margin-bottom: 0;
     padding: 0 40px 30px 40px;
   }
+  .col-md-8 {
+    min-width: 249px;
+  }
   .col-sm-3 {
     max-width: none;
     min-width: 100%;
@@ -118,6 +121,11 @@
   .cit-btn-line {
     text-align: center;
   }
+
+  #quote-carousel .carousel-control.right 
+{
+  right: -15px !important;
+}
   
 }
 

@@ -24,11 +24,23 @@ a {
   .container {
     max-width: 540px;
   }
+  body {
+    font-size: 1.4rem !important;
+  }
+  h4 {
+    font-size: 2.4rem;
+  }
 }
 
 @media (min-width: 768px) {
   .container {
     max-width: 720px;
+  }
+  body {
+    font-size: 2rem !important;
+  }
+  h4 {
+    font-size: 2.4rem;
   }
 }
 
@@ -52,11 +64,7 @@ a {
   margin-left: auto;
 }
 
-.icon {
-  max-width: 30px;
-  max-height: 30px;
-  margin: 2px 2px 2px 2px;
-}
+
 
 .btn{
   height: 30px;
@@ -74,3 +82,4 @@ a {
 .btn:hover{
   -webkit-box-shadow: -200px 0 0 #31708f inset;
 }
+
