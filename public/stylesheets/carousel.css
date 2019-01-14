@@ -84,6 +84,11 @@
     text-align: center;
     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
   }
+  .col-sm-9 {
+    width: 100%;
+    max-width: 100%;
+    flex: initial;
+  }
   .img-cirlce {
     margin: auto;
   }
