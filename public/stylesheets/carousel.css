@@ -64,6 +64,25 @@
     margin-right: 10px;
 }
 
+.cit-btn-line {
+  display: inline-block;
+  min-width: 100%;
+  text-align: left;
+  padding: 5px;
+}
+
+.btn {
+  float: none;
+  margin: 0;
+  padding: 0;
+  margin-left: 5px;
+}
+
+.icon {
+  max-width: 30px;
+  max-height: 30px;
+  margin: 2px !important;
+}
 
 
 /**
@@ -90,11 +109,14 @@
     flex: initial;
     padding: 0;
   }
-  p {
-    text-align: left;
+  .col-sm-9 p {
+    text-align: center;
   }
   .img-cirlce {
     margin: auto;
+  }
+  .cit-btn-line {
+    text-align: center;
   }
   
 }
@@ -140,22 +162,3 @@
     }
 }
 
-.cit-btn-line {
-  display: inline-block;
-  min-width: 100%;
-  text-align: left;
-  padding: 5px;
-}
-
-.btn {
-  float: none;
-  margin: 0;
-  padding: 0;
-  margin-left: 5px;
-}
-
-.icon {
-  max-width: 30px;
-  max-height: 30px;
-  margin: 2px !important;
-}
