@@ -22,7 +22,7 @@
 /* Next button  */
 #quote-carousel .carousel-control.right 
 {
-  right: -12px !important;
+  right: -60px !important;
 }
 /* Changes the position of the indicators */
 #quote-carousel .carousel-indicators 
@@ -88,6 +88,10 @@
     width: 100%;
     max-width: 100%;
     flex: initial;
+    padding: 0;
+  }
+  p {
+    text-align: left;
   }
   .img-cirlce {
     margin: auto;
@@ -102,6 +106,15 @@
     {
       margin-bottom: 0;
       padding: 0 40px 30px 40px;
+    }
+    .col-sm-9 {
+      min-width: 75%;
+      flex: initial;
+      padding: 0;
+    }
+    .col-md-8 {
+      min-width: 100%;
+      margin: 0;
     }
     
 }
