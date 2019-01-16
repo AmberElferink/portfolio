@@ -59,6 +59,11 @@ a {
     justify-content: right;
     align-items: baseline;
   }
+  .navbar-collapse.collapse.in {
+    display: flex !important;
+    justify-content: right;
+    align-items: baseline;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -110,7 +115,8 @@ h1 {
 
 .btn-nav{
   border-radius: 4px;
-  height: 70%;
+  height: 80%;
+  padding: 6px;
   background: lightseagreen;
   margin: 2px;
   float: none;
