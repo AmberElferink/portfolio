@@ -19,19 +19,19 @@ block append content
     p.
         And since I love learning, that seems like a great thing to do.
   section
-    h2 Working experience
+    h1 Working experience
     p.
       If you want a quick overview, you can download my curriculum vitae here:
-    <button class ="btn"><i class="fa fa-download"></i> Download CV </button>
-    p If you are curious about the things have made:
-    <button class ="btn"><i class="fa fa-download"></i> Check out all projects </button>
+    <button class ="btn-inline"><i class="fa fa-download"></i> Download CV </button>
+    p If you are curious about things I have made:
+    <button class ="btn-inline"><i class="fa fa-folder"></i> View my projects </button>
 
         
   //-adapted from: https://bootsnipp.com/snippets/featured/responsive-quote-carousel
   //------------------------CAROUSEL------------------------------
   .row
     .col-md-offset-2.col-md-8.text-center
-      h2 Reviews from former employers
+      h1 Reviews from former employers
   .row
     .col-md-offset-2.col-md-8
       #quote-carousel.carousel.slide(data-ride='carousel')
@@ -58,10 +58,13 @@ block append content
                     br
                     | She shows initiative by proposing improvements, which were incorporated in a manual for assistants. 
                     | I'm very satisfied with her work and I highly recommend her for any endeavor she chooses to pursue!
-                  small Paulien van Bentum, chemistry education coordinator at the Utrecht University
-                  div.cit-btn-line
-                    img.icon(src='/images/LinkedIn-Logo.png')
-                    button.btn Coupled Projects
+                  small 
+                    img.LI-icon(src='/images/LinkedIn-Logo.png')
+                    |Paulien van Bentum, chemistry education coordinator at the Utrecht University
+            div.cit-btn-line
+              button.btn 
+                i.fa.fa-folder 
+                | Coupled Projects
 
           // Quote 2
           .item

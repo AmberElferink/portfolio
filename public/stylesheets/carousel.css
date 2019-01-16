@@ -64,12 +64,7 @@
     margin-right: 10px;
 }
 
-.cit-btn-line {
-  display: inline-block;
-  min-width: 100%;
-  text-align: left;
-  padding: 5px;
-}
+
 
 .btn {
   float: none;
@@ -78,10 +73,15 @@
   margin-left: 5px;
 }
 
-.icon {
+.LI-icon {
   max-width: 30px;
   max-height: 30px;
   margin: 2px !important;
+  margin-right: 10px !important;
+}
+
+.col-sm-9 {
+  text-align: left;
 }
 
 
@@ -119,13 +119,17 @@
     margin: auto;
   }
   .cit-btn-line {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
     text-align: center;
   }
 
   #quote-carousel .carousel-control.right 
-{
+  {
   right: -15px !important;
-}
+  }
   
 }
 
@@ -170,3 +174,20 @@
     }
 }
 
+.btn{
+  height: 40px;
+  width: 300px;
+  background: lightseagreen;
+  margin:  0px;
+  float: center;
+  border:0px;
+  color:#fff;
+  box-shadow: 0 0 1px #ccc;
+  -webkit-transition-duration: 0.5s;
+  -webkit-transition-timing-function: linear;
+  box-shadow:0px 0 0 #31708f  inset;
+}
+
+.btn:hover{
+  -webkit-box-shadow: -200px 0 0 #31708f inset;
+}

@@ -66,22 +66,35 @@ a {
 
 
 
-.btn{
-  height: 30px;
-  width: 200px;
+.btn-inline{
+  border-radius: 4px;
+  height: 40px;
+  width: 250px;
   background: lightseagreen;
-  margin: 20px;
-  float: left;
+  margin: 10px;
+  float: none;
   border:0px;
   color:#fff;
   box-shadow: 0 0 1px #ccc;
   -webkit-transition-duration: 0.5s;
   -webkit-transition-timing-function: linear;
   box-shadow:0px 0 0 #31708f  inset;
+  font-size: 14px;
 }
-.btn:hover{
+
+.fa {
+  margin-right: 6px;
+}
+
+.btn-inline:hover{
   -webkit-box-shadow: -200px 0 0 #31708f inset;
 }
 
+.container {
+  text-align: center;
+}
 
 
+h1 {
+  margin-top: 30px;
+}

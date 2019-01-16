@@ -11,3 +11,24 @@
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
+.card-title {
+  height: 10%;
+  width: 100%;
+}
+
+.card-text {
+  height: 70%;
+  width: 100%;
+}
+.skills-list {
+  height: 20%; 
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.card-body {
+  display: flex;
+  text-align: left;
+  flex-direction: column;
+  justify-content: space-between;
+}
