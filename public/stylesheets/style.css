@@ -43,6 +43,12 @@ a {
   .navbar-collapse.collapse {
     display: none !important;
   }
+  a.nav-link {
+    margin: auto;
+  }
+  btn-nav {
+    margin: auto;
+  }
 
 
   body {
