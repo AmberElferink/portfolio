@@ -7,6 +7,7 @@ html(lang="en")
       link(rel='stylesheet', id='bootstrap-css', href='/stylesheets/bootstrap.css')
       <link defer href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
       link(rel='stylesheet', href='/stylesheets/style.css')     
+      <link defer href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 
     block scripts
       script(async, defer, src='/javascripts/jquery.js')
@@ -17,15 +18,20 @@ html(lang="en")
     block navbar
       // Navigation
       nav.navbar.navbar-expand-lg.navbar-dark.bg-dark.fixed-top
-        .container
-          a.navbar-brand(href='/') Portfolio - Amber Elferink
+        .container  
+          div.navbar-brand         
+            a(href="/")
+              i.fa.fa-linkedin-square
+            a(href="/")
+              i.fa.fa-github-square
+            a(href="/")#navbar-brand-name
+              |Portfolio - Amber Elferink
           button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarResponsive', aria-controls='navbarResponsive', aria-expanded='false', aria-label='Toggle navigation')
             span.navbar-toggler-icon
           #navbarResponsive.collapse.navbar-collapse
             li.navbar-nav.ml-auto
-              button.btn-nav
-                i.fa.fa-dowload
-                |Download CV
+              <button class ="btn-nav"><i class ="fa fa-download nav-download"></i>Download CV </button>
+                
             ul.navbar-nav.ml-auto
               li.nav-item.active
                 a.nav-link(href='/')

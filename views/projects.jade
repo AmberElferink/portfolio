@@ -5,13 +5,13 @@ block append stylesheets
   link(rel='stylesheet' defer, href='/stylesheets/projectBoxes.css')
   
 
-
+//-images should be 700x464 to be the same size
 block append content
       .row
         .col-lg-4.col-sm-6.portfolio-item
           .card.h-100
             a(href='#')
-              img.card-img-top(src='http://placehold.it/700x400', alt='')
+              img.card-img-top(src='/images/handDet.jpg', alt='')
             .card-body
               div.upper-content
                 h4.card-title
@@ -26,13 +26,15 @@ block append content
                   | This was particulary challenging due to occlusion and no fixed length and position of the arm attached to the hand.       
                 ul.skills-list
                 li Built in C#
-                li Handles occlusion (by beamer light) and rotation of the hand
+                li Handles occlusion (by beamer light)
+                li Handles rotation of the hand
                 li No external libraries used
                 li Graded with 8.7/10
         .col-lg-4.col-sm-6.portfolio-item
           .card.h-100
             a(href='#')
-              img.card-img-top(src='http://placehold.it/700x400', alt='')
+              //-iframe(width="700" height="400" src="https://www.youtube.com/embed/xG2lreUPnFQ?controls=0&autoplay=1&mute=1&loop=1&modestbranding=0" frameborder="0").card-img-top
+              img.card-img-top(src='/images/RayTracerScreenshot.png', alt='')
             .card-body
               div.upper-content
                 h4.card-title
@@ -44,11 +46,14 @@ block append content
                   | From there, further rays can be shot to obtain shadow, reflections and refractions.
               ul.skills-list
                 li Built in C#
-                li Features: Glass, mirrors, spotlights and triangles.
+                li Features: Glass, mirrors, spotlights, anti-aliasing and triangles.
+                li Graded with a 10/10.
         .col-lg-4.col-sm-6.portfolio-item
           .card.h-100
             a(href='#')
-              img.card-img-top(src='http://placehold.it/700x400', alt='')
+              video(autoplay loop muted playsinline width="100%").card-img-top
+                source(src="/videos/Rasterizer.webm" type="video/webm")
+                source(src="/videos/Rasterizer.mp4" type="video/mp4")
             .card-body
               div.upper-content
                 h4.card-title
@@ -56,16 +61,17 @@ block append content
                 p.card-text
                   | A 3D environment that has real-time performance as priority, however, shadows, lighting and reflections will be less accurate. This method is mostly used in games.
                   | Implemented many basic engine features from a template that could load a basic 3D meshes.
-                  | The features implemented are: !!!!!!!!!!!(voeg toe wat de naam is van die parent child structuur.) rotation and translation with respect to parent objects and finally transforming to camera space.
+                  | The features implemented are: scenegraph, which enables rotation and translation with respect to parent objects and finally transforming to camera space.
                   | This was done with matrix multiplications.
                   | Other implemented features include: Pong shading, texture mapping and normal maps.
               ul.skills-list
-                li Built in C# and OpenGL
-                li Graded with !!!!!!!!!!!!!!!!!!
+                li Built in C# and OpenGL.
+                li Features: Phong shading model, multiple light sources, normal maps and an interactive camera.
+                li Graded with a 9.7/10.
         .col-lg-4.col-sm-6.portfolio-item
           .card.h-100
             a(href='#')
-              img.card-img-top(src='http://placehold.it/700x400', alt='')
+              img.card-img-top(src='/images/Larry.png', alt='')
             .card-body
               h4.card-title
                 a(href='#') Larry the Unsanitary Canary: Dragons Den
@@ -79,7 +85,8 @@ block append content
               ul.skills-list
                 li Built in C# and Monogame
                 li Teamleader
-                li Graded with !!!!!!!!!!!!!!!!!!                
+                li Worked mostly on planning, menu's, story art (upper image) and controller input
+                li Personal grade: 8.5/10.              
         .col-lg-4.col-sm-6.portfolio-item
           .card.h-100
             a(href='#')
