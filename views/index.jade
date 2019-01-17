@@ -6,87 +6,88 @@ block append stylesheets
   <link defer href="/stylesheets/carousel.css" rel="stylesheet">
 
 block append content
-  section
-    p.
-        I'm Amber and I absolutely love learning. After finishing my chemistry bachelor, I decided I was not done studying yet, and started a computer science bachelor.
-        I thought I loved chemistry, but studying computer science, I have found an even greater love.
-        I have always been interested in programming computers, robots and Arduino's and want to learn everything there is to know about it.
-    p.
-        Recently I discovered a great interest in Virtual Reality and haptics, which makes the user experience the forces of the virtual world.
-        Since this is a young technology, I feel there is a lot to be done. I decided I want to be a part of the pioneers that connect that world to ours.
-        In my spare time, I'm trying to develop a haptic device for the legs. Before that will be brought to life, I have a lot to learn.
-    p.
-        And since I love learning, that seems like a great thing to do.
-  section
-    h1 Working experience
-    p.
-      If you want a quick overview, you can download my curriculum vitae here:
-    <button class ="btn-inline"><i class="fa fa-download"></i> Download CV </button>
-    p If you are curious about things I have made:
-    <button class ="btn-inline"><i class="fa fa-folder"></i> View my projects </button>
+  section.normal-page-container
+    section
+      p.
+          I'm Amber and I absolutely love learning. After finishing my chemistry bachelor, I decided I was not done studying yet, and started a computer science bachelor.
+          I thought I loved chemistry, but studying computer science, I have found an even greater love.
+          I have always been interested in programming computers, robots and Arduino's and want to learn everything there is to know about it.
+      p.
+          Recently I discovered a great interest in Virtual Reality and haptics, which makes the user experience the forces of the virtual world.
+          Since this is a young technology, I feel there is a lot to be done. I decided I want to be a part of the pioneers that connect that world to ours.
+          In my spare time, I'm trying to develop a haptic device for the legs. Before that will be brought to life, I have a lot to learn.
+      p.
+          And since I love learning, that seems like a great thing to do.
+    section
+      h1 Working experience
+      p.
+        If you want a quick overview, you can download my curriculum vitae here:
+      <button class ="btn-inline"><i class="fa fa-download"></i> Download CV </button>
+      p If you are curious about things I have made:
+      <button class ="btn-inline"><i class="fa fa-files-o"></i> View my projects </button>
 
-        
-  //-adapted from: https://bootsnipp.com/snippets/featured/responsive-quote-carousel
-  //------------------------CAROUSEL------------------------------
-  .row
-    .col-md-offset-2.col-md-8.text-center
-      h1 Reviews from former employers
-  .row
-    .col-md-offset-2.col-md-8
-      #quote-carousel.carousel.slide(data-ride='carousel')
-        // Bottom Carousel Indicators
-        ol.carousel-indicators
-          li.active(data-target='#quote-carousel', data-slide-to='0')
-          li(data-target='#quote-carousel', data-slide-to='1')
-          li(data-target='#quote-carousel', data-slide-to='2')
-        // Carousel Slides / Quotes
-        .carousel-inner
-          // Quote 1
-          .item.active
-            blockquote
-              .row
-                .col-sm-3.text-center
-                  img.img-circle(src='/images/Portrait-PaulienVanBentum.jpg', style='width: 100px;height:100px;')
-                 .col-sm-9
-                  p
-                    | Amber is a hardworking person and she takes her responsibilities seriously. 
-                    | She is a real team player, because she solved multiple (unexpected) problems together with her teammates during a traveling chemistry practical. 
-                    br
-                    | She is sometimes a bit uncertain at the start of a new assignment, but she quickly acquires new knowledge and skills and her end results are very good. 
-                    | She made, for example, a handy, accessible database of schools. 
-                    br
-                    | She shows initiative by proposing improvements, which were incorporated in a manual for assistants. 
-                    | I'm very satisfied with her work and I highly recommend her for any endeavor she chooses to pursue!
-                  small 
-                    img.LI-icon(src='/images/LinkedIn-Logo.png')
-                    |Paulien van Bentum, chemistry education coordinator at the Utrecht University
-            div.cit-btn-line
-              button.btn 
-                i.fa.fa-folder 
-                | Coupled Projects
+          
+    //-adapted from: https://bootsnipp.com/snippets/featured/responsive-quote-carousel
+    //------------------------CAROUSEL------------------------------
+    .row
+      .col-md-offset-2.col-md-8.text-center
+        h1 Reviews from former employers
+    .row
+      .col-md-offset-2.col-md-8
+        #quote-carousel.carousel.slide(data-ride='carousel')
+          // Bottom Carousel Indicators
+          ol.carousel-indicators
+            li.active(data-target='#quote-carousel', data-slide-to='0')
+            li(data-target='#quote-carousel', data-slide-to='1')
+            li(data-target='#quote-carousel', data-slide-to='2')
+          // Carousel Slides / Quotes
+          .carousel-inner
+            // Quote 1
+            .item.active
+              blockquote
+                .row
+                  .col-sm-3.text-center
+                    img.img-circle(src='/images/Portrait-PaulienVanBentum.jpg', style='width: 100px;height:100px;')
+                  .col-sm-9
+                    p
+                      | Amber is a hardworking person and she takes her responsibilities seriously. 
+                      | She is a real team player, because she solved multiple (unexpected) problems together with her teammates during a traveling chemistry practical. 
+                      br
+                      | She is sometimes a bit uncertain at the start of a new assignment, but she quickly acquires new knowledge and skills and her end results are very good. 
+                      | She made, for example, a handy, accessible database of schools. 
+                      br
+                      | She shows initiative by proposing improvements, which were incorporated in a manual for assistants. 
+                      | I'm very satisfied with her work and I highly recommend her for any endeavor she chooses to pursue!
+                    small 
+                      img.LI-icon(src='/images/LinkedIn-Logo.png')
+                      |Paulien van Bentum, chemistry education coordinator at the Utrecht University
+              div.cit-btn-line
+                button.btn 
+                  i.fa.fa-folder 
+                  | Coupled Projects
 
-          // Quote 2
-          .item
-            blockquote
-              .row
-                .col-sm-3.text-center
-                  img.img-circle(src='https://s3.amazonaws.com/uifaces/faces/twitter/mijustin/128.jpg', style='width: 100px; height:100px;')
-                .col-sm-9
-                  p
-                    | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam auctor nec lacus ut tempor. Mauris.
-                  small Someone famous
-          // Quote 3
-          .item
-            blockquote
-              .row
-                .col-sm-3.text-center
-                  img.img-circle(src='https://s3.amazonaws.com/uifaces/faces/twitter/keizgoesboom/128.jpg', style='width: 100px; height:100px;')
-                .col-sm-9
-                  p
-                    | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut rutrum elit in arcu blandit, eget pretium nisl accumsan. Sed ultricies commodo tortor, eu pretium mauris.
-                  small Someone famous
-        // Carousel Buttons Next/Prev
-        a.left.carousel-control(data-slide='prev', href='#quote-carousel')
-          i.fa.fa-chevron-left
-        a.right.carousel-control(data-slide='next', href='#quote-carousel')
-          i.fa.fa-chevron-right
+            // Quote 2
+            .item
+              blockquote
+                .row
+                  .col-sm-3.text-center
+                    img.img-circle(src='https://s3.amazonaws.com/uifaces/faces/twitter/mijustin/128.jpg', style='width: 100px; height:100px;')
+                  .col-sm-9
+                    p
+                      | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam auctor nec lacus ut tempor. Mauris.
+                    small Someone famous
+            // Quote 3
+            .item
+              blockquote
+                .row
+                  .col-sm-3.text-center
+                    img.img-circle(src='https://s3.amazonaws.com/uifaces/faces/twitter/keizgoesboom/128.jpg', style='width: 100px; height:100px;')
+                  .col-sm-9
+                    p
+                      | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut rutrum elit in arcu blandit, eget pretium nisl accumsan. Sed ultricies commodo tortor, eu pretium mauris.
+                    small Someone famous
+          // Carousel Buttons Next/Prev
+          a.left.carousel-control(data-slide='prev', href='#quote-carousel')
+            i.fa.fa-chevron-left
+          a.right.carousel-control(data-slide='next', href='#quote-carousel')
+            i.fa.fa-chevron-right

@@ -7,159 +7,160 @@ block append stylesheets
 
 //-images should be 700x464 to be the same size
 block append content
-      .row
-        .col-lg-4.col-sm-6.portfolio-item
-          .card.h-100
-            a(href='#')
-              img.card-img-top(src='/images/handDet.jpg', alt='')
-            .card-body
-              div.upper-content
-                h4.card-title
-                  a(href='#') Hand detection algorithm
-                p.card-text
-                  | Detects amount of fingers and position of a hand on a table with an overlay projected by a beamer.
-                  | Use cases can be to actively change the projection when a hand points at a specific spot.
-                  | General process:
-                  | First, the image is iteratively thresholded to reduce the background noise.
-                  | Then, the largest item is isolated. The convex hull and convex defects are generated.
-                  | From the angles of the fingers, the finger amount and location is determined.
-                  | This was particulary challenging due to occlusion and no fixed length and position of the arm attached to the hand.       
+      section.project-page-container
+        .row
+          .col-lg-4.col-sm-6.portfolio-item
+            .card.h-100
+              a(href='#')
+                img.card-img-top(src='/images/handDet.jpg', alt='')
+              .card-body
+                div.upper-content
+                  h4.card-title
+                    a(href='#') Hand detection algorithm
+                  p.card-text
+                    | Detects amount of fingers and position of a hand on a table with an overlay projected by a beamer.
+                    | Use cases can be to actively change the projection when a hand points at a specific spot.
+                    | General process:
+                    | First, the image is iteratively thresholded to reduce the background noise.
+                    | Then, the largest item is isolated. The convex hull and convex defects are generated.
+                    | From the angles of the fingers, the finger amount and location is determined.
+                    | This was particulary challenging due to occlusion and no fixed length and position of the arm attached to the hand.       
+                  ul.skills-list
+                  li Built in C#
+                  li Handles occlusion (by beamer light)
+                  li Handles rotation of the hand
+                  li No external libraries used
+                  li Graded with 8.7/10
+          .col-lg-4.col-sm-6.portfolio-item
+            .card.h-100
+              a(href='#')
+                //-iframe(width="700" height="400" src="https://www.youtube.com/embed/xG2lreUPnFQ?controls=0&autoplay=1&mute=1&loop=1&modestbranding=0" frameborder="0").card-img-top
+                img.card-img-top(src='/images/RayTracerScreenshot.png', alt='')
+              .card-body
+                div.upper-content
+                  h4.card-title
+                    a(href='#') Ray-Tracer
+                  p.card-text
+                    | A 3D environment that does not have real-time performance as priority, but how physically accurate shadows, lighting and reflections can be rendered. This method is mostly used in rendering software.
+                    | It was made from a template where you could color individual pixels on the screen.
+                    | From there, a ray was shot from each pixel into a virtual space and the intersection with the closests object and its color is determined. 
+                    | From there, further rays can be shot to obtain shadow, reflections and refractions.
                 ul.skills-list
-                li Built in C#
-                li Handles occlusion (by beamer light)
-                li Handles rotation of the hand
-                li No external libraries used
-                li Graded with 8.7/10
-        .col-lg-4.col-sm-6.portfolio-item
-          .card.h-100
-            a(href='#')
-              //-iframe(width="700" height="400" src="https://www.youtube.com/embed/xG2lreUPnFQ?controls=0&autoplay=1&mute=1&loop=1&modestbranding=0" frameborder="0").card-img-top
-              img.card-img-top(src='/images/RayTracerScreenshot.png', alt='')
-            .card-body
-              div.upper-content
+                  li Built in C#
+                  li Features: Glass, mirrors, spotlights, anti-aliasing and triangles.
+                  li Graded with a 10/10.
+          .col-lg-4.col-sm-6.portfolio-item
+            .card.h-100
+              a(href='#')
+                video(autoplay loop muted playsinline width="100%").card-img-top
+                  source(src="/videos/Rasterizer.webm" type="video/webm")
+                  source(src="/videos/Rasterizer.mp4" type="video/mp4")
+              .card-body
+                div.upper-content
+                  h4.card-title
+                    a(href='#') Rasterization Engine
+                  p.card-text
+                    | A 3D environment that has real-time performance as priority, however, shadows, lighting and reflections will be less accurate. This method is mostly used in games.
+                    | Implemented many basic engine features from a template that could load a basic 3D meshes.
+                    | The features implemented are: scenegraph, which enables rotation and translation with respect to parent objects and finally transforming to camera space.
+                    | This was done with matrix multiplications.
+                    | Other implemented features include: Pong shading, texture mapping and normal maps.
+                ul.skills-list
+                  li Built in C# and OpenGL.
+                  li Features: Phong shading model, multiple light sources, normal maps and an interactive camera.
+                  li Graded with a 9.7/10.
+          .col-lg-4.col-sm-6.portfolio-item
+            .card.h-100
+              a(href='#')
+                img.card-img-top(src='/images/Larry.png', alt='')
+              .card-body
                 h4.card-title
-                  a(href='#') Ray-Tracer
+                  a(href='#') Larry the Unsanitary Canary: Dragons Den
                 p.card-text
-                  | A 3D environment that does not have real-time performance as priority, but how physically accurate shadows, lighting and reflections can be rendered. This method is mostly used in rendering software.
-                  | It was made from a template where you could color individual pixels on the screen.
-                  | From there, a ray was shot from each pixel into a virtual space and the intersection with the closests object and its color is determined. 
-                  | From there, further rays can be shot to obtain shadow, reflections and refractions.
-              ul.skills-list
-                li Built in C#
-                li Features: Glass, mirrors, spotlights, anti-aliasing and triangles.
-                li Graded with a 10/10.
-        .col-lg-4.col-sm-6.portfolio-item
-          .card.h-100
-            a(href='#')
-              video(autoplay loop muted playsinline width="100%").card-img-top
-                source(src="/videos/Rasterizer.webm" type="video/webm")
-                source(src="/videos/Rasterizer.mp4" type="video/mp4")
-            .card-body
-              div.upper-content
+                  | The game starts when Larry, the trusty steed of the adventures, besmurged the wall of a dragons den. The players are locked into the dragons dungeon. 
+                  | Escaping it is their only hope to freedom.
+                  | This game was made as a first year introduction project. It was made within two months with a team of seven first year students.
+                  | It is a co-op puzzle dungeon crawler, where the players need to find colored keys to unlock doors and each player can only pick up keys of his own color.
+                  | Some doors can be opened by levers, which a player can hold down to hold open doors for eachother.
+                  | Along the way, players will encounter evil bunnies and pinguins they must defeat.
+                ul.skills-list
+                  li Built in C# and Monogame
+                  li Teamleader
+                  li Worked mostly on planning, menu's, story art (upper image) and controller input
+                  li Personal grade: 8.5/10.              
+          .col-lg-4.col-sm-6.portfolio-item
+            .card.h-100
+              a(href='#')
+                img.card-img-top(src='http://placehold.it/700x400', alt='')
+              .card-body
                 h4.card-title
-                  a(href='#') Rasterization Engine
+                  a(href='#') Project Five
                 p.card-text
-                  | A 3D environment that has real-time performance as priority, however, shadows, lighting and reflections will be less accurate. This method is mostly used in games.
-                  | Implemented many basic engine features from a template that could load a basic 3D meshes.
-                  | The features implemented are: scenegraph, which enables rotation and translation with respect to parent objects and finally transforming to camera space.
-                  | This was done with matrix multiplications.
-                  | Other implemented features include: Pong shading, texture mapping and normal maps.
-              ul.skills-list
-                li Built in C# and OpenGL.
-                li Features: Phong shading model, multiple light sources, normal maps and an interactive camera.
-                li Graded with a 9.7/10.
-        .col-lg-4.col-sm-6.portfolio-item
-          .card.h-100
-            a(href='#')
-              img.card-img-top(src='/images/Larry.png', alt='')
-            .card-body
-              h4.card-title
-                a(href='#') Larry the Unsanitary Canary: Dragons Den
-              p.card-text
-                | The game starts when Larry, the trusty steed of the adventures, besmurged the wall of a dragons den. The players are locked into the dragons dungeon. 
-                | Escaping it is their only hope to freedom.
-                | This game was made as a first year introduction project. It was made within two months with a team of seven first year students.
-                | It is a co-op puzzle dungeon crawler, where the players need to find colored keys to unlock doors and each player can only pick up keys of his own color.
-                | Some doors can be opened by levers, which a player can hold down to hold open a doors for eachother.
-                | Along the way, players will encounter evil bunnies and pinguins they must defeat.
-              ul.skills-list
-                li Built in C# and Monogame
-                li Teamleader
-                li Worked mostly on planning, menu's, story art (upper image) and controller input
-                li Personal grade: 8.5/10.              
-        .col-lg-4.col-sm-6.portfolio-item
-          .card.h-100
-            a(href='#')
-              img.card-img-top(src='http://placehold.it/700x400', alt='')
-            .card-body
-              h4.card-title
-                a(href='#') Project Five
-              p.card-text
-                | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.
-        .col-lg-4.col-sm-6.portfolio-item
-          .card.h-100
-            a(href='#')
-              img.card-img-top(src='http://placehold.it/700x400', alt='')
-            .card-body
-              h4.card-title
-                a(href='#') Project Six
-              p.card-text
-                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque earum nostrum suscipit ducimus nihil provident, perferendis rem illo, voluptate atque, sit eius in voluptates, nemo repellat fugiat excepturi! Nemo, esse.
-      
+                  | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.
+          .col-lg-4.col-sm-6.portfolio-item
+            .card.h-100
+              a(href='#')
+                img.card-img-top(src='http://placehold.it/700x400', alt='')
+              .card-body
+                h4.card-title
+                  a(href='#') Project Six
+                p.card-text
+                  | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque earum nostrum suscipit ducimus nihil provident, perferendis rem illo, voluptate atque, sit eius in voluptates, nemo repellat fugiat excepturi! Nemo, esse.
+        
 
 
-      .row
-        .col-lg-4.col-sm-6.portfolio-item
-          .card.h-100
-            a(href='#')
-              img.card-img-top(src='http://placehold.it/700x400', alt='')
-            .card-body
-              h4.card-title
-                a(href='#') Project One
-              p.card-text
-                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur eum quasi sapiente nesciunt? Voluptatibus sit, repellat sequi itaque deserunt, dolores in, nesciunt, illum tempora ex quae? Nihil, dolorem!
-        .col-lg-4.col-sm-6.portfolio-item
-          .card.h-100
-            a(href='#')
-              img.card-img-top(src='http://placehold.it/700x400', alt='')
-            .card-body
-              h4.card-title
-                a(href='#') Project Two
-              p.card-text
-                | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.
-        .col-lg-4.col-sm-6.portfolio-item
-          .card.h-100
-            a(href='#')
-              img.card-img-top(src='http://placehold.it/700x400', alt='')
-            .card-body
-              h4.card-title
-                a(href='#') Project Three
-              p.card-text
-                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos quisquam, error quod sed cumque, odio distinctio velit nostrum temporibus necessitatibus et facere atque iure perspiciatis mollitia recusandae vero vel quam!
-        .col-lg-4.col-sm-6.portfolio-item
-          .card.h-100
-            a(href='#')
-              img.card-img-top(src='http://placehold.it/700x400', alt='')
-            .card-body
-              h4.card-title
-                a(href='#') Project Four
-              p.card-text
-                | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.
-        .col-lg-4.col-sm-6.portfolio-item
-          .card.h-100
-            a(href='#')
-              img.card-img-top(src='http://placehold.it/700x400', alt='')
-            .card-body
-              h4.card-title
-                a(href='#') Project Five
-              p.card-text
-                | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.
-        .col-lg-4.col-sm-6.portfolio-item
-          .card.h-100
-            a(href='#')
-              img.card-img-top(src='http://placehold.it/700x400', alt='')
-            .card-body
-              h4.card-title
-                a(href='#') Project Six
-              p.card-text
-                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque earum nostrum suscipit ducimus nihil provident, perferendis rem illo, voluptate atque, sit eius in voluptates, nemo repellat fugiat excepturi! Nemo, esse.
+        .row
+          .col-lg-4.col-sm-6.portfolio-item
+            .card.h-100
+              a(href='#')
+                img.card-img-top(src='http://placehold.it/700x400', alt='')
+              .card-body
+                h4.card-title
+                  a(href='#') Project One
+                p.card-text
+                  | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur eum quasi sapiente nesciunt? Voluptatibus sit, repellat sequi itaque deserunt, dolores in, nesciunt, illum tempora ex quae? Nihil, dolorem!
+          .col-lg-4.col-sm-6.portfolio-item
+            .card.h-100
+              a(href='#')
+                img.card-img-top(src='http://placehold.it/700x400', alt='')
+              .card-body
+                h4.card-title
+                  a(href='#') Project Two
+                p.card-text
+                  | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.
+          .col-lg-4.col-sm-6.portfolio-item
+            .card.h-100
+              a(href='#')
+                img.card-img-top(src='http://placehold.it/700x400', alt='')
+              .card-body
+                h4.card-title
+                  a(href='#') Project Three
+                p.card-text
+                  | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos quisquam, error quod sed cumque, odio distinctio velit nostrum temporibus necessitatibus et facere atque iure perspiciatis mollitia recusandae vero vel quam!
+          .col-lg-4.col-sm-6.portfolio-item
+            .card.h-100
+              a(href='#')
+                img.card-img-top(src='http://placehold.it/700x400', alt='')
+              .card-body
+                h4.card-title
+                  a(href='#') Project Four
+                p.card-text
+                  | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.
+          .col-lg-4.col-sm-6.portfolio-item
+            .card.h-100
+              a(href='#')
+                img.card-img-top(src='http://placehold.it/700x400', alt='')
+              .card-body
+                h4.card-title
+                  a(href='#') Project Five
+                p.card-text
+                  | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.
+          .col-lg-4.col-sm-6.portfolio-item
+            .card.h-100
+              a(href='#')
+                img.card-img-top(src='http://placehold.it/700x400', alt='')
+              .card-body
+                h4.card-title
+                  a(href='#') Project Six
+                p.card-text
+                  | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque earum nostrum suscipit ducimus nihil provident, perferendis rem illo, voluptate atque, sit eius in voluptates, nemo repellat fugiat excepturi! Nemo, esse.
