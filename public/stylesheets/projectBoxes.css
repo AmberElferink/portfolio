@@ -19,6 +19,7 @@ body {
 .card-text {
   height: 70%;
   width: 100%;
+  margin-bottom: auto;
 }
 .skills-list {
   height: 20%; 

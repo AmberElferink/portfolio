@@ -3,7 +3,9 @@ block append stylesheets
   link(rel='stylesheet' defer, href='/stylesheets/bootstrap-grid.css')
   link(rel='stylesheet' defer, href='/stylesheets/bootstrap-reboot.css')
   link(rel='stylesheet' defer, href='/stylesheets/projectBoxes.css')
-  
+
+block append scripts
+  script(async, defer, src='/javascripts/video.js')
 
 //-images should be 700x464 to be the same size
 block content
@@ -91,76 +93,101 @@ block content
           .col-lg-4.col-sm-6.portfolio-item
             .card.h-100
               a(href='#')
-                img.card-img-top(src='http://placehold.it/700x400', alt='')
+                video(autoplay loop muted playsinline width="100%").card-img-top
+                  source(src="/videos/FastDining.webm" type="video/webm")
+                  source(src="/videos/FastDining.mp4" type="video/mp4")
               .card-body
                 h4.card-title
-                  a(href='#') Project Five
+                  a(href='#') Fast Dining Webshop
                 p.card-text
-                  | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.
+                  | This is a small web shop made for the web technology course.
+                  | The main focus was to create a functioning webshop, with both front- and backend. 
+                  | The user can make an account, log in, filter products and buy a product whereafter they can view it in their order history.
+                  | This project was mostly focussed on the back-end and less on the responsiveness and looks.
+                ul.skills-list
+                  li Users and products are stored in an SQLite database.
+                  li It includes: login (sessions), register, update profile, buying products and order history. 
+                  li Made using HTML, CSS, Javascript, NodeJs with ExpressJs and an SQLite database.
+                  li Graded with 9.75/10.
           .col-lg-4.col-sm-6.portfolio-item
             .card.h-100
               a(href='#')
                 img.card-img-top(src='http://placehold.it/700x400', alt='')
               .card-body
                 h4.card-title
-                  a(href='#') Project Six
+                  a(href='#') Portfolio website
                 p.card-text
-                  | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque earum nostrum suscipit ducimus nihil provident, perferendis rem illo, voluptate atque, sit eius in voluptates, nemo repellat fugiat excepturi! Nemo, esse.
-        
-
-
-        .row
+                  | This project is the website you are currently visiting. 
+                  | It is a very basic website, mostly front-end oriented.
+                  | I could have gone for an amazing template, but I do not want a designers website.
+                  | I am not a designer or front-end developer, but I like to make projects functional.
+                  | It is built to be responsive and simple.
+                ul.skills-list
+                  li Built using Jade, CSS, NodeJS and Bootstrap.
+                  li Responsive on all device sizes
           .col-lg-4.col-sm-6.portfolio-item
-            .card.h-100
-              a(href='#')
-                img.card-img-top(src='http://placehold.it/700x400', alt='')
-              .card-body
-                h4.card-title
-                  a(href='#') Project One
-                p.card-text
-                  | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur eum quasi sapiente nesciunt? Voluptatibus sit, repellat sequi itaque deserunt, dolores in, nesciunt, illum tempora ex quae? Nihil, dolorem!
+              .card.h-100
+                a(href='#')
+                  video(autoplay loop muted playsinline width="100%").card-img-top
+                    source(src="/videos/Asteroids.webm" type="video/webm")
+                    source(src="/videos/Asteroids.mp4" type="video/mp4")
+                .card-body
+                  h4.card-title
+                    a(href='#') Asteroids in Haskell
+                  p.card-text
+                    | This might seem like a very simple game. However, anyone that has programmed in Haskell can confirm it is a very hard language to work with.
+                    | Haskell is a functional programming language, which requires entirely different thinking than the usual imperative programming languages.
+                    | Everything in this language works recursively, which means every argument which keeps the game running has to be passed along.
+                    | The syntax is very compact and abstract and the code is hard to break down into smaller easy pieces.
+                    | Debugging can be a pain, since especially for beginners, the stated errors can be very abstract.
+                  ul.skills-list
+                    li Built in Haskell with the Gloss library
+                    li The asteroids are parsed from a json file with the aeson, bytestring and text libraries.
+                    li Features parallax scrolling.
+                    li Basic enemy AI.
+                  
           .col-lg-4.col-sm-6.portfolio-item
-            .card.h-100
-              a(href='#')
-                img.card-img-top(src='http://placehold.it/700x400', alt='')
-              .card-body
-                h4.card-title
-                  a(href='#') Project Two
-                p.card-text
-                  | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.
-          .col-lg-4.col-sm-6.portfolio-item
-            .card.h-100
-              a(href='#')
-                img.card-img-top(src='http://placehold.it/700x400', alt='')
-              .card-body
-                h4.card-title
-                  a(href='#') Project Three
-                p.card-text
-                  | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos quisquam, error quod sed cumque, odio distinctio velit nostrum temporibus necessitatibus et facere atque iure perspiciatis mollitia recusandae vero vel quam!
-          .col-lg-4.col-sm-6.portfolio-item
-            .card.h-100
-              a(href='#')
-                img.card-img-top(src='http://placehold.it/700x400', alt='')
-              .card-body
-                h4.card-title
-                  a(href='#') Project Four
-                p.card-text
-                  | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.
-          .col-lg-4.col-sm-6.portfolio-item
-            .card.h-100
-              a(href='#')
-                img.card-img-top(src='http://placehold.it/700x400', alt='')
-              .card-body
-                h4.card-title
-                  a(href='#') Project Five
-                p.card-text
-                  | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.
-          .col-lg-4.col-sm-6.portfolio-item
-            .card.h-100
-              a(href='#')
-                img.card-img-top(src='http://placehold.it/700x400', alt='')
-              .card-body
-                h4.card-title
-                  a(href='#') Project Six
-                p.card-text
-                  | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque earum nostrum suscipit ducimus nihil provident, perferendis rem illo, voluptate atque, sit eius in voluptates, nemo repellat fugiat excepturi! Nemo, esse.
+              .card.h-100
+                a(href='#')
+                  img.card-img-top(src='http://placehold.it/700x400', alt='')
+                .card-body
+                  h4.card-title
+                    a(href='#') Project Two
+                  p.card-text
+                    | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.
+            .col-lg-4.col-sm-6.portfolio-item
+              .card.h-100
+                a(href='#')
+                  img.card-img-top(src='http://placehold.it/700x400', alt='')
+                .card-body
+                  h4.card-title
+                    a(href='#') Project Three
+                  p.card-text
+                    | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos quisquam, error quod sed cumque, odio distinctio velit nostrum temporibus necessitatibus et facere atque iure perspiciatis mollitia recusandae vero vel quam!
+            .col-lg-4.col-sm-6.portfolio-item
+              .card.h-100
+                a(href='#')
+                  img.card-img-top(src='http://placehold.it/700x400', alt='')
+                .card-body
+                  h4.card-title
+                    a(href='#') Project Four
+                  p.card-text
+                    | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.
+            .col-lg-4.col-sm-6.portfolio-item
+              .card.h-100
+                a(href='#')
+                  img.card-img-top(src='http://placehold.it/700x400', alt='')
+                .card-body
+                  h4.card-title
+                    a(href='#') Project Five
+                  p.card-text
+                    | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.
+            .col-lg-4.col-sm-6.portfolio-item
+              .card.h-100
+                a(href='#')
+                  img.card-img-top(src='http://placehold.it/700x400', alt='')
+                .card-body
+                  h4.card-title
+                    a(href='#') Project Six
+                  p.card-text
+                    | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque earum nostrum suscipit ducimus nihil provident, perferendis rem illo, voluptate atque, sit eius in voluptates, nemo repellat fugiat excepturi! Nemo, esse.
