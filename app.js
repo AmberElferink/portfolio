@@ -3,9 +3,16 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+
+//for loading the sendgrid API key:
 require('dotenv').config({path: path.join(__dirname, 'sendgrid.env')})
 
+//for the reCAPTCHA part:
+const bodyParser = require('body-parser');
+const request = require('request');
+
 var indexRouter = require('./routes/index');
+var contactRouter = require('./routes/contact');
 var usersRouter = require('./routes/users');
 
 var app = express();
@@ -14,6 +21,11 @@ var app = express();
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 
+//for the reCAPTCHA part:
+app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.json());
+
+
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -21,6 +33,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
+app.use('/contact', contactRouter);
 app.use('/users', usersRouter);
 
 // catch 404 and forward to error handler
