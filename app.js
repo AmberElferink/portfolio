@@ -21,7 +21,7 @@ var app = express();
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 
-//for the reCAPTCHA part:
+//Middleware for the reCAPTCHA part:
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 
@@ -32,6 +32,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+// Routers
 app.use('/', indexRouter);
 app.use('/contact', contactRouter);
 app.use('/users', usersRouter);

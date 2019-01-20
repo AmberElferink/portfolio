@@ -94,7 +94,7 @@ a {
 
 .btn-inline{
   border-radius: 4px;
-  height: 40px;
+  min-height: 50px;
   width: 250px;
   background: lightseagreen;
   margin: 10px;
@@ -105,7 +105,7 @@ a {
   -webkit-transition-duration: 0.5s;
   -webkit-transition-timing-function: linear;
   box-shadow:0px 0 0 #31708f  inset;
-  font-size: 18px;
+  font-size: inherit;
 }
 
 .fa {
@@ -181,4 +181,21 @@ h1 {
 section {
   margin: 10px;
   padding: 5px;
+}
+
+label {
+  text-align: left;
+  display: block;
+  margin-bottom: 20px;
+}
+
+input, textarea {
+  text-align: left;
+  display: block;
+  margin-bottom: 30px;
+  width: 100%;
+  border-style: solid;
+  padding: 8px;
+  border-width: 2px;
+  border-color: darkgray;
 }
