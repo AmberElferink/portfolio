@@ -962,3 +962,15 @@
 {"message":"::1 - - [24/Jan/2019:17:12:12 +0000] \"GET /images/RayTracerScreenshot.png HTTP/1.1\" 200 130779\n","level":"info"}
 {"message":"::1 - - [24/Jan/2019:17:12:12 +0000] \"GET /images/Larry.png HTTP/1.1\" 200 641343\n","level":"info"}
 {"message":"::1 - - [24/Jan/2019:17:12:12 +0000] \"GET /images/handDet.jpg HTTP/1.1\" 200 74921\n","level":"info"}
+{"message":"404 - Not Found - /stylesheets/bootstrap.css.map - GET - ::ffff:127.0.0.1","level":"error"}
+{"message":"::ffff:127.0.0.1 - - [24/Jan/2019:17:12:15 +0000] \"GET /stylesheets/bootstrap.css.map HTTP/1.1\" 404 3072\n","level":"info"}
+{"message":"404 - Not Found - /stylesheets/bootstrap-grid.css.map - GET - ::ffff:127.0.0.1","level":"error"}
+{"message":"::ffff:127.0.0.1 - - [24/Jan/2019:17:12:15 +0000] \"GET /stylesheets/bootstrap-grid.css.map HTTP/1.1\" 404 3072\n","level":"info"}
+{"message":"404 - Not Found - /stylesheets/bootstrap-reboot.css.map - GET - ::ffff:127.0.0.1","level":"error"}
+{"message":"::ffff:127.0.0.1 - - [24/Jan/2019:17:12:16 +0000] \"GET /stylesheets/bootstrap-reboot.css.map HTTP/1.1\" 404 3072\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [24/Jan/2019:17:12:16 +0000] \"GET /contact HTTP/1.1\" 200 2752\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [24/Jan/2019:17:12:16 +0000] \"GET /stylesheets/style.css HTTP/1.1\" 200 3864\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [24/Jan/2019:17:12:17 +0000] \"GET /stylesheets/bootstrap.css HTTP/1.1\" 200 182448\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [24/Jan/2019:17:12:17 +0000] \"GET /javascripts/jquery.js HTTP/1.1\" 200 282115\n","level":"info"}
+{"message":"404 - Not Found - /stylesheets/bootstrap.css.map - GET - ::ffff:127.0.0.1","level":"error"}
+{"message":"::ffff:127.0.0.1 - - [24/Jan/2019:17:12:17 +0000] \"GET /stylesheets/bootstrap.css.map HTTP/1.1\" 404 3072\n","level":"info"}

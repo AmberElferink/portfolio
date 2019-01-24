@@ -89,7 +89,7 @@
   MEDIA QUERIES
 */
 /* Small devices (tablets, 200px and down) */
-@media screen and (max-width: 767px) { 
+@media screen and (max-width: 992px) { 
   #quote-carousel 
   {
     text-align: center;
@@ -154,7 +154,7 @@
 }
 
 /* Small devices (tablets, up to 768px) */
-@media (max-width: 768px) { 
+@media (max-width: 992px) { 
     
     /* Make the indicators larger for easier clicking with fingers/thumb on mobile */
     
@@ -172,6 +172,7 @@
         width: 20px;
         height: 20px;
     }
+    
 }
 
 .btn{
