@@ -510,3 +510,51 @@
 {"message":"::1 - - [24/Jan/2019:04:51:42 +0000] \"GET /stylesheets/bootstrap.css HTTP/1.1\" 304 -\n","level":"info"}
 {"message":"::1 - - [24/Jan/2019:04:51:42 +0000] \"GET /stylesheets/style.css HTTP/1.1\" 304 -\n","level":"info"}
 {"message":"::1 - - [24/Jan/2019:04:51:42 +0000] \"GET /javascripts/jquery.js HTTP/1.1\" 304 -\n","level":"info"}
+{"message":"::1 - - [24/Jan/2019:04:58:34 +0000] \"GET /contact HTTP/1.1\" 200 2752\n","level":"info"}
+{"message":"::1 - - [24/Jan/2019:04:58:34 +0000] \"GET /stylesheets/bootstrap.css HTTP/1.1\" 304 -\n","level":"info"}
+{"message":"::1 - - [24/Jan/2019:04:58:34 +0000] \"GET /stylesheets/style.css HTTP/1.1\" 304 -\n","level":"info"}
+{"message":"::1 - - [24/Jan/2019:04:58:34 +0000] \"GET /javascripts/jquery.js HTTP/1.1\" 304 -\n","level":"info"}
+{"message":"::1 - - [24/Jan/2019:04:59:37 +0000] \"POST /contact HTTP/1.1\" 200 2879\n","level":"info"}
+{"message":"::1 - - [24/Jan/2019:04:59:37 +0000] \"GET /stylesheets/bootstrap.css HTTP/1.1\" 304 -\n","level":"info"}
+{"message":"::1 - - [24/Jan/2019:04:59:37 +0000] \"GET /stylesheets/style.css HTTP/1.1\" 304 -\n","level":"info"}
+{"message":"::1 - - [24/Jan/2019:04:59:37 +0000] \"GET /javascripts/jquery.js HTTP/1.1\" 304 -\n","level":"info"}
+{"message":"host: localhost:3000 sent a message from - /contact - POST - ::1","level":"info"}
+{"message":{"to":"amber.elferink@gmail.com","from":{"email":"eempie103@gmail.com","name":"Amber Elferink"},"subject":"&lt;script&gt;alert(1)&lt;&#x2F;script&gt;","text":"aaa"},"level":"info"}
+{"message":"::1 - - [24/Jan/2019:05:00:17 +0000] \"POST /contact HTTP/1.1\" 200 2268\n","level":"info"}
+{"message":"::1 - - [24/Jan/2019:05:00:17 +0000] \"GET /stylesheets/bootstrap.css HTTP/1.1\" 304 -\n","level":"info"}
+{"message":"::1 - - [24/Jan/2019:05:00:17 +0000] \"GET /javascripts/jquery.js HTTP/1.1\" 304 -\n","level":"info"}
+{"message":"::1 - - [24/Jan/2019:05:00:17 +0000] \"GET /stylesheets/style.css HTTP/1.1\" 304 -\n","level":"info"}
+{"message":"host: localhost:3000 sent a message from - /contact - POST - ::1","level":"info"}
+{"message":{"to":"amber.elferink@gmail.com","from":{"email":"eempie103@gmail.com","name":"Amber Elferink"},"subject":"&lt;script&gt;alert(1)&lt;&#x2F;script&gt;","text":"aaa/n sent from portfolio site."},"level":"info"}
+{"message":"::1 - - [24/Jan/2019:05:01:37 +0000] \"POST /contact HTTP/1.1\" 200 2268\n","level":"info"}
+{"message":"::1 - - [24/Jan/2019:05:01:37 +0000] \"GET /stylesheets/bootstrap.css HTTP/1.1\" 304 -\n","level":"info"}
+{"message":"::1 - - [24/Jan/2019:05:01:37 +0000] \"GET /stylesheets/style.css HTTP/1.1\" 304 -\n","level":"info"}
+{"message":"::1 - - [24/Jan/2019:05:01:37 +0000] \"GET /javascripts/jquery.js HTTP/1.1\" 304 -\n","level":"info"}
+{"message":"::1 - - [24/Jan/2019:05:02:27 +0000] \"GET / HTTP/1.1\" 304 -\n","level":"info"}
+{"message":"::1 - - [24/Jan/2019:05:02:27 +0000] \"GET /stylesheets/style.css HTTP/1.1\" 304 -\n","level":"info"}
+{"message":"::1 - - [24/Jan/2019:05:02:27 +0000] \"GET /stylesheets/bootstrap.css HTTP/1.1\" 304 -\n","level":"info"}
+{"message":"::1 - - [24/Jan/2019:05:02:27 +0000] \"GET /stylesheets/carousel.css HTTP/1.1\" 304 -\n","level":"info"}
+{"message":"::1 - - [24/Jan/2019:05:02:27 +0000] \"GET /javascripts/jquery.js HTTP/1.1\" 304 -\n","level":"info"}
+{"message":"::1 - - [24/Jan/2019:05:02:27 +0000] \"GET /images/Portrait-PaulienVanBentum.jpg HTTP/1.1\" 304 -\n","level":"info"}
+{"message":"::1 - - [24/Jan/2019:05:02:27 +0000] \"GET /images/LinkedIn-Logo.png HTTP/1.1\" 304 -\n","level":"info"}
+{"message":"::1 - - [24/Jan/2019:05:02:31 +0000] \"GET /contact HTTP/1.1\" 200 2752\n","level":"info"}
+{"message":"::1 - - [24/Jan/2019:05:02:31 +0000] \"GET /stylesheets/bootstrap.css HTTP/1.1\" 304 -\n","level":"info"}
+{"message":"::1 - - [24/Jan/2019:05:02:31 +0000] \"GET /stylesheets/style.css HTTP/1.1\" 304 -\n","level":"info"}
+{"message":"::1 - - [24/Jan/2019:05:02:31 +0000] \"GET /javascripts/jquery.js HTTP/1.1\" 304 -\n","level":"info"}
+{"message":"host: localhost:3000 sent a message from - /contact - POST - ::1","level":"info"}
+{"message":{"to":"amber.elferink@gmail.com","from":{"email":"eempie103@gmail.com","name":"Amber Elferink"},"subject":"a","text":"a<br> sent from portfolio site."},"level":"info"}
+{"message":"::1 - - [24/Jan/2019:05:02:38 +0000] \"POST /contact HTTP/1.1\" 200 2268\n","level":"info"}
+{"message":"::1 - - [24/Jan/2019:05:02:38 +0000] \"GET /stylesheets/bootstrap.css HTTP/1.1\" 304 -\n","level":"info"}
+{"message":"::1 - - [24/Jan/2019:05:02:38 +0000] \"GET /stylesheets/style.css HTTP/1.1\" 304 -\n","level":"info"}
+{"message":"::1 - - [24/Jan/2019:05:02:38 +0000] \"GET /javascripts/jquery.js HTTP/1.1\" 304 -\n","level":"info"}
+{"message":"::1 - - [24/Jan/2019:05:03:16 +0000] \"GET /contact HTTP/1.1\" 200 2752\n","level":"info"}
+{"message":"host: localhost:3000 sent a message from - /contact - POST - ::1","level":"info"}
+{"message":{"to":"amber.elferink@gmail.com","from":{"email":"eempie103@gmail.com","name":"Amber Elferink"},"subject":"a","text":"a \r\n sent from portfolio site."},"level":"info"}
+{"message":"::1 - - [24/Jan/2019:05:03:19 +0000] \"POST /contact HTTP/1.1\" 200 2268\n","level":"info"}
+{"message":"::1 - - [24/Jan/2019:05:03:19 +0000] \"GET /stylesheets/bootstrap.css HTTP/1.1\" 304 -\n","level":"info"}
+{"message":"::1 - - [24/Jan/2019:05:03:19 +0000] \"GET /stylesheets/style.css HTTP/1.1\" 304 -\n","level":"info"}
+{"message":"::1 - - [24/Jan/2019:05:03:19 +0000] \"GET /javascripts/jquery.js HTTP/1.1\" 304 -\n","level":"info"}
+{"message":"::1 - - [24/Jan/2019:05:04:30 +0000] \"GET /contact HTTP/1.1\" 200 2752\n","level":"info"}
+{"message":"::1 - - [24/Jan/2019:05:04:30 +0000] \"GET /stylesheets/bootstrap.css HTTP/1.1\" 304 -\n","level":"info"}
+{"message":"::1 - - [24/Jan/2019:05:04:30 +0000] \"GET /stylesheets/style.css HTTP/1.1\" 304 -\n","level":"info"}
+{"message":"::1 - - [24/Jan/2019:05:04:30 +0000] \"GET /javascripts/jquery.js HTTP/1.1\" 304 -\n","level":"info"}

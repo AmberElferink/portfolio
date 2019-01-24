@@ -31,7 +31,7 @@ router.post('/', function(req, res, next) {
       name: req.body.name
     },
     subject: req.body.subject,
-    text: req.body.content,
+    text: req.body.content + ' \r\n sent from portfolio site www.amber-elferink.com.',
   };
   var host = req.get('host');
   winston.info(`host: ${host} sent a message from - ${req.originalUrl} - ${req.method} - ${req.ip}`);
