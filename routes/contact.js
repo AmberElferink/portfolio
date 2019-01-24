@@ -13,20 +13,23 @@ console.log("contact");
 
 
 router.post('/', function(req, res, next) {
-  req.checkBody('name', 'name is required').notEmpty();
-  req.checkBody('email', 'email is required').notEmpty();
-  req.checkBody('subject', 'subject is required').notEmpty();
-  req.checkBody('content', 'content is required').notEmpty();
+  req.checkBody('name', 'name is required').notEmpty().isLength({min: 3}).escape();
+  req.checkBody('email', 'email must be a valid email format').notEmpty().isEmail().normalizeEmail();
+  req.checkBody('subject', 'subject is required').notEmpty().escape();
+  req.checkBody('content', 'content is required').notEmpty().trim().escape();
 
   var errors = req.validationErrors();
   if(errors) {
     console.log(errors);
-    res.render('contact', {title: "Let's talk!", name: "", email: "", subject: "", content: "", errs: errors});
+    res.render('contact', {title: "Let's talk!", name: req.body.name, email: req.body.email, subject: req.body.subject, content: req.body.content, errs: errors});
     return;
   }
   const msg = {
-    to: 'myemail@gmail.com',
-    from: req.body.email,
+    to: 'mymail@gmail.com',
+    from: {
+      email: req.body.email,
+      name: req.body.name
+    },
     subject: req.body.subject,
     text: req.body.content,
   };
@@ -47,17 +50,17 @@ router.post('/', function(req, res, next) {
   sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
 
-  /*
+  
   sgMail.send(msg, function(err, json) {
     if (err) {
       return res.render('contactResponse', 
         {title: 'An error with sending the email has occured. Please try again later or contact me via LinkedIn'});
     }
-    */
+    
     res.render('contactResponse', 
     {title: 'Thank you for your email. I will respond as soon as possible.'});
 
-  //}); 
+  }); 
 
 });
 
