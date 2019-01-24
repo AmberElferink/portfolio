@@ -204,3 +204,11 @@ input, textarea {
   border-width: 2px;
   border-color: darkgray;
 }
+
+.errors {
+  text-align: left;
+  color: red;
+  list-style: none;
+  padding-left: 0px;
+  margin-bottom: 10px;
+}

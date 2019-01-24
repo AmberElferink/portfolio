@@ -1,17 +1,29 @@
 var express = require('express');
 var router = express.Router();
+var expressValidator = require('express-validator');
+
 var winston = require('../config/winston');
 
 
 
 router.get('/', function(req, res, next) {
 console.log("contact");
-  res.render('contact', {title: "Let's talk!"});
+  res.render('contact', {title: "Let's talk!", name: "", email: "", subject: "", content: "", errs: []});
 });
 
 
 router.post('/', function(req, res, next) {
-  
+  req.checkBody('name', 'name is required').notEmpty();
+  req.checkBody('email', 'email is required').notEmpty();
+  req.checkBody('subject', 'subject is required').notEmpty();
+  req.checkBody('content', 'content is required').notEmpty();
+
+  var errors = req.validationErrors();
+  if(errors) {
+    console.log(errors);
+    res.render('contact', {title: "Let's talk!", name: "", email: "", subject: "", content: "", errs: errors});
+    return;
+  }
   const msg = {
     to: 'myemail@gmail.com',
     from: req.body.email,

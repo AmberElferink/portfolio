@@ -4,6 +4,8 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var morgan = require('morgan');
 var winston = require('./config/winston');
+var expressValidator = require('express-validator');
+
 
 
 //for loading the sendgrid API key:
@@ -13,6 +15,9 @@ require('dotenv').config({path: path.join(__dirname, 'sendgrid.env')})
 const bodyParser = require('body-parser');
 const request = require('request');
 
+
+
+//routers
 var indexRouter = require('./routes/index');
 var contactRouter = require('./routes/contact');
 var usersRouter = require('./routes/users');
@@ -28,6 +33,26 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 
 
+// Express Validator Middleware
+app.use(expressValidator({
+  errorFormatter: function(param, msg, value) {
+    var namespace = param.split('.')
+    , root = namespace.shift()
+    , formParam = root;
+
+    while(namespace.length) {
+      formParam += '[' + namespace.shift() + ']';
+    }
+
+    return {
+      param : formParam,
+      msg : msg,
+      value : value
+    };
+  }
+}));
+
+//Other middleware
 app.use(morgan('common', { stream: winston.stream }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));

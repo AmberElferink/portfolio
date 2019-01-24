@@ -2,18 +2,23 @@ extends layout.jade
 
 block append content
   section.normal-page-container
+    script.
+      console.log(errs);
+    ul.errors
+      each error in errs
+        li= error.msg
     <form action="/contact" method="post">
     <label for="name">Name</label>
-    <input type="text" id="name" name="name" placeholder="Your name..">
+    <input type="text" id="name" name="name" placeholder="Your name.." value=#{name}>
 
     <label for="email">Email address</label>
-    <input type="text" id="email" name="email" placeholder="Your email..">
+    <input type="text" id="email" name="email" placeholder="Your email.." value=#{email}>
 
     <label for="subject">Subject</label>
-    <input id="subject" name="subject" placeholder="Subject..">
+    <input id="subject" name="subject" placeholder="Subject.." value=#{subject}>
 
     <label for="content">Content</label>
-    <textarea id="content" name="content" placeholder="Write something.." style="height:400px"></textarea>
+    <textarea id="content" name="content" placeholder="Write something.." style="height:400px">#{content}</textarea>
 
     <input type="submit" class="btn-inline" value="Submit">
   </form>
