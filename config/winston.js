@@ -1,5 +1,7 @@
 var appRoot = require('app-root-path');
 var winston = require('winston');
+const { createLogger, format, transports } = winston
+const { combine, timestamp, label, printf, colorize } = format
 
 var options = {
   file: {
@@ -9,13 +11,12 @@ var options = {
     json: true,
     maxsize: 5242880, // 5MB
     maxFiles: 5,
-    colorize: false,
   },
   console: {
     level: 'debug',
     handleExceptions: true,
     json: false,
-    colorize: true,
+    format: winston.format.combine(colorize({message: true}), winston.format.simple())
   },
 };
 

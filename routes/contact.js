@@ -1,5 +1,6 @@
 var express = require('express');
 var router = express.Router();
+var winston = require('../config/winston');
 
 
 
@@ -18,13 +19,13 @@ router.post('/', function(req, res, next) {
     text: req.body.content,
   };
   var host = req.get('host');
-  console.log('host ' + host + " sent the following message:");
-  console.log(msg);
-  debug("HELOO");
+  winston.info(`host: ${host} sent a message from - ${req.originalUrl} - ${req.method} - ${req.ip}`);
+  winston.info(msg);
 
   if(host != 'localhost:3000')
   {
     res.send("Please use the original website to send me an email.")
+    winston.warn(`above message was not sent from the original website and has not been sent to mail`)
     return;
   }
   const sgMail = require('@sendgrid/mail');
