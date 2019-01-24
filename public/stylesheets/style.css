@@ -46,16 +46,34 @@ a {
   a.nav-link {
     margin: auto;
   }
-  btn-nav {
-    margin: auto;
+  .ml-auto {
+    margin-left: auto !important;
   }
-
+  .container:before {
+    content: none
+  }
+  .container:after {
+    content: none
+  }
+  .navbar-nav {
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+    float: none;
+  }
 
   body {
     font-size: 2rem !important;
   }
   h4 {
     font-size: 2.4rem;
+  }
+  .btn-nav {
+    padding-bottom: 15px;
+    padding-top: 15px;
   }
 }
 
@@ -147,7 +165,9 @@ h1 {
   transition-timing-function: linear;
   -webkit-transition-timing-function: linear;
   box-shadow:0px 0 0 #31708f  inset;
-  font-size: 14px;
+ /* font-size: 14px;*/
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .navbar-brand div {
@@ -210,5 +230,5 @@ input, textarea {
   color: red;
   list-style: none;
   padding-left: 0px;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
