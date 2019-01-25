@@ -2,6 +2,8 @@ var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
+
+//Logging and verification
 var morgan = require('morgan');
 var winston = require('./config/winston');
 var expressValidator = require('express-validator');
@@ -13,7 +15,6 @@ require('dotenv').config({path: path.join(__dirname, 'sendgrid.env')})
 
 //for the reCAPTCHA part:
 const bodyParser = require('body-parser');
-const request = require('request');
 
 
 

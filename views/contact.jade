@@ -1,9 +1,11 @@
 extends layout.jade
 
+block append scripts
+  <script src='https://www.google.com/recaptcha/api.js'></script>
+
 block append content
   section.normal-page-container
-    script.
-      console.log(errs);
+    
     ul.errors
       each error in errs
         li= error.msg
@@ -20,5 +22,7 @@ block append content
     <label for="content">Content</label>
     <textarea id="content" name="content" placeholder="Write something.." style="height:400px">#{content}</textarea>
 
+    <div class="g-recaptcha" data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI" ></div>
+    
     <input type="submit" class="btn-inline" value="Submit">
   </form>

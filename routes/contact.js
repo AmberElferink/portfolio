@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var expressValidator = require('express-validator');
+const request = require('request');
 
 var winston = require('../config/winston');
 
@@ -13,17 +14,68 @@ console.log("contact");
 
 
 router.post('/', function(req, res, next) {
+  //-------------------------------------------------------RECAPTCHA PART---------------------------------------------------------------------
+  //tutorial on: https://codeforgeek.com/2016/03/google-recaptcha-node-js-tutorial/
+  //for the testing phase, the following keys are used:
+  //Site key, in contact.jade file form:
+  //Site key: 6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI
+  //secret key, here.
+  //Secret key: 6LeIxAcTAAAAAGG-vFI1TnRWxMZNFuojJ4WifJWe
+  //these are the development keys and will be changed for your own generated keys on the server. Get your keys at: https://www.google.com/recaptcha/admin
+
+  // g-recaptcha-response is the key that browser will generate upon form submit.
+  // if its blank or null means user has not selected the captcha, so return the error.
+  if(req.body['g-recaptcha-response'] === undefined || req.body['g-recaptcha-response'] === '' || req.body['g-recaptcha-response'] === null) {
+    return res.render('contact', {
+      title: "Let's talk!", 
+      name: req.body.name, 
+      email: req.body.email, 
+      subject: req.body.subject, 
+      content: req.body.content, 
+      errs: [{msg: "Please check the captcha checkbox."}]
+    });  
+  }
+  // Put your secret key here.
+  var secretKey = "6LeIxAcTAAAAAGG-vFI1TnRWxMZNFuojJ4WifJWe";
+  // req.connection.remoteAddress will provide IP address of connected user.
+  var verificationUrl = "https://www.google.com/recaptcha/api/siteverify?secret=" + secretKey + "&response=" + req.body['g-recaptcha-response'] + "&remoteip=" + req.connection.remoteAddress;
+  // Hitting GET request to the URL, Google will respond with success or error scenario.
+  request(verificationUrl,function(error,response,body) {
+    body = JSON.parse(body);
+    // Success will be true or false depending upon captcha validation.
+    if(body.success !== undefined && !body.success) {
+      return res.render('contact', {
+        title: "Let's talk!", 
+        name: req.body.name, 
+        email: req.body.email, 
+        subject: req.body.subject, 
+        content: req.body.content, 
+        errs: [{msg: "Failed captcha verification, try again."}]
+      });   }
+  });
+
+
+  //--------------------------------------FORM VALIDATION PART----------------------------------------------------
   req.checkBody('name', 'name is required').notEmpty().isLength({min: 3}).escape();
   req.checkBody('email', 'email must be a valid email format').notEmpty().isEmail().normalizeEmail();
   req.checkBody('subject', 'subject is required').notEmpty().escape();
   req.checkBody('content', 'content is required').notEmpty().trim().escape();
 
   var errors = req.validationErrors();
+  console.log(errors);
   if(errors) {
     console.log(errors);
-    res.render('contact', {title: "Let's talk!", name: req.body.name, email: req.body.email, subject: req.body.subject, content: req.body.content, errs: errors});
-    return;
+    return res.render('contact', {
+      title: "Let's talk!", 
+      name: req.body.name, 
+      email: req.body.email, 
+      subject: req.body.subject, 
+      content: req.body.content, 
+      errs: errors
+    });
   }
+
+  ///----------------------------------MESSAGE SENDING PART---------------------------------------------------------
   const msg = {
     to: 'mymail@gmail.com',
     from: {
