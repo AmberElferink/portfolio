@@ -77,7 +77,7 @@ router.post('/', function(req, res, next) {
 
   ///----------------------------------MESSAGE SENDING PART---------------------------------------------------------
   const msg = {
-    to: 'mymail@gmail.com',
+    to: 'amber.elferink@gmail.com',
     from: {
       email: req.body.email,
       name: req.body.name
@@ -89,12 +89,12 @@ router.post('/', function(req, res, next) {
   winston.info(`host: ${host} sent a message from - ${req.originalUrl} - ${req.method} - ${req.ip}`);
   winston.info(msg);
 
-  if(host != 'localhost:3000')
-  {
-    res.send("Please use the original website to send me an email.")
-    winston.warn(`above message was not sent from the original website and has not been sent to mail`)
-    return;
-  }
+  //if(host != 'localhost:3000')
+  //{
+   // res.send("Please use the original website to send me an email.")
+   // winston.warn(`above message was not sent from the original website and has not been sent to mail`)
+   // return;
+  //}
   const sgMail = require('@sendgrid/mail');
 
   //this reads the secret key from the process environment
@@ -102,17 +102,17 @@ router.post('/', function(req, res, next) {
   sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
 
-  /*
+  
   sgMail.send(msg, function(err, json) {
     if (err) {
       return res.render('contactResponse', 
         {title: 'An error with sending the email has occured. Please try again later or contact me via LinkedIn'});
-    }*/
+    }
     
     res.render('contactResponse', 
     {title: 'Thank you for your email. I will respond as soon as possible.'});
 
-  //}); 
+  }); 
 
 });
 
