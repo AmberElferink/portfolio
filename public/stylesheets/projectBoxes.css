@@ -15,13 +15,79 @@ body {
   width: 100%;
 }
 
+/* media queries to align specification boxes*/
+@media screen and (max-width: 4000px) {
+  .lower-content {
+    height: 220px;
+   }
+}
+@media screen and (max-width: 1920px) {
+  .lower-content {
+    height: 220px;
+   }
+}
+@media screen and (max-width: 1600px) {
+  .lower-content {
+    height: 270px;
+   }
+}
+@media screen and (max-width: 1600px) {
+  .lower-content {
+    height: 270px;
+   }
+}
+@media screen and (max-width: 1500px) {
+  .lower-content {
+    height: 320px;
+   }
+}
+@media screen and (max-width: 1265px) {
+  .lower-content {
+    height: 350px;
+   }
+}
+@media screen and (max-width: 1165px) {
+  .lower-content {
+    height: 400px;
+   }
+}
+@media screen and (max-width: 991px) {
+  .lower-content {
+    height: 300px;
+   }
+}
+@media screen and (max-width: 850px) {
+  .lower-content {
+    height: 350px;
+   }
+}
+@media screen and (max-width: 767px) {
+  .lower-content {
+    height: 210px;
+   }
+}
+@media screen and (max-width: 642px) {
+  .lower-content {
+    height: 250px;
+   }
+}
+@media screen and (max-width: 593px) {
+  .lower-content {
+    height: 270px;
+   }
+}
+@media screen and (max-width: 575px) {
+  .lower-content {
+    height: auto;
+   }
+}
+
 .card-text {
   height: 70%;
   width: 100%;
   margin-bottom: auto;
 }
 .lower-content {
-  height: 300px;
   margin-top: 10px;
 }
 .skills-list {
@@ -34,4 +100,7 @@ body {
   text-align: left;
   flex-direction: column;
   justify-content: space-between;
+}
+.card-img-top {
+  height: 520px;
 }
