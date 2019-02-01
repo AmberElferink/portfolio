@@ -18,7 +18,7 @@ block content
               Since this is a young technology, I feel there is a lot to be done. I decided I want to be a part of the pioneers that connect that world to ours.
               In my spare time, I'm trying to develop a haptic device for the legs. Before that will be brought to life, I have a lot to learn.
           p.
-              And since I love learning, that seems like a great thing to do.
+              And since I love learning, that seems like a great thing to do!
 
               
         //-adapted from: https://bootsnipp.com/snippets/featured/responsive-quote-carousel
@@ -26,7 +26,7 @@ block content
         .row
           .col-md-offset-2.col-md-8.text-center
             h1 Reviews from former employers
-        .row
+        .row.bordercarr
           .col-md-offset-2.col-md-8
             #quote-carousel.carousel.slide(data-ride='carousel')
               // Bottom Carousel Indicators
@@ -55,10 +55,7 @@ block content
                         small 
                           img.LI-icon(src='/images/LinkedIn-Logo.png')
                           |Paulien van Bentum, chemistry education coordinator at the Utrecht University
-                  div.cit-btn-line
-                    button.btn 
-                      i.fa.fa-folder 
-                      | Coupled Projects
+
 
                 // Quote 2
                 .item
@@ -67,8 +64,10 @@ block content
                       .col-sm-3.text-center
                         img.img-circle(src='https://s3.amazonaws.com/uifaces/faces/twitter/mijustin/128.jpg', style='width: 100px; height:100px;')
                       .col-sm-9
-                        p
-                          | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam auctor nec lacus ut tempor. Mauris.
+                        p.
+                          Amber has worked with me as a student assistent in a short course for high school students about making projects with Arduino's and electrical components. With little help, Amber got to know the material beforehand (ie. building prjects with the Arduino). Amber showed interest in the course and aligned her own approach to students with the goals and didactics. She was punctual, proactive in helping students and communicative concerning to where she did and didn't have the knowledge to help. So all in all: a great addition to the teaching team!
+
+
                         small Someone famous
                 // Quote 3
                 .item
@@ -88,9 +87,6 @@ block content
 
         section.working-exp
           h1 Working experience
-          p If you are curious about things I have made:
           <button class ="btn-inline" onclick="parent.location='/projects'"><i class="fa fa-files-o"></i> View my projects </button>
-          p.
-            If you want a quick overview, you can download my curriculum vitae here:
           <button class ="btn-inline" onclick="window.open('/files/Curriculum vitae - Amber Elferink.pdf', '_blank');"><i class="fa fa-download"></i> Download CV </button>
         

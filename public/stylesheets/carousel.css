@@ -63,7 +63,12 @@
     float: left;
     margin-right: 10px;
 }
-
+.item blockquote p:after {
+  content: "\f10e";
+  font-family: 'Fontawesome';
+  float: right;
+  margin-right: 10px;
+}
 
 
 .btn {
@@ -191,4 +196,12 @@
 
 .btn:hover{
   -webkit-box-shadow: -200px 0 0 #31708f inset;
+}
+
+.bordercarr {
+  border-radius: 25px;
+  border: 2px solid lightseagreen;
+  padding: 20px; 
+  border: 2px solid lightseagreen;
+  background: rgb(245, 255, 254);
 }

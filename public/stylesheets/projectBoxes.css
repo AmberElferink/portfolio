@@ -102,5 +102,9 @@ body {
   justify-content: space-between;
 }
 .card-img-top {
-  height: 520px;
+  width: 100%;
+}
+
+a {
+  color: lightseagreen;
 }

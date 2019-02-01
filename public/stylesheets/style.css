@@ -88,7 +88,7 @@ a {
     justify-content: right;
     align-items: baseline;
   }
-  btn-nav {
+  .btn-nav {
     margin: auto;
   }
   a.nav-link {
@@ -193,7 +193,7 @@ h1 {
 }
 
 .normal-page-container {
-  text-align: center;
+  text-align: left;
   margin-left: 20%;
   margin-right: 20%;
 }
@@ -231,4 +231,30 @@ input, textarea {
   list-style: none;
   padding-left: 0px;
   margin-bottom: 5px;
+}
+
+.working-exp {
+  text-align: center;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: white;
+}
+
+.btn-box {
+  border-radius: 4px;
+  min-height: 50px;
+  width: 250px;
+  background: lightseagreen;
+  margin: 10px;
+  float: none;
+  border:0px;
+  color:#fff;
+  box-shadow: 0 0 1px #ccc;
+  -webkit-transition-duration: 0.5s;
+  -webkit-transition-timing-function: linear;
+  transition-duration: 0.5s;
+  transition-timing-function: linear;
+  box-shadow:0px 0 0 #31708f  inset;
+  font-size: inherit;
 }
