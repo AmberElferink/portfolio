@@ -1,0 +1,44 @@
+.working-line {
+  margin: 0px;
+  border-top: solid;
+}
+.project-page-container {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+h1 {
+  color: lightseagreen;
+}
+
+.work-overview {
+  margin-top: 20px;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-bottom: 20px;
+  border-width: 0px 0px 2px 0px;
+  border-style: solid;
+  border-color: lightseagreen;
+}
+
+small {
+  font-style: italic;
+}
+
+.card-title {
+  color: lightseagreen;
+}
+
+.iframe-container {
+  overflow: hidden;
+  padding-top: 67.25%; /*56.25%*/
+  position: relative;
+}
+
+.iframe-container iframe {
+   border: 0;
+   height: 100%;
+   left: 0;
+   position: absolute;
+   top: 0;
+   width: 100%;
+}

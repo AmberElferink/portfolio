@@ -11,6 +11,9 @@ router.get('/projects', function(req, res, next) {
   res.render('projects', { title: 'All Projects', stitle: ''});
 });
 
+router.get('/workexperience', function(req, res, next) {
+  res.render('workexperience', { title: 'My Workexperience', stitle: ''});
+});
 
 
 

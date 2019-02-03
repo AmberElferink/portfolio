@@ -1,0 +1,132 @@
+extends layout.jade
+block append stylesheets
+  link(rel='stylesheet' defer, href='/stylesheets/bootstrap-grid.css')
+  link(rel='stylesheet' defer, href='/stylesheets/bootstrap-reboot.css')
+  link(rel='stylesheet' defer, href='/stylesheets/projectBoxes.css')
+  link(rel='stylesheet' defer, href='/stylesheets/working-experience.css')
+
+//-images should be 700x464 to be the same size
+block content
+      section.work-overview
+        h1 Utrecht University - Werfkracht, Freudenthal Institute
+          br
+          small September 2017 - February 2019
+        p
+          |The Werfkracht project was built to get students in touch with education. It consists of working an average of four hours a week on diverse activities for secondairy school students.
+          |Examples are: 
+          ul 
+            li Translating the Kangaroo Mathematics competition for the visually disabled. 
+            li Helping organize and assisting at conferences such as the Woudschoten Chemie beurs and Research Funding Days.
+            li Assisting in multiple U-talent workshops. The U-talent courses are available for secondary school students that perform outstandingly well and want to take additional lessons in a wide variaty of subjects. 
+               | This includes the Arduino, Simulation and games and Music programming workshops below.
+
+      section.project-page-container
+        .row
+          .col-lg-4.col-sm-6.portfolio-item
+            .card.h-100
+              a(href='#').div-img-top
+                img.card-img-top(src='/images/Arduino-collage.jpg', alt='Arduino U-talent students in the workshop')
+              .card-body
+                div.upper-content
+                  h4.card-title Arduino workshops
+                  p.card-text.
+                    In this workshop secondary school students learn the fundamentals of Arduino. On day one they learn the basics by doing three projects from the Arduino starters kit book.
+                    After gaining some experience, they think of a project they want to make. 
+                    They come up with amazing ideas like a "high five robot", laser vault protection system, velocity sensor or infra red remote controlled robots.
+                    At home, they start working on their ideas in the online Tinkercad environment. On the second day, they build their projects and solve the remaining bugs.
+                    It is always a joy to help in these workshops, since after this workshop they have built something amazing, while they generally have never programmed before.
+          .col-lg-4.col-sm-6.portfolio-item
+            .card.h-100
+              a(href='#').div-img-top
+                //-iframe(width="700" height="400" src="https://www.youtube.com/embed/xG2lreUPnFQ?controls=0&autoplay=1&mute=1&loop=1&modestbranding=0" frameborder="0").card-img-top
+                img.card-img-top(src='/images/RayTracerScreenshot.png', alt='')
+              .card-body
+                div.upper-content
+                  h4.card-title  Simulation and Games in Unity
+                  p.card-text.
+                    This workshop teaches secondary school students with generally no programming experience to make simulations and games with the Unity engine. 
+                    As a preparation the students follow the Unity tutorials. 
+                    On the first day they make a rabbit population simulator by adding random movement, collision, reproduction and death. 
+                    A predator and food is then added to the simulation.
+                    They think about a simulation or game they want to make at home and start working on it. They finish it the second workshop day.
+          .col-lg-4.col-sm-6.portfolio-item
+            .card.h-100
+              a(href='#').div-img-top
+                div.iframe-container
+                  <iframe src="https://www.youtube.com/embed/v8pd4UzvIew?autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" id="iFrame1"></iframe>
+              .card-body
+                div.upper-content
+                  h4.card-title Music Programming
+                  p.card-text.
+                    In music programming, secondary school students learn programming, by programming their own song. 
+                    In Sonic Pi they learn the basic principles of loops, methods and threads. It uses a programming language based on Ruby.
+                    To accompany their song, they also program an animation in Processing, which touches briefly on classes. 
+                    This is a programming language related to Java.
+                    After this workshop, they have made a full music video using code.                    
+          .col-lg-4.col-sm-6.portfolio-item
+            .card.h-100
+              a(href='#').div-img-top
+                img.card-img-top(src='/images/Larry.png', alt='')
+              .card-body
+                div.upper-content
+                  h4.card-title
+                    a(href='#') Larry the Unsanitary Canary: Dragons Den
+                  p.card-text
+                    | The game starts when Larry, the trusty steed of the adventures, besmurged the wall of a dragons den. The players are locked into the dragons dungeon. 
+                    | Escaping it is their only hope to freedom.
+                    | This game was made as a first year introduction project. It was made within two months with a team of seven first year students.
+                    | It is a co-op puzzle dungeon crawler, where the players need to find colored keys to unlock doors and each player can only pick up keys of his own color.
+                    | Some doors can be opened by levers, which a player can hold down to hold open doors for eachother.
+                    | Along the way, players will encounter evil bunnies and pinguins they must defeat.
+                div.lower-content
+                  h4.skills-title Specifications
+                  ul.skills-list
+                    li Built in C# and Monogame
+                    li Teamleader
+                    li Worked mostly on planning, menu's, story art (upper image) and controller input
+                    li Personal grade: 8.5/10   
+                <button class ="btn-box" onclick="window.open('https://github.com/AmberElferink/LarryDragonsDen', '_blank');"><i class="fa fa-github-square"></i> Checkout Github</button>
+            
+          .col-lg-4.col-sm-6.portfolio-item
+            .card.h-100
+              a(href='#').div-img-top
+                img.card-img-top(src='/images/gc-practical.jpg', alt='Gas chromotography practical')
+              .card-body
+                div.upper-content
+                  h4.card-title
+                    a(href='#') Fast Dining Webshop
+                  p.card-text
+                    | This is a small web shop made for the web technology course.
+                    | The main focus was to create a functioning webshop, with both front- and backend. 
+                    | The user can make an account, log in, filter products and buy a product whereafter they can view it in their order history.
+                    | This project was mostly focussed on the back-end and less on the responsiveness and looks.
+                div.lower-content
+                  h4.skills-title Specifications
+                  ul.skills-list
+                    li Users and products are stored in an SQLite database.
+                    li It includes: login (sessions), register, update profile, buying products and order history. 
+                    li Made using HTML, CSS, Javascript, NodeJs with ExpressJs and an SQLite database.
+                    li Graded with 9.75/10
+                <button class ="btn-box" onclick="window.open('https://github.com/AmberElferink/fastdiningshop', '_blank');"><i class="fa fa-github-square"></i> Checkout Github</button>
+
+          .col-lg-4.col-sm-6.portfolio-item
+            .card.h-100
+              a(href='#').div-img-top
+                img.card-img-top(src='http://placehold.it/700x400', alt='')
+              .card-body
+                div.upper-content
+                  h4.card-title
+                    a(href='#') Portfolio website
+                  p.card-text
+                    | This project is the website you are currently visiting. 
+                    | It is a very basic website, mostly front-end oriented.
+                    | I could have gone for an amazing template, but I do not want a designers website.
+                    | I am not a designer or front-end developer, but I like to make projects functional.
+                    | It is built to be responsive and simple.
+                div.lower-content
+                  h4.skills-title Specifications
+                  ul.skills-list
+                    li Built using Jade, CSS, NodeJS and Bootstrap.
+                    li Responsive on all device sizes
+                <button class ="btn-box" onclick="window.open('https://github.com/AmberElferink/Portfolio', '_blank');"><i class="fa fa-github-square"></i> Checkout Github</button>
+
