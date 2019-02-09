@@ -95,6 +95,9 @@
 */
 /* Small devices (tablets, 200px and down) */
 @media screen and (max-width: 992px) { 
+  .inline {
+    text-align: center;
+  }
   #quote-carousel 
   {
     text-align: center;

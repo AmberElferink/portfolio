@@ -192,6 +192,34 @@ h1 {
   padding-left: 15px;
 }
 
+@media (max-width: 768px) { 
+  .normal-page-container {
+    margin-left: 10% !important;
+    margin-right: 10% !important; 
+  }
+  .col-md-8 {
+    padding: 0;
+  }
+  #quote-carousel {
+    padding: 5% !important;
+  }
+  .bordercarr {
+    padding-left: 3px !important;
+    padding-right: 3px !important;
+  }
+  button {
+    width: 100% !important;
+  }
+  .nav-link {
+    text-align: left;
+    padding-left: 10% !important;
+  }
+  .col-sm-9 {
+    text-align: center !important;
+  }
+}
+
+
 .normal-page-container {
   text-align: left;
   margin-left: 20%;
@@ -252,4 +280,20 @@ input, textarea {
   transition-timing-function: linear;
   box-shadow:0px 0 0 #31708f  inset;
   font-size: inherit;
+}
+
+blockquote small {
+  font-size: 90%
+}
+
+.inline {
+  display: inline-block;
+  vertical-align: top;
+  max-width: 98%;
+  height: auto;
+  width: 75%;
+  margin: 1%;
+}
+img .inline {
+  width:10%;
 }
