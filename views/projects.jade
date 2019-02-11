@@ -10,15 +10,16 @@ block append scripts
 //-images should be 700x464 to be the same size
 block content
       section.project-page-container
+        h1.page-header #{title}
         .row
           .col-lg-4.col-sm-6.portfolio-item
             .card.h-100
-              a(href='#').div-img-top
-                img.card-img-top(src='/images/handDet.jpg', alt='')
+              a(href='https://github.com/AmberElferink/ImageProcessing3/wiki', target="_blank").div-img-top
+                img.card-img-top(src='/images/handDet.jpg', alt='Hand detection result with beamer projection')
               .card-body
                 div.upper-content
                   h4.card-title
-                    a(href='#') Hand detection algorithm
+                    a(href='https://github.com/AmberElferink/ImageProcessing3/wiki', target="_blank") Hand detection algorithm
                   p.card-text
                     | Detects amount of fingers and position of a hand on a table with an overlay projected by a beamer.
                     | Use cases can be to actively change the projection when a hand points at a specific spot.
@@ -35,17 +36,17 @@ block content
                     li Handles rotation of the hand
                     li No external libraries used
                     li Graded with 8.7/10    
-                <button class ="btn-box" onclick="window.open('https://github.com/AmberElferink/ImageProcessing3', '_blank');"><i class="fa fa-github-square"></i> Checkout Github CV </button>
+                <button class ="btn-box" onclick="window.open('https://github.com/AmberElferink/ImageProcessing3/wiki', '_blank');"><i class="fa fa-github-square"></i> Checkout Github </button>
         
           .col-lg-4.col-sm-6.portfolio-item
             .card.h-100
-              a(href='#').div-img-top
+              a(href='https://github.com/AmberElferink/Raytracer/wiki', target="_blank").div-img-top
                 //-iframe(width="700" height="400" src="https://www.youtube.com/embed/xG2lreUPnFQ?controls=0&autoplay=1&mute=1&loop=1&modestbranding=0" frameborder="0").card-img-top
-                img.card-img-top(src='/images/RayTracerScreenshot.png', alt='')
+                img.card-img-top(src='/images/RayTracerScreenshot.png', alt='Raytracer with triangles, spheres, spotlight, checkboard and glass.')
               .card-body
                 div.upper-content
                   h4.card-title
-                    a(href='#') Ray-Tracer
+                    a(href='https://github.com/AmberElferink/Raytracer/wiki', target="_blank") Ray-Tracer
                   p.card-text
                     | A 3D environment that does not have real-time performance as priority, but how physically accurate shadows, lighting and reflections can be rendered. This method is mostly used in rendering software.
                     | It was made from a template where you could color individual pixels on the screen.
@@ -57,7 +58,7 @@ block content
                     li Built in C#
                     li Features: Glass, mirrors, spotlights, anti-aliasing and triangles.
                     li Graded with a 10/10
-                <button class ="btn-box" onclick="window.open('https://github.com/AmberElferink/Raytracer', '_blank');"><i class="fa fa-github-square"></i> Checkout Github CV </button>
+                <button class ="btn-box" onclick="window.open('https://github.com/AmberElferink/Raytracer/wiki', '_blank');"><i class="fa fa-github-square"></i> Checkout Github </button>
  
           .col-lg-4.col-sm-6.portfolio-item
             .card.h-100
@@ -85,12 +86,12 @@ block content
  
           .col-lg-4.col-sm-6.portfolio-item
             .card.h-100
-              a(href='#').div-img-top
-                img.card-img-top(src='/images/Larry.png', alt='')
+              a(href='https://github.com/AmberElferink/LarryDragonsDen/wiki').div-img-top
+                img.card-img-top(src='/images/Larry.png', alt='Image from story and screenshot from Larry the Unsanitary canary')
               .card-body
                 div.upper-content
                   h4.card-title
-                    a(href='#') Larry the Unsanitary Canary: Dragons Den
+                    a(href='https://github.com/AmberElferink/LarryDragonsDen/wiki') Larry the Unsanitary Canary: Dragons Den
                   p.card-text
                     | The game starts when Larry, the trusty steed of the adventures, besmurged the wall of a dragons den. The players are locked into the dragons dungeon. 
                     | Escaping it is their only hope to freedom.
@@ -105,12 +106,12 @@ block content
                     li Teamleader
                     li Worked mostly on planning, menu's, story art (upper image) and controller input
                     li Personal grade: 8.5/10   
-                <button class ="btn-box" onclick="window.open('https://github.com/AmberElferink/LarryDragonsDen', '_blank');"><i class="fa fa-github-square"></i> Checkout Github</button>
+                <button class ="btn-box" onclick="window.open('https://github.com/AmberElferink/LarryDragonsDen/wiki', '_blank');"><i class="fa fa-github-square"></i> Checkout Github</button>
             
           .col-lg-4.col-sm-6.portfolio-item
             .card.h-100
               a(href='#').div-img-top
-                img.card-img-top(src='/images/fastdining.png', alt='')
+                img.card-img-top(src='/images/fastdining.png', alt='Fastdining webshop image')
               .card-body
                 div.upper-content
                   h4.card-title
@@ -131,12 +132,12 @@ block content
  
           .col-lg-4.col-sm-6.portfolio-item
             .card.h-100
-              a(href='#').div-img-top
-                img.card-img-top(src='http://placehold.it/700x400', alt='')
+              a(href='www.amberelferink.com' target='_blank').div-img-top
+                img.card-img-top(src='/images/Portfolio2.jpg', alt='Screenshot of the Portfolio Homepage')
               .card-body
                 div.upper-content
                   h4.card-title
-                    a(href='#') Portfolio website
+                    a(href='www.amberelferink.com' target='_blank') Portfolio website
                   p.card-text
                     | This project is the website you are currently visiting. 
                     | It is a very basic website, mostly front-end oriented.
@@ -152,14 +153,14 @@ block content
  
           .col-lg-4.col-sm-6.portfolio-item
               .card.h-100
-                a(href='#').div-img-top
+                a(href='https://github.com/AmberElferink/AsteroidsInHaskell' target='_blank').div-img-top
                   video(autoplay loop muted playsinline width="100%").card-img-top
                     source(src="/videos/Asteroids.webm" type="video/webm")
                     source(src="/videos/Asteroids.mp4" type="video/mp4")
                 .card-body
                   div.upper-content
                     h4.card-title
-                      a(href='#') Asteroids in Haskell
+                      a(href='https://github.com/AmberElferink/AsteroidsInHaskell' target='_blank') Asteroids in Haskell
                     p.card-text
                       | This might seem like a very simple game. However, anyone that has programmed in Haskell can confirm it is a very hard language to work with.
                       | Haskell is a functional programming language, which requires entirely different thinking than the usual imperative programming languages.
@@ -174,3 +175,25 @@ block content
                       li Features parallax scrolling.
                       li Basic enemy AI.
                   <button class ="btn-box" onclick="window.open('https://github.com/AmberElferink/AsteroidsInHaskell', '_blank');"><i class="fa fa-github-square"></i> Checkout Github</button>
+          .col-lg-4.col-sm-6.portfolio-item
+              .card.h-100
+                a(href='').div-img-top
+                  img.card-img-top(src='/images/WaistBag.jpg', alt='Leather Waist Bag')
+                .card-body
+                  div.upper-content
+                    h4.card-title
+                      a(href='') Leather waist bag
+                    p.card-text
+                      | Next to working on computers, I like working with my hands. 
+                      | Since pockets for women are usually too small to fit a phone, wallet and keys, this is a solution to that.
+                      | I wear it on my belt every day.
+                      | I first made the design to fit my keys, wallet and phone exactly. Then I added decorations.
+                      | I bought vegetable tanned leather, stamped, cut and dyed it, after which I have sewn it together by hand.
+                      | The feedback received on this project was very good and some strangers even asked for possibilities to make another bag for them.
+                  div.lower-content
+                    h4.skills-title Specifications
+                    ul.skills-list
+                      li Made from vegetable tanned cowhide.
+                      li All design and processing steps are done by hand.
+                      li High quality, still functional after 2.5 years.
+            
