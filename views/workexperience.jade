@@ -40,7 +40,7 @@ block content
             .card.h-100
               a(href='#').div-img-top
                 //-iframe(width="700" height="400" src="https://www.youtube.com/embed/xG2lreUPnFQ?controls=0&autoplay=1&mute=1&loop=1&modestbranding=0" frameborder="0").card-img-top
-                img.card-img-top(src='/images/RayTracerScreenshot.png', alt='')
+                img.card-img-top(src='/images/unity.jpg', alt='Unity Simulation and Games')
               .card-body
                 div.upper-content
                   h4.card-title  Simulation and Games in Unity
@@ -54,7 +54,7 @@ block content
             .card.h-100
               a(href='#').div-img-top
                 div.iframe-container
-                  <iframe src="https://www.youtube.com/embed/v8pd4UzvIew?autoplay=1&mute=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" id="iFrame1"></iframe>
+                  <iframe src="https://www.youtube.com/embed/v8pd4UzvIew?autoplay=1&mute=1&loop=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" id="iFrame1"></iframe>
               .card-body
                 div.upper-content
                   h4.card-title Music Programming
@@ -67,67 +67,60 @@ block content
           .col-lg-4.col-sm-6.portfolio-item
             .card.h-100
               a(href='#').div-img-top
-                img.card-img-top(src='/images/Larry.png', alt='')
+                 div.iframe-container
+                  <iframe src="https://www.youtube.com/embed/yMgKDpvvL-w?autoplay=1&mute=1&loop=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" id="iFrame1"></iframe>
               .card-body
                 div.upper-content
                   h4.card-title
-                    a(href='#') Larry the Unsanitary Canary: Dragons Den
-                  p.card-text
-                    | The game starts when Larry, the trusty steed of the adventures, besmurged the wall of a dragons den. The players are locked into the dragons dungeon. 
-                    | Escaping it is their only hope to freedom.
-                    | This game was made as a first year introduction project. It was made within two months with a team of seven first year students.
-                    | It is a co-op puzzle dungeon crawler, where the players need to find colored keys to unlock doors and each player can only pick up keys of his own color.
-                    | Some doors can be opened by levers, which a player can hold down to hold open doors for eachother.
-                    | Along the way, players will encounter evil bunnies and pinguins they must defeat.
-                div.lower-content
-                  h4.skills-title Specifications
-                  ul.skills-list
-                    li Built in C# and Monogame
-                    li Teamleader
-                    li Worked mostly on planning, menu's, story art (upper image) and controller input
-                    li Personal grade: 8.5/10   
-                <button class ="btn-box" onclick="window.open('https://github.com/AmberElferink/LarryDragonsDen', '_blank');"><i class="fa fa-github-square"></i> Checkout Github</button>
-            
-          .col-lg-4.col-sm-6.portfolio-item
-            .card.h-100
-              a(href='#').div-img-top
-                img.card-img-top(src='/images/gc-practical.jpg', alt='Gas chromotography practical')
-              .card-body
-                div.upper-content
-                  h4.card-title
-                    a(href='#') Fast Dining Webshop
-                  p.card-text
-                    | This is a small web shop made for the web technology course.
-                    | The main focus was to create a functioning webshop, with both front- and backend. 
-                    | The user can make an account, log in, filter products and buy a product whereafter they can view it in their order history.
-                    | This project was mostly focussed on the back-end and less on the responsiveness and looks.
-                div.lower-content
-                  h4.skills-title Specifications
-                  ul.skills-list
-                    li Users and products are stored in an SQLite database.
-                    li It includes: login (sessions), register, update profile, buying products and order history. 
-                    li Made using HTML, CSS, Javascript, NodeJs with ExpressJs and an SQLite database.
-                    li Graded with 9.75/10
-                <button class ="btn-box" onclick="window.open('https://github.com/AmberElferink/fastdiningshop', '_blank');"><i class="fa fa-github-square"></i> Checkout Github</button>
-
-          .col-lg-4.col-sm-6.portfolio-item
-            .card.h-100
-              a(href='#').div-img-top
-                img.card-img-top(src='http://placehold.it/700x400', alt='')
-              .card-body
-                div.upper-content
-                  h4.card-title
-                    a(href='#') Portfolio website
-                  p.card-text
-                    | This project is the website you are currently visiting. 
-                    | It is a very basic website, mostly front-end oriented.
-                    | I could have gone for an amazing template, but I do not want a designers website.
-                    | I am not a designer or front-end developer, but I like to make projects functional.
-                    | It is built to be responsive and simple.
-                div.lower-content
-                  h4.skills-title Specifications
-                  ul.skills-list
-                    li Built using Jade, CSS, NodeJS and Bootstrap.
-                    li Responsive on all device sizes
-                <button class ="btn-box" onclick="window.open('https://github.com/AmberElferink/Portfolio', '_blank');"><i class="fa fa-github-square"></i> Checkout Github</button>
-
+                    a(href='#') Gass Chromatography practicals
+                  p.card-text.
+                    Since I have done the chemistry bachelor, I also assisted in chemistry practicals.
+                    The gas chromatography (GC) practical was designed to enthuse secondary school students about chemistry.
+                    Secondary schools usually do not have expensive apparatus such as a GC. 
+                    To give them experience with that, two students from Utrecht University are given a rental car and the equipment.
+                    They drive to the school, set up the equipment and give a presentation on the subject of catalysis and GC.
+                    The students then have a palladium, platinum, copper and ... . 
+                    They then test how well these catalysts work for burning methane by looking at the end products with the GC.
+      section.work-overview
+          h1 Utrecht University - Logics assistant, Departement Informatics
+            br
+            small November 2018 - January 2019
+          p
+            | These lessons are part of a first year course in the Informatics Bachelor. 
+            | I assisted this course, which means answering their questions about homework in dedicated hours throughout the week.
+            | Additionally, they were required to do a minitest every friday, to which I explained the answers afterwards.
+            | Topics include
+          ul
+            li (Infinite) Sets and relations
+            li Truth tables
+            li Proof and semantics with predicate logics (Natural deduction, Hilberts system, CNF, DNF, normal forms, etc)
+            li Prolog
+      section.work-overview
+          h1 Content creator - KRO-NCRV - Volunteer
+            br
+            small November 2015 - March 2016
+          p
+          | For the scientific television program for children, Willem Wever, I have worked behind the scenes to make the content.
+          | The activities consisted of:
+          ul
+            li proposing subjects and experiments to perform on television.
+            li advising the moderators about the correct explanation of the content.
+          p
+          | The episodes with content were displayed on the Dutch television from April 2016.
+      section.work-overview
+          h1 Topselect Groep BV
+            br
+            small Nov 2014 - July 2018
+          p.
+            Various tasks within University Utrecht: 
+          ul
+            li Informing pupils (secondary school) about the study chemistry.
+            li Laboratory assistant for secondary school pupils during their laboratory experiments, including the Chemistry Olympiad.
+            li Contacting potential participants for research.
+            li Helping with setup of symposia and welcoming participants
+      section.work-overview
+          h1 De Wolkenfietser - Bicycle repair shop           
+            small Jan 2011 - October 2011
+          p.
+            When I was on high school I was interested in technology and wanted to gain some hands-on experience.
+            I repaired bicycles every week in a local bicycle repair shop. 
