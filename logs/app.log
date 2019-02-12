@@ -156,3 +156,25 @@
 {"message":"::1 - - [12/Feb/2019:20:32:25 +0000] \"GET /images/Portfolio.jpg HTTP/1.1\" 200 258931\n","level":"info"}
 {"message":"::1 - - [12/Feb/2019:20:32:25 +0000] \"GET /images/Larry.png HTTP/1.1\" 200 641343\n","level":"info"}
 {"message":"::1 - - [12/Feb/2019:20:32:25 +0000] \"GET /images/WaistBag.jpg HTTP/1.1\" 200 573784\n","level":"info"}
+{"message":"::1 - - [12/Feb/2019:21:08:41 +0000] \"GET / HTTP/1.1\" 200 7471\n","level":"info"}
+{"message":"::1 - - [12/Feb/2019:21:08:41 +0000] \"GET /stylesheets/style.css HTTP/1.1\" 304 -\n","level":"info"}
+{"message":"::1 - - [12/Feb/2019:21:08:41 +0000] \"GET /javascripts/jquery.js HTTP/1.1\" 304 -\n","level":"info"}
+{"message":"::1 - - [12/Feb/2019:21:08:41 +0000] \"GET /stylesheets/bootstrap.css HTTP/1.1\" 304 -\n","level":"info"}
+{"message":"::1 - - [12/Feb/2019:21:08:41 +0000] \"GET /stylesheets/carousel.css HTTP/1.1\" 200 3823\n","level":"info"}
+{"message":"::1 - - [12/Feb/2019:21:08:41 +0000] \"GET /images/Header.jpg HTTP/1.1\" 304 -\n","level":"info"}
+{"message":"::1 - - [12/Feb/2019:21:08:42 +0000] \"GET /images/LinkedIn-Logo.png HTTP/1.1\" 200 3661\n","level":"info"}
+{"message":"::1 - - [12/Feb/2019:21:08:42 +0000] \"GET /images/Portrait-PaulienVanBentum.jpg HTTP/1.1\" 200 27227\n","level":"info"}
+{"message":"::1 - - [12/Feb/2019:21:08:42 +0000] \"GET /images/Portrait-ManonThijssen.jpg HTTP/1.1\" 200 62110\n","level":"info"}
+{"message":"::1 - - [12/Feb/2019:21:08:42 +0000] \"GET /images/Portrait-PeterDuifhuis.jpg HTTP/1.1\" 200 26624\n","level":"info"}
+{"message":"::1 - - [12/Feb/2019:21:08:44 +0000] \"GET /contact HTTP/1.1\" 200 3053\n","level":"info"}
+{"message":"::1 - - [12/Feb/2019:21:08:44 +0000] \"GET /stylesheets/bootstrap.css HTTP/1.1\" 304 -\n","level":"info"}
+{"message":"::1 - - [12/Feb/2019:21:08:44 +0000] \"GET /stylesheets/style.css HTTP/1.1\" 304 -\n","level":"info"}
+{"message":"::1 - - [12/Feb/2019:21:08:44 +0000] \"GET /javascripts/jquery.js HTTP/1.1\" 304 -\n","level":"info"}
+{"message":"::1 - - [12/Feb/2019:21:08:44 +0000] \"GET /images/Header.jpg HTTP/1.1\" 304 -\n","level":"info"}
+{"message":"host: localhost sent a message from - /contact - POST - ::1","level":"info"}
+{"message":{"to":"amber.elferink@gmail.com","from":{"email":"aaaa@gmail.com","name":"AAAAA"},"subject":"AAAAA","text":"AAAAA \r\n sent from portfolio site www.amber-elferink.com."},"level":"info"}
+{"message":"::1 - - [12/Feb/2019:21:09:05 +0000] \"POST /contact HTTP/1.1\" 200 2451\n","level":"info"}
+{"message":"::1 - - [12/Feb/2019:21:09:05 +0000] \"GET /stylesheets/bootstrap.css HTTP/1.1\" 304 -\n","level":"info"}
+{"message":"::1 - - [12/Feb/2019:21:09:05 +0000] \"GET /stylesheets/style.css HTTP/1.1\" 304 -\n","level":"info"}
+{"message":"::1 - - [12/Feb/2019:21:09:05 +0000] \"GET /javascripts/jquery.js HTTP/1.1\" 304 -\n","level":"info"}
+{"message":"::1 - - [12/Feb/2019:21:09:05 +0000] \"GET /images/Header.jpg HTTP/1.1\" 304 -\n","level":"info"}
