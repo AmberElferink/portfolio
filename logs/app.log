@@ -344,3 +344,8 @@
 {"message":"::1 - - [17/Feb/2019:15:57:33 +0000] \"GET /images/Header.jpg HTTP/1.1\" 304 -\n","level":"info"}
 {"message":"::1 - - [17/Feb/2019:15:57:33 +0000] \"GET /images/Arduino-collage.jpg HTTP/1.1\" 304 -\n","level":"info"}
 {"message":"::1 - - [17/Feb/2019:15:57:33 +0000] \"GET /images/unity.jpg HTTP/1.1\" 304 -\n","level":"info"}
+{"message":"::1 - - [17/Feb/2019:16:28:31 +0000] \"GET /contact HTTP/1.1\" 200 3168\n","level":"info"}
+{"message":"::1 - - [17/Feb/2019:16:28:31 +0000] \"GET /stylesheets/style.css HTTP/1.1\" 304 -\n","level":"info"}
+{"message":"::1 - - [17/Feb/2019:16:28:31 +0000] \"GET /stylesheets/bootstrap.css HTTP/1.1\" 304 -\n","level":"info"}
+{"message":"::1 - - [17/Feb/2019:16:28:31 +0000] \"GET /javascripts/jquery.js HTTP/1.1\" 304 -\n","level":"info"}
+{"message":"::1 - - [17/Feb/2019:16:28:31 +0000] \"GET /images/Header.jpg HTTP/1.1\" 304 -\n","level":"info"}
