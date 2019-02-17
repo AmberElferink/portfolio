@@ -137,8 +137,8 @@ a {
 }
 
 .btn-inline:hover{
-  -webkit-box-shadow: -200px 0 0 #31708f inset;
-  box-shadow: -200px 0 0 #31708f inset;
+  -webkit-box-shadow: -250px 0 0 #31708f inset;
+  box-shadow: -250px 0 0 #31708f inset;
 }
 
 .container {
