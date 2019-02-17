@@ -140,6 +140,14 @@ a {
   -webkit-box-shadow: -250px 0 0 #31708f inset;
   box-shadow: -250px 0 0 #31708f inset;
 }
+.btn-nav:hover{
+  -webkit-box-shadow: -250px 0 0 #31708f inset;
+  box-shadow: -250px 0 0 #31708f inset;
+}
+.btn-box:hover{
+  -webkit-box-shadow: -250px 0 0 #31708f inset;
+  box-shadow: -250px 0 0 #31708f inset;
+}
 
 .container {
   text-align: center;
