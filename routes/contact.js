@@ -14,6 +14,25 @@ console.log("contact");
 
 
 router.post('/', function(req, res, next) {
+
+  checkRECAPTCHA(function(err, message){
+    if(message === "allgood")
+    {
+      sendEmail();
+    }
+    else
+    {
+      return res.render('contact', {
+        title: "Let's talk!", 
+        name: req.body.name, 
+        email: req.body.email, 
+        subject: req.body.subject, 
+        content: req.body.content, 
+        errs: [{msg: message}]
+      });
+    }
+  }, req);
+});
   //-------------------------------------------------------RECAPTCHA PART---------------------------------------------------------------------
   //tutorial on: https://codeforgeek.com/2016/03/google-recaptcha-node-js-tutorial/
   //for the testing phase, the following keys are used:
@@ -23,38 +42,32 @@ router.post('/', function(req, res, next) {
   //Secret key: 6LeIxAcTAAAAAGG-vFI1TnRWxMZNFuojJ4WifJWe
   //these are the development keys and will be changed for your own generated keys on the server. Get your keys at: https://www.google.com/recaptcha/admin
 
-  // g-recaptcha-response is the key that browser will generate upon form submit.
-  // if its blank or null means user has not selected the captcha, so return the error.
-  if(req.body['g-recaptcha-response'] === undefined || req.body['g-recaptcha-response'] === '' || req.body['g-recaptcha-response'] === null) {
-    return res.render('contact', {
-      title: "Let's talk!", 
-      name: req.body.name, 
-      email: req.body.email, 
-      subject: req.body.subject, 
-      content: req.body.content, 
-      errs: [{msg: "Please check the captcha checkbox."}]
-    });  
+  function checkRECAPTCHA(callback, req) {
+    // g-recaptcha-response is the key that browser will generate upon form submit.
+    // if its blank or null means user has not selected the captcha, so return the error.
+    if(req.body['g-recaptcha-response'] === undefined || req.body['g-recaptcha-response'] === '' || req.body['g-recaptcha-response'] === null) {
+      callback(undefined, "Please check the captcha checkbox");
+    }
+    else {
+      // Put your secret key here.
+      var secretKey = process.env.CAPTCHA_KEY_PORTFOLIO;
+      // req.connection.remoteAddress will provide IP address of connected user.
+      var verificationUrl = "https://www.google.com/recaptcha/api/siteverify?secret=" + secretKey + "&response=" + req.body['g-recaptcha-response'] + "&remoteip=" + req.connection.remoteAddress;
+      // Hitting GET request to the URL, Google will respond with success or error scenario.
+      request(verificationUrl,function(error,response,body) {
+        body = JSON.parse(body);
+        // Success will be true or false depending upon captcha validation.
+        if(body.success !== undefined && !body.success) {
+          callback(undefined, "reCAPTCHA verification failed, please try again");
+        }
+        else {
+          callback(undefined, "allgood");
+        }
+      });
+    }
   }
-  // Put your secret key here.
-  var secretKey = process.env.CAPTCHA_KEY_PORTFOLIO;
-  // req.connection.remoteAddress will provide IP address of connected user.
-  var verificationUrl = "https://www.google.com/recaptcha/api/siteverify?secret=" + secretKey + "&response=" + req.body['g-recaptcha-response'] + "&remoteip=" + req.connection.remoteAddress;
-  // Hitting GET request to the URL, Google will respond with success or error scenario.
-  request(verificationUrl,function(error,response,body) {
-    body = JSON.parse(body);
-    // Success will be true or false depending upon captcha validation.
-    if(body.success !== undefined && !body.success) {
-      return res.render('contact', {
-        title: "Let's talk!", 
-        name: req.body.name, 
-        email: req.body.email, 
-        subject: req.body.subject, 
-        content: req.body.content, 
-        errs: [{msg: "Failed captcha verification, try again."}]
-      });   }
-  });
 
-
+/*
   //--------------------------------------FORM VALIDATION PART----------------------------------------------------
   req.checkBody('name', 'name is required').notEmpty().isLength({min: 3}).escape();
   req.checkBody('email', 'email must be a valid email format').notEmpty().isEmail().normalizeEmail();
@@ -115,5 +128,9 @@ router.post('/', function(req, res, next) {
   }); 
 
 });
+*/
+function sendEmail() {
+  console.log("sending email test");
+}
 
 module.exports = router;
