@@ -75,7 +75,7 @@ router.post('/', function(req, res, next) {
         body = JSON.parse(body);
         // Success will be true or false depending upon captcha validation.
         if(body.success !== undefined && !body.success) {
-          winston.info(body[error-codes]);
+          winston.info(body["error-codes"]);
           callback(undefined, "reCAPTCHA verification went wrong, please try again.");
         }
         else {
