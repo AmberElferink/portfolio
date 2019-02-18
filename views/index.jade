@@ -2,8 +2,11 @@ extends layout.jade
 
 block append stylesheets
   //-<link defer href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-  <script defer src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
   <link defer href="/stylesheets/carousel.css" rel="stylesheet">
+
+block append scripts
+  <script defer src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+  <script defer src="/javascripts/carousel.js"></script>
 
 block content
      div.normal-page-container
