@@ -5,7 +5,7 @@ block append stylesheets
   <link defer href="/stylesheets/carousel.css" rel="stylesheet">
 
 block append scripts
-  <script defer src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+  <script defer src="/javascripts/bootstrap330carousel.js"></script>
   <script defer src="/javascripts/carousel.js"></script>
 
 block content
@@ -13,9 +13,9 @@ block content
         section
           h1.page-header #{title}
           p.
-              I'm Amber and I absolutely love learning. After finishing my chemistry bachelor, I decided I was not done studying yet, and started a computer science bachelor.
-              I thought I loved chemistry, but studying computer science, I have found an even greater love.
-              I have always been interested in programming computers, robots and Arduino's and want to learn everything there is to know about it.
+              I'm Amber and I absolutely love learning, after I finished my chemistry bachelor I decided I wanted to continue my studies, so I started a computer science bachelor course. 
+              Although I love chemistry, by studying computer science I have found an even greater passion. 
+              I have always been interested in programming computers, robots and Arduino's and my aim is now to significantly further my knowledge on this subject.
           p.
               Recently I discovered a great interest in Virtual Reality and haptics, which makes the user experience the forces of the virtual world.
               Since this is a young technology, I feel there is a lot to be done. I decided I want to be a part of the pioneers that connect that world to ours.
@@ -37,10 +37,23 @@ block content
                 li.active(data-target='#quote-carousel', data-slide-to='0')
                 li(data-target='#quote-carousel', data-slide-to='1')
                 li(data-target='#quote-carousel', data-slide-to='2')
+                li(data-target='#quote-carousel', data-slide-to='3')
+
               // Carousel Slides / Quotes
               .carousel-inner
                 // Quote 1
                 .item.active
+                  blockquote
+                    .row
+                      .col-sm-3.text-center
+                        img.img-circle(src='/images/Portrait-ChristianKoppe.jpg', style='width: 100px;height:100px;')
+                      .col-sm-9
+                        p 
+                          |Amber assisted me in various computer science modules for pupils from upper secondary education as part of the U-Talent programme at the Utrecht University. She helped the pupils during practical exercises and used her thorough knowledge of Arduino development, Unity, Sonic Pi and Processing in a very constructive, friendly and supportive way. Especially her proactive approach was valued by both me and the pupils.
+                        small 
+                          a(href="https://www.linkedin.com/in/christian-k%C3%B6ppe-0810529/" target="_blank")
+                            <img class="inline LI-icon" src='/images/LinkedIn-Logo.png'> <span class="inline"> Christian Köppe - Lecturer Computer Science at the U-Talent program </span>
+                .item
                   blockquote
                     .row
                       .col-sm-3.text-center
@@ -68,7 +81,7 @@ block content
                         img.img-circle(src='images/Portrait-PeterDuifhuis.jpg', style='width: 100px; height:100px;')
                       .col-sm-9
                         p.
-                          Amber has worked with me as a student assistent in a short course for high school students about making projects with Arduino's and electrical components. With little help, Amber got to know the material beforehand (ie. building prjects with the Arduino). Amber showed interest in the course and aligned her own approach to students with the goals and didactics. She was punctual, proactive in helping students and communicative concerning to where she did and didn't have the knowledge to help. So all in all: a great addition to the teaching team!
+                          Amber has worked with me as a student assistent in a short course for high school students about making projects with Arduino's and electrical components. With little help, Amber got to know the material beforehand (ie. building projects with the Arduino). Amber showed interest in the course and aligned her own approach to students with the goals and didactics. She was punctual, proactive in helping students and communicative concerning to where she did and didn't have the knowledge to help. So all in all: a great addition to the teaching team!
                         small 
                           a(href="https://www.linkedin.com/in/peter-duifhuis-2162998/" target="_blank")
                             img.LI-icon(src='/images/LinkedIn-Logo.png')

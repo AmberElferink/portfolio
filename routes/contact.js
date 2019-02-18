@@ -108,7 +108,7 @@ router.post('/', function(req, res, next) {
  
 function sendEmail(req, res) {
   const msg = {
-    to: 'amber.elferink@gmail.com',
+    to: 'portfolio.amber.elferink@gmail.com',
     from: {
       email: req.body.email,
       name: req.body.name
