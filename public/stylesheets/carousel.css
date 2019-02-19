@@ -17,13 +17,9 @@
 /* Previous button  */
 #quote-carousel .carousel-control.left 
 {
-  left: -12px;
+  left: 15px;
 }
-/* Next button  */
-#quote-carousel .carousel-control.right 
-{
-  right: -60px !important;
-}
+
 /* Changes the position of the indicators */
 #quote-carousel .carousel-indicators 
 {
@@ -115,8 +111,9 @@
     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
   }
   .col-sm-9 {
-    width: 100%;
-    max-width: 100%;
+    min-width: 65% !important;
+    width: 65% !important;
+    margin: auto;
     flex: initial;
     padding: 0;
   }
@@ -134,10 +131,7 @@
     text-align: center;
   }
 
-  #quote-carousel .carousel-control.right 
-  {
-  right: -15px !important;
-  }
+
   
 }
 
@@ -150,7 +144,8 @@
       padding: 0 40px 30px 40px;
     }
     .col-sm-9 {
-      min-width: 75%;
+      min-width: 65% !important;
+      width: 65% !important;
       flex: initial;
       padding: 0;
     }
@@ -203,8 +198,8 @@
 
 .bordercarr {
  /* border-radius: 25px;*/
-  border: 2px solid lightseagreen;
+  border-top: 2px solid lightseagreen;
+  border-bottom: 2px solid lightseagreen;
   padding: 20px; 
-  border: 2px solid lightseagreen;
   background: rgb(245, 255, 254);
 }
