@@ -1,0 +1,40 @@
+/**
+ * Profile image component
+ */
+ .profile-header-container{
+  margin: 0 auto;
+  text-align: center;
+}
+
+.profile-header-img {
+  text-align: center;
+  transform: translate3d(0px, -50%, 0px);
+}
+
+.profile-header-img > img.img-circle {
+  max-width: 200px;
+  width: 100%;
+  border: 2px solid #51D2B7;
+}
+
+.belowRaised {
+  margin-top: -80px;
+}
+
+
+
+/**
+* Ranking component
+*/
+.rank-label-container {
+  margin-top: -19px;
+  /* z-index: 1000; */
+  text-align: center;
+  font-size: 30px;
+}
+
+.label-green {
+  background-color: lightseagreen;
+  font-family: "Oswald","Arial",serif;
+  font-weight: normal;
+}
