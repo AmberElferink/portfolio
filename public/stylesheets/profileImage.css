@@ -8,7 +8,16 @@
 
 .profile-header-img {
   text-align: center;
-  transform: translate3d(0px, -50%, 0px);
+  
+}
+
+@media (min-width: 768px) {
+  .profile-header-img {
+    transform: translate3d(0px, -50%, 0px);
+  }
+  .belowRaised {
+    margin-top: -80px;
+  }
 }
 
 .profile-header-img > img.img-circle {
@@ -17,9 +26,7 @@
   border: 2px solid #51D2B7;
 }
 
-.belowRaised {
-  margin-top: -80px;
-}
+
 
 
 
