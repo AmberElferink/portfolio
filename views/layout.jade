@@ -13,11 +13,12 @@ html(lang="en")
       script(async, defer, src='/javascripts/jquery.js')
       <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
       <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+      <script src="javascripts/navbar.js"></script>
 
   body
     block navbar
       // Navigation
-      nav.navbar.navbar-expand-lg.navbar-dark.bg-dark.fixed-top
+      nav.navbar.navbar-expand-lg.navbar-dark.bg-dark.fixed#navbar
         .container  
           div.navbar-brand         
             a(href="https://www.linkedin.com/in/amber-elferink/" target="_blank")

@@ -18,6 +18,10 @@ a {
 
 .navbar {
   margin: 0px;
+  z-index: 50000;
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 
 .container {
@@ -192,6 +196,9 @@ h2 {
   padding: 15px 15px;
   font-size: 18px;
   line-height: 20px;
+}
+.navbar {
+  justify-content: space-between;
 }
 .navbar-brand a {
   padding-right: 2px;
