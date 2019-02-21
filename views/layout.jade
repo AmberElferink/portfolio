@@ -2,18 +2,20 @@ doctype html
 html(lang="en")
   head
     <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1" />
+    <meta property="og:image" content="/images/Header-mobile.jpg" />
+
     title Amber Elferink - #{title}
     block stylesheets
-      link(rel='stylesheet', id='bootstrap-css', href='/stylesheets/bootstrap.css')
+      link( defer rel='stylesheet', id='bootstrap-css', href='/stylesheets/bootstrap.css')
       <link defer href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-      link(rel='stylesheet', href='/stylesheets/style.css')     
+      link( defer rel='stylesheet', href='/stylesheets/style.css')     
       <link defer href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 
     block scripts
       //script(async, defer, src='/javascripts/jquery.js')
-      <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+      <script defer src="//code.jquery.com/jquery-1.11.1.min.js"></script>
       <script defer src="/javascripts/bootstrap330.js"></script>
-      <script src="javascripts/navbar.js"></script>
+      <script defer src="javascripts/navbar.js"></script>
 
   body
     block navbar
