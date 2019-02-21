@@ -1,7 +1,7 @@
 doctype html
 html(lang="en")
   head
-    <meta name="viewport" content="width=device-width, user-scalable=yes" />
+    <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1" />
     title Amber Elferink - #{title}
     block stylesheets
       link(rel='stylesheet', id='bootstrap-css', href='/stylesheets/bootstrap.css')
@@ -52,7 +52,14 @@ html(lang="en")
                   i.fa.fa-envelope-o
                   | Contact
     block headerImg
-      img(href='/' src="/images/Header.jpg")#headerImage
+      picture
+        <source media="(min-width: 992px)" srcset="images/Header.webp" type="image/webp">
+        <source media="(min-width: 500px)" srcset="images/Header-tablet.webp" type="image/webp">
+        <source media="(min-width: 0px)" srcset="images/Header-mobile.webp" type="image/webp">
+        <source media="(min-width: 992px)" srcset="images/Header.jpg" type="image/jpeg">
+        <source media="(min-width: 500px)" srcset="images/Header-tablet.jpg" type="image/jpeg">
+        <source media="(min-width: 0px)" srcset="images/Header-mobile.jpg" type="image/jpeg">
+        img(href='/' src="/images/Header.jpg" alt="Header Amber Elferink")#headerImage
 
 
 

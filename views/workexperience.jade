@@ -28,7 +28,9 @@ block content
           .col-lg-4.col-sm-6.portfolio-item
             .card.h-100
               a(href='#').div-img-top
-                img.card-img-top(src='/images/Arduino-collage.jpg', alt='Arduino U-talent students in the workshop')
+                picture
+                  source(srcset="/images/Arduino-collage.webp" type="image/webp")
+                  img.card-img-top(src='/images/Arduino-collage.jpg' type="image/jpeg" alt='Arduino U-talent projects in the workshop')  
               .card-body
                 div.upper-content
                   h4.card-title Arduino workshops
@@ -41,8 +43,9 @@ block content
           .col-lg-4.col-sm-6.portfolio-item
             .card.h-100
               a(href='#').div-img-top
-                //-iframe(width="700" height="400" src="https://www.youtube.com/embed/xG2lreUPnFQ?controls=0&autoplay=1&mute=1&loop=1&modestbranding=0" frameborder="0").card-img-top
-                img.card-img-top(src='/images/unity.jpg', alt='Unity Simulation and Games')
+                picture
+                  source(srcset="/images/unity.webp" type="image/webp")
+                  img.card-img-top(src='/images/unity.jpg' type="image/jpeg" alt='Unity Simulation and Games')
               .card-body
                 div.upper-content
                   h4.card-title  Simulation and Games in Unity
@@ -81,7 +84,7 @@ block content
                     Secondary schools usually do not have expensive apparatus such as a GC. 
                     To give them experience with that, two students from Utrecht University are given a rental car and the equipment.
                     They drive to the school, set up the equipment and give a presentation on the subject of catalysis and GC.
-                    The students then have a palladium, platinum, copper and as a control only the support: aluminium oxide. 
+                    The students then have a palladium, platinum, copper catalysts and as a control only the support: aluminium oxide. 
                     They then test how well these catalysts work for burning methane by looking at the end products with the GC.
       section.work-overview
           h2 Utrecht University - Logics assistant, Departement Informatics
@@ -125,5 +128,5 @@ block content
             br           
             small Jan 2011 - October 2011
           p.
-            When I was on high school I was interested in technology and wanted to gain some hands-on experience.
+            When I was in high school I was interested in technology and wanted to gain some hands-on experience.
             I repaired bicycles every week in a local bicycle repair shop. 

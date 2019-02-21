@@ -15,19 +15,21 @@ block content
           .col-lg-4.col-sm-6.portfolio-item
             .card.h-100
               a(href='https://github.com/AmberElferink/ImageProcessing3/wiki', target="_blank").div-img-top
-                img.card-img-top(src='/images/handDet.jpg', alt='Hand detection result with beamer projection')
+                picture
+                  source(srcset="/images/handDet.webp" type="image/webp")
+                  img.card-img-top(src='/images/handDet.jpg' type="image/jpeg" alt='Hand detection result with beamer projection')  
               .card-body
                 div.upper-content
                   h4.card-title
                     a(href='https://github.com/AmberElferink/ImageProcessing3/wiki', target="_blank") Hand detection algorithm
                   p.card-text
-                    | Detects amount of fingers and position of a hand on a table with an overlay projected by a beamer.
-                    | Use cases can be to actively change the projection when a hand points at a specific spot.
+                    | This algorithm detects the amount of fingers and position of a hand on a table with an overlay projected by a beamer.
+                    | This can be used to change the projection when a hand points at a specific spot.
                     | General process:
                     | First, the image is iteratively thresholded to reduce the background noise.
                     | Then, the largest item is isolated. The convex hull and convex defects are generated.
-                    | From the angles of the fingers, the finger amount and location is determined.
-                    | This was particulary challenging due to occlusion and no fixed length and position of the arm attached to the hand.       
+                    | From the angles of the fingers, the amount of fingers and location is determined.
+                    | The largest challenges in this project, were the occlusion of beamer light, and the varying arm length and position.       
                 div.lower-content
                   h4.skills-title Specifications
                   ul.skills-list
@@ -42,7 +44,9 @@ block content
             .card.h-100
               a(href='https://github.com/AmberElferink/Raytracer/wiki', target="_blank").div-img-top
                 //-iframe(width="700" height="400" src="https://www.youtube.com/embed/xG2lreUPnFQ?controls=0&autoplay=1&mute=1&loop=1&modestbranding=0" frameborder="0").card-img-top
-                img.card-img-top(src='/images/RayTracerScreenshot.png', alt='Raytracer with triangles, spheres, spotlight, checkboard and glass.')
+                picture
+                  source(srcset="/images/RayTracerScreenshot.webp" type="image/webp")
+                  img.card-img-top(src='/images/RayTracerScreenshot.png', alt='Raytracer with triangles, spheres, spotlight, checkboard and glass.' type="image/png")  
               .card-body
                 div.upper-content
                   h4.card-title
@@ -51,7 +55,7 @@ block content
                     | A 3D environment that does not have real-time performance as priority, but how physically accurate shadows, lighting and reflections can be rendered. This method is mostly used in rendering software.
                     | It was made from a template where you could color individual pixels on the screen.
                     | From there, a ray was shot from each pixel into a virtual space and the intersection with the closests object and its color is determined. 
-                    | From there, further rays can be shot to obtain shadow, reflections and refractions.
+                    | Then, further rays can be shot to obtain shadow, reflections and refractions.
                 div.lower-content
                   h4.skills-title Specifications
                   ul.skills-list
@@ -71,9 +75,10 @@ block content
                   h4.card-title
                     a(href='#') Rasterization Engine
                   p.card-text
-                    | A 3D environment that has real-time performance as priority, however, shadows, lighting and reflections will be less accurate. This method is mostly used in games.
+                    | A 3D environment that has real-time performance as priority. 
+                    | However, shadows, lighting and reflections will be less accurate. This rendering method is mostly used in games.
                     | Implemented many basic engine features from a template that could load a basic 3D meshes.
-                    | The features implemented are: scenegraph, which enables rotation and translation with respect to parent objects and finally transforming to camera space.
+                    | One of the features implemented is a scenegraph, which enables rotation and translation with respect to parent objects and finally transforming to camera space.
                     | This was done with matrix multiplications.
                     | Other implemented features include: Pong shading, texture mapping and normal maps.
                 div.lower-content
@@ -87,17 +92,19 @@ block content
           .col-lg-4.col-sm-6.portfolio-item
             .card.h-100
               a(href='https://github.com/AmberElferink/LarryDragonsDen/wiki').div-img-top
-                img.card-img-top(src='/images/Larry.png', alt='Image from story and screenshot from Larry the Unsanitary canary')
+                picture
+                  source(srcset="/images/Larry.webp" type="image/webp")
+                  img.card-img-top(src='/images/Larry.png', alt='Image from story and screenshot from Larry the Unsanitary canary' type="image/png")  
               .card-body
                 div.upper-content
                   h4.card-title
                     a(href='https://github.com/AmberElferink/LarryDragonsDen/wiki') Larry the Unsanitary Canary: Dragons Den
                   p.card-text
-                    | The game starts when Larry, the trusty steed of the adventures, besmurged the wall of a dragons den. The players are locked into the dragons dungeon. 
-                    | Escaping it is their only hope to freedom.
+                    | The game starts when Larry, the trusty steed of the adventures, besmirches the wall of a dragons den. 
+                    | The players are locked into the dragons dungeon, and escaping it is their only hope to freedom.
                     | This game was made as a first year introduction project. It was made within two months with a team of seven first year students.
                     | It is a co-op puzzle dungeon crawler, where the players need to find colored keys to unlock doors and each player can only pick up keys of his own color.
-                    | Some doors can be opened by levers, which a player can hold down to hold open doors for eachother.
+                    | Some doors can be opened by levers, which a player can hold down to open doors for eachother.
                     | Along the way, players will encounter evil bunnies and pinguins they must defeat.
                 div.lower-content
                   h4.skills-title Specifications
@@ -111,16 +118,18 @@ block content
           .col-lg-4.col-sm-6.portfolio-item
             .card.h-100
               a(href='#').div-img-top
-                img.card-img-top(src='/images/fastdining.png', alt='Fastdining webshop image')
+                picture
+                  source(srcset="/images/fastdining.webp" type="image/webp")
+                  img.card-img-top(src='/images/fastdining.png', alt='Fastdining webshop image' type="image/png")
               .card-body
                 div.upper-content
                   h4.card-title
                     a(href='#') Fast Dining Webshop
                   p.card-text
-                    | This is a small web shop made for the web technology course.
+                    | This is a small web shop made for a web technology course.
                     | The main focus was to create a functioning webshop, with both front- and backend. 
-                    | The user can make an account, log in, filter products and buy a product whereafter they can view it in their order history.
-                    | This project was mostly focussed on the back-end and less on the responsiveness and looks.
+                    | Users can make an account, log in, filter products and buy a product whereafter they can view it in their order history.
+                    | This project was mostly focused on the back-end and less on responsiveness and looks.
                 div.lower-content
                   h4.skills-title Specifications
                   ul.skills-list
@@ -133,7 +142,9 @@ block content
           .col-lg-4.col-sm-6.portfolio-item
             .card.h-100
               a(href='www.amberelferink.com' target='_blank').div-img-top
-                img.card-img-top(src='/images/Portfolio.jpg', alt='Screenshot of the Portfolio Homepage')
+                picture
+                  source(srcset="/images/Portfolio.webp" type="image/webp")
+                  img.card-img-top(src='/images/Portfolio.jpg', alt='Screenshot of the Portfolio Homepage' type="image/jpeg")
               .card-body
                 div.upper-content
                   h4.card-title
@@ -180,18 +191,20 @@ block content
           .col-lg-4.col-sm-6.portfolio-item
               .card.h-100
                 a(href='').div-img-top
-                  img.card-img-top(src='/images/WaistBag.jpg', alt='Leather Waist Bag')
+                  picture
+                    source(srcset="/images/WaistBag.webp" type="image/webp")
+                    img.card-img-top(src='/images/WaistBag.jpg', alt='Leather Waist Bag' type="image/jpeg")
                 .card-body
                   div.upper-content
                     h4.card-title
                       a(href='') Leather waist bag
                     p.card-text
-                      | Next to working on computers, I like working with my hands. 
-                      | Since pockets for women are usually too small to fit a phone, wallet and keys, this is a solution to that.
+                      | Aside from working on computers, I like working with my hands. 
+                      | Since pockets for women are usually too small to fit a phone, wallet and keys, I made this to solve that problem.
                       | I wear it on my belt every day.
-                      | I first made the design to fit my keys, wallet and phone exactly. Then I added decorations.
+                      | I first made the design to fit my keys, wallet and phone exactly, and then I added decorations.
                       | I bought vegetable tanned leather, stamped, cut and dyed it, after which I have sewn it together by hand.
-                      | The feedback received on this project was very good and some strangers even asked for possibilities to make another bag for them.
+                      | I have received a lot of positive feedback on this project and have even been approached by strangers to create a similar bag for them.
                   div.lower-content
                     h4.skills-title Specifications
                     ul.skills-list
@@ -201,11 +214,13 @@ block content
           .col-lg-4.col-sm-6.portfolio-item
             .card.h-100
               a(href='#').div-img-top
-                img.card-img-top(src='/images/VR-exo-logo.png', alt='VR-exo logo')
+                picture
+                  source(srcset="/images/VR-exo-logo.webp" type="image/webp")
+                  img.card-img-top(src='/images/VR-exo-logo.png', alt='Leather Waist Bag' type="image/png")
               .card-body
                 div.upper-content
                   h4.card-title
-                    a(href='#') VR-exo, an exoskeleton for VR
+                    a(href='#') VR-exo, an exoskeleton for Virtual Reality
                   p.card-text
                     | I am currently working on designing an exoskeleton for Virtual Reality to provide force feedback.
                     | The first step is to make an exoskeleton for the elbow joint and connect it to a virtual game.

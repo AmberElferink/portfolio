@@ -13,7 +13,9 @@ block append scripts
 block content
         section.normal-page-container
           .profile-header-img
-            img.img-circle(src='/images/profielfoto.jpg')
+            picture
+              source(srcset="images/profielfoto.webp" type="image/webp")
+              img.img-circle(src='/images/profielfoto.jpg' type="image/jpeg")
             // badge
             .rank-label-container
               span.label.label-default.label-green.rank-label Amber Elferink
@@ -56,7 +58,9 @@ block content
                   blockquote
                     .row
                       .col-sm-3.text-center
-                        img.img-circle(src='/images/Portrait-ChristianKoppe.jpg', style='width: 100px;height:100px;')
+                        picture
+                          source(srcset="/images/Portrait-ChristianKoppe.webp" type="image/webp" style='width: 100px;height:100px;')
+                          img.img-circle(src='/images/Portrait-ChristianKoppe.jpg' type="image/jpeg" style='width: 100px;height:100px;')                      
                       .col-sm-9
                         p 
                           |Amber assisted me in various computer science modules for pupils from upper secondary education as part of the U-Talent programme at the Utrecht University. She helped the pupils during practical exercises and used her thorough knowledge of Arduino development, Unity, Sonic Pi and Processing in a very constructive, friendly and supportive way. Especially her proactive approach was valued by both me and the pupils.
@@ -67,7 +71,9 @@ block content
                   blockquote
                     .row
                       .col-sm-3.text-center
-                        img.img-circle(src='/images/Portrait-PaulienVanBentum.jpg', style='width: 100px;height:100px;')
+                        picture
+                          source(srcset="/images/Portrait-PaulienVanBentum.webp" type="image/webp"  style='width: 100px;height:100px;')
+                          img.img-circle(src='/images/Portrait-PaulienVanBentum.jpg' type="image/jpeg" style='width: 100px;height:100px;')                      
                       .col-sm-9
                         p
                           | Amber is a hardworking person and she takes her responsibilities seriously. 
@@ -88,7 +94,9 @@ block content
                   blockquote
                     .row
                       .col-sm-3.text-center
-                        img.img-circle(src='images/Portrait-PeterDuifhuis.jpg', style='width: 100px; height:100px;')
+                        picture
+                          source(srcset="/images/Portrait-PeterDuifhuis.webp" type="image/webp" style='width: 100px;height:100px;')
+                          img.img-circle(src='/images/Portrait-PeterDuifhuis.jpg' type="image/jpeg" style='width: 100px;height:100px;')     
                       .col-sm-9
                         p.
                           Amber has worked with me as a student assistent in a short course for high school students about making projects with Arduino's and electrical components. With little help, Amber got to know the material beforehand (ie. building projects with the Arduino). Amber showed interest in the course and aligned her own approach to students with the goals and didactics. She was punctual, proactive in helping students and communicative concerning to where she did and didn't have the knowledge to help. So all in all: a great addition to the teaching team!
@@ -101,7 +109,9 @@ block content
                   blockquote
                     .row
                       .col-sm-3.text-center
-                        img.img-circle(src='/images/Portrait-ManonThijssen.jpg', style='width: 100px; height:100px;')
+                        picture
+                          source(srcset="/images/Portrait-ManonThijssen.webp" type="image/webp" style='width: 100px;height:100px;')
+                          img.img-circle(src='/images/Portrait-ManonThijssen.jpg' type="image/jpeg" style='width: 100px;height:100px;')     
                       .col-sm-9
                         p
                           | As coordinator of Project Werfkracht where Amber participated as teaching assistant, I have learned to know her as a great student to work with. Amber is clear in her communication, is intelligent and quickly sees what is needed somewhere. She is patient and friendly and is always prepared to take on extra tasks. She works hard and good.
