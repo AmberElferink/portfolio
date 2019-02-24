@@ -14,32 +14,34 @@ block content
         .row
           .col-lg-4.col-sm-6.portfolio-item
             .card.h-100
-              a(href='https://github.com/AmberElferink/ImageProcessing3/wiki', target="_blank").div-img-top
+              a(href='#').div-img-top
                 picture
-                  source(srcset="/images/handDet.webp" type="image/webp")
-                  img.card-img-top(src='/images/handDet.jpg' type="image/jpeg" alt='Hand detection result with beamer projection')  
+                  source(srcset="/images/VR-exo arm design.webp" type="image/webp")
+                  img.card-img-top(src='/images/VR-exo arm design.png', alt='Leather Waist Bag' type="image/png")
               .card-body
                 div.upper-content
                   h4.card-title
-                    a(href='https://github.com/AmberElferink/ImageProcessing3/wiki', target="_blank") Hand detection algorithm
+                    a(href='#') VR-exo, an exoskeleton for Virtual Reality
                   p.card-text
-                    | This algorithm detects the amount of fingers and position of a hand on a table with an overlay projected by a beamer.
-                    | This can be used to change the projection when a hand points at a specific spot.
-                    | General process:
-                    | First, the image is iteratively thresholded to reduce the background noise.
-                    | Then, the largest item is isolated. The convex hull and convex defects are generated.
-                    | From the angles of the fingers, the amount of fingers and location is determined.
-                    | The largest challenges in this project, were the occlusion of beamer light, and the varying arm length and position.       
+                    | Wat if we were to make an exoskeleton for the entire body, that can be tilted as well?
+                    | We would be able to simulate anything. Walk, step onto things, step in a plane and fly away. 
+                    | Feel all the forces in a virtual world.
+                    | The first step is to make an exoskeleton for the elbow joint and connect it to a virtual game.
+                    | I am currently working on building a prototype that does this.
+                    | Adding the shoulder joint will be the next step. 
+                    | My ultimate goal, in many years, is to build an exoskeleton for the legs as well.
+                    | Designing an exoskeleton counteracting human movements is hard due to the high torque and speed requirements for the motors.
+                    | Another problem is that you should be able to move without the motor counteracting your forces.
+                    | Both of these difficulties prove to be most challenging for the legs.
+                    | The research I have done up untill now on the legs is downloadable in a PDF below.
+                    | This project is currently in research status.
                 div.lower-content
                   h4.skills-title Specifications
                   ul.skills-list
-                    li Built in C#
-                    li Handles occlusion (by beamer light)
-                    li Handles rotation of the hand
-                    li No external libraries used
-                    li Graded with 8.7/10    
-                <button class ="btn-box" onclick="window.open('https://github.com/AmberElferink/ImageProcessing3/wiki', '_blank');"><i class="fa fa-github-square"></i> Checkout Github </button>
-        
+                    li The elbow exoskeleton is currently being made.
+                    li The legs are still in research process
+                <button class ="btn-box" onclick="window.open('files/VR-exo-Research.pdf', '_blank');"><i class="fa fa-download"></i> Research PDF VR-exo</button>
+      
           .col-lg-4.col-sm-6.portfolio-item
             .card.h-100
               a(href='https://github.com/AmberElferink/Raytracer/wiki', target="_blank").div-img-top
@@ -88,6 +90,33 @@ block content
                     li Features: Phong shading model, multiple light sources, normal maps and an interactive camera.
                     li Graded with a 9.7/10
                 <button class ="btn-box" onclick="window.open('https://github.com/AmberElferink/Rasterizer', '_blank');"><i class="fa fa-github-square"></i> Checkout Github</button>
+          .col-lg-4.col-sm-6.portfolio-item
+            .card.h-100
+              a(href='https://github.com/AmberElferink/ImageProcessing3/wiki', target="_blank").div-img-top
+                picture
+                  source(srcset="/images/handDet.webp" type="image/webp")
+                  img.card-img-top(src='/images/handDet.jpg' type="image/jpeg" alt='Hand detection result with beamer projection')  
+              .card-body
+                div.upper-content
+                  h4.card-title
+                    a(href='https://github.com/AmberElferink/ImageProcessing3/wiki', target="_blank") Hand detection algorithm
+                  p.card-text
+                    | This algorithm detects the amount of fingers and position of a hand on a table with an overlay projected by a beamer.
+                    | This can be used to change the projection when a hand points at a specific spot.
+                    | General process:
+                    | First, the image is iteratively thresholded to reduce the background noise.
+                    | Then, the largest item is isolated. The convex hull and convex defects are generated.
+                    | From the angles of the fingers, the amount of fingers and location is determined.
+                    | The largest challenges in this project, were the occlusion of beamer light, and the varying arm length and position.       
+                div.lower-content
+                  h4.skills-title Specifications
+                  ul.skills-list
+                    li Built in C#
+                    li Handles occlusion (by beamer light)
+                    li Handles rotation of the hand
+                    li No external libraries used
+                    li Graded with 8.7/10    
+                <button class ="btn-box" onclick="window.open('https://github.com/AmberElferink/ImageProcessing3/wiki', '_blank');"><i class="fa fa-github-square"></i> Checkout Github </button>
  
           .col-lg-4.col-sm-6.portfolio-item
             .card.h-100
@@ -211,22 +240,3 @@ block content
                       li Made from vegetable tanned cowhide.
                       li All design and processing steps are done by hand.
                       li High quality, still functional after 2.5 years.
-          .col-lg-4.col-sm-6.portfolio-item
-            .card.h-100
-              a(href='#').div-img-top
-                picture
-                  source(srcset="/images/VR-exo-logo.webp" type="image/webp")
-                  img.card-img-top(src='/images/VR-exo-logo.png', alt='Leather Waist Bag' type="image/png")
-              .card-body
-                div.upper-content
-                  h4.card-title
-                    a(href='#') VR-exo, an exoskeleton for Virtual Reality
-                  p.card-text
-                    | I am currently working on designing an exoskeleton for Virtual Reality to provide force feedback.
-                    | The first step is to make an exoskeleton for the elbow joint and connect it to a virtual game.
-                    | After this, I will continue with a shoulder joint and in many years, I wish to make an exoskeleton for the legs as well.
-                    | This project is currently in research status.
-                div.lower-content
-                  h4.skills-title Specifications
-                  ul.skills-list
-                    li Still in research process
