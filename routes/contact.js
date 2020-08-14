@@ -27,7 +27,8 @@ router.post('/', validationRules, (req, res, next) => {
     if(message === "allgood")
     {
       validateForm(function(validateErrs){
-        if(validateErrs)
+        console.log(validateErrs);
+        if(validateErrs.length > 0)
         {
           //console.error(validateErrs);
           return res.render('contact', {
@@ -41,6 +42,7 @@ router.post('/', validationRules, (req, res, next) => {
         }
         else 
         {
+          console.log("SENDING MAIL");
           sendEmail(req, res);
         }
       }, req);
@@ -135,7 +137,7 @@ function sendEmail(req, res) {
   sgMail.send(msg, function(err, json) {
     if (err) {
       return res.render('contactResponse', 
-        {title: 'An error with sending the email has occured. Please try again later or contact me via LinkedIn'});
+        {title: 'An error with sending the email has occured. Please try again later or contact me via LinkedIn or via the contact info on my CV'});
     }
     else {
       res.render('contactResponse', 
