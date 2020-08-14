@@ -27,7 +27,7 @@ var app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'jade');
+app.set('view engine', 'pug');
 
 //Middleware for the reCAPTCHA part:
 app.use(bodyParser.urlencoded({extended: false}));
@@ -35,23 +35,23 @@ app.use(bodyParser.json());
 
 
 // Express Validator Middleware
-app.use(expressValidator({
-  errorFormatter: function(param, msg, value) {
-    var namespace = param.split('.')
-    , root = namespace.shift()
-    , formParam = root;
+// app.use(expressValidator({
+//   errorFormatter: function(param, msg, value) {
+//     var namespace = param.split('.')
+//     , root = namespace.shift()
+//     , formParam = root;
 
-    while(namespace.length) {
-      formParam += '[' + namespace.shift() + ']';
-    }
+//     while(namespace.length) {
+//       formParam += '[' + namespace.shift() + ']';
+//     }
 
-    return {
-      param : formParam,
-      msg : msg,
-      value : value
-    };
-  }
-}));
+//     return {
+//       param : formParam,
+//       msg : msg,
+//       value : value
+//     };
+//   }
+// }));
 
 //Other middleware
 app.use(morgan('common', { stream: winston.stream }));

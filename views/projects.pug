@@ -1,4 +1,4 @@
-extends layout.jade
+extends layout.pug
 block append stylesheets
   link(rel='stylesheet' defer, href='/stylesheets/bootstrap-grid.css')
   link(rel='stylesheet' defer, href='/stylesheets/bootstrap-reboot.css')
@@ -184,7 +184,7 @@ block content
                 div.lower-content
                   h4.skills-title Specifications
                   ul.skills-list
-                    li Built using Jade, CSS, NodeJS and Bootstrap
+                    li Built using Pug(formally Jade), CSS, NodeJS and Bootstrap
                     li Responsive on all device sizes
                     li Running on a self setup Raspberry webserver
                 <button class ="btn-box" onclick="window.open('https://github.com/AmberElferink/Portfolio', '_blank');"><i class="fa fa-github-square"></i> Checkout Github</button>

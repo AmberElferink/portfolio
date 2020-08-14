@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var expressValidator = require('express-validator');
+var {body, validationResult} = require('express-validator');
 const request = require('request');
 
 var winston = require('../config/winston');
@@ -8,12 +8,20 @@ var winston = require('../config/winston');
 
 
 router.get('/', function(req, res, next) {
-console.log("contact");
+//console.log("contact");
   res.render('contact', {title: "Let's talk!", name: "", email: "", subject: "", content: "", errs: []});
 });
 
+validationRules = [
+  body('name', 'name is required').isLength({min: 2}).exists().escape(),
+  body('email', 'email must be a valid email format').exists().isEmail().normalizeEmail(),
+  body('subject', 'subject is required').exists().escape(),
+  body('content', 'content is required').exists().trim().escape()
+];
 
-router.post('/', function(req, res, next) {
+
+
+router.post('/', validationRules, (req, res, next) => {
 
   checkRECAPTCHA(function(err, message){
     if(message === "allgood")
@@ -21,7 +29,7 @@ router.post('/', function(req, res, next) {
       validateForm(function(validateErrs){
         if(validateErrs)
         {
-          console.error(validateErrs);
+          //console.error(validateErrs);
           return res.render('contact', {
             title: "Let's talk!", 
             name: req.body.name, 
@@ -53,7 +61,7 @@ router.post('/', function(req, res, next) {
   //-------------------------------------------------------RECAPTCHA PART---------------------------------------------------------------------
   //tutorial on: https://codeforgeek.com/2016/03/google-recaptcha-node-js-tutorial/
   //for the testing phase, the following keys are used:
-  //Site key, in contact.jade file form:
+  //Site key, in contact.pug file form:
   //Site key: 6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI
   //secret key, here.
   //Secret key: 6LeIxAcTAAAAAGG-vFI1TnRWxMZNFuojJ4WifJWe
@@ -88,17 +96,15 @@ router.post('/', function(req, res, next) {
 
   //--------------------------------------FORM VALIDATION PART----------------------------------------------------
   function validateForm(callback, req) {
-    req.checkBody('name', 'name is required').notEmpty().isLength({min: 3}).escape();
-    req.checkBody('email', 'email must be a valid email format').notEmpty().isEmail().normalizeEmail();
-    req.checkBody('subject', 'subject is required').notEmpty().escape();
-    req.checkBody('content', 'content is required').notEmpty().trim().escape();
 
-    var errors = req.validationErrors();
+    var errors = validationResult(req).errors;
 
     if(errors) {
+     //console.log(errors);
       callback(errors);
     }
     else {
+      //console.log('No errors');
       callback(undefined);
     }
   }
