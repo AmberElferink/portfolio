@@ -1,0 +1,6 @@
+#files and folders noted here, will not be uploaded to host
+/node_modules/
+.git
+.gitignore
+Portfolio onderhoud.rtf
+
