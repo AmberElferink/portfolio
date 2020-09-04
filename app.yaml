@@ -2,7 +2,7 @@ runtime: nodejs
 api_version: '1.0'
 env: flexible
 threadsafe: true
-instance_class: F1 
+instance_class: B1
   #what is it: https://cloud.google.com/appengine/docs/flexible/python/reference/app-yaml#resource-settings
   #what are the costs? The CPU costs were very high (50 euros for almost no visitors), also a bit memory consumption on server. Other costs: https://cloud.google.com/appengine/pricing
 handlers:
@@ -17,11 +17,12 @@ handlers:
     redirect_http_response_code: '301'
 env_variables:
   BUCKET_NAME: portfolio-gcs-bucket
-automatic_scaling:
-  cool_down_period: 120s
-  max_num_instances: 1
-  cpu_utilization:
-    target_utilization: 0.5
+manual_scaling:
+  instances: 1
+resources:
+  cpu: 1
+  memory_gb: 0.5
+  disk_size_gb: 1
 network: {}
 liveness_check:
   initial_delay_sec: 300
