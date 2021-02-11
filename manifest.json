@@ -1,0 +1,14 @@
+{
+    "runtime": {
+        "majorVersion": "8"
+    },
+    "type": "web",
+    "command": "node bin/www",
+    "startupTime": "10",
+    "notes": "Portfolio about bachelor",
+    "mode": "rolling",
+    "home": "/home.jsp",
+    "healthCheck": {
+      "http-endpoint": "/projects"
+    }
+}
