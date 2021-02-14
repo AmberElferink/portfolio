@@ -17,21 +17,49 @@ block content
               a(href='#').div-img-top
                 picture
                   source(srcset="/images/VR-exo arm design.webp" type="image/webp")
-                  img.card-img-top(src='/images/VR-exo arm design.png', alt='Leather Waist Bag' type="image/png")
+                  img.card-img-top(src='/images/VR-exo arm design.png', alt='VR-exo elbow force feedback design' type="image/png")
               .card-body
                 div.upper-content
                   h4.card-title
                     a(href='#') VR-exo, an exoskeleton for Virtual Reality
                   p.card-text
                     | Wat if we were to make an exoskeleton for the entire body, that can be tilted as well?
-                    | We would be able to simulate anything. Walk, step onto things, step in a plane and fly away. 
+                    | We would be able to simulate anything in VR. Walk, step onto things, step in a plane and fly away. 
                     | Feel all the forces in a virtual world.
-                    | By following extra courses at TU Delft during my master on simulations in 3D space in Utrecht, I plan to fully customize my education to fit haptics for VR.
-                    | My ultimate goal, in many years, is to build an exoskeleton for the legs.
+                    | Since 2018 I tried to fully customize my education to work towards this goal.
+                    | The image above is from a project to create haptic force feedback for the elbow (to shoot a bow in VR).
                     | Designing an exoskeleton counteracting human movements is hard due to the high torque and speed requirements for the motors.
                     | Another problem is that you should be able to move without the motor counteracting your forces.
                     | Both of these difficulties prove to be most challenging for the legs.
                     | The research I have done up untill now on the legs is downloadable in a PDF below.
+                div.lower-content
+                  h4.skills-title Specifications
+                  ul.skills-list
+                    li I am currently studying towards this goal.
+                <button class ="btn-box" onclick="window.open('files/VR-exo-Research-sensored.pdf', '_blank');"><i class="fa fa-download"></i> Research PDF VR-exo</button>
+
+          .col-lg-4.col-sm-6.portfolio-item
+            .card.h-100
+              a(href='#').div-img-top
+                picture
+                  source(srcset="/images/VR-exo arm design.webp" type="image/webp")
+                  img.card-img-top(src='/images/VR-exo arm design.png', alt='VR-exo first design image' type="image/png")
+              .card-body
+                div.upper-content
+                  h4.card-title
+                    a(href='#') VR-exo, an exoskeleton for Virtual Reality
+                  h5.date 3 weeks full-time - Dec 2018
+                  p.card-text
+                    | Wat if we were to make an exoskeleton for the entire body, that can be tilted as well?
+                    | We would be able to simulate anything in VR. Walk, step onto things, step in a plane and fly away. 
+                    | Feel all the forces in a virtual world.
+                    | I spent a few weeks doing research and designing ideas to solve the locomotion problem with haptic feedback in my spare time.
+                    | Since this project I tried to fully customize my education to work towards this goal.
+                    | Designing an exoskeleton counteracting human movements is hard due to the high torque and speed requirements for the motors.
+                    | Another problem is that you should be able to move without the motor counteracting your forces.
+                    | Both of these difficulties prove to be most challenging for the legs.
+                    | The research I have during this time is downloadable in a PDF below. 
+                    | Please keep in mind that during this time I only had chemistry and 1.5 years computer science experience.
                 div.lower-content
                   h4.skills-title Specifications
                   ul.skills-list
@@ -49,6 +77,7 @@ block content
                 div.upper-content
                   h4.card-title
                     a(href='https://github.com/AmberElferink/Raytracer/wiki', target="_blank") Ray-Tracer
+                  h5.date 3 weeks part-time - May 2018
                   p.card-text
                     | A 3D environment that does not have real-time performance as priority, but how physically accurate shadows, lighting and reflections can be rendered. This method is mostly used in rendering software.
                     | It was made from a template where you could color individual pixels on the screen.
@@ -72,6 +101,7 @@ block content
                 div.upper-content
                   h4.card-title
                     a(href='#') Rasterization Engine
+                  h5.date 3 weeks part-time - Jun 2018
                   p.card-text
                     | A 3D environment that has real-time performance as priority. 
                     | However, shadows, lighting and reflections will be less accurate. This rendering method is mostly used in games.
@@ -96,6 +126,7 @@ block content
                 div.upper-content
                   h4.card-title
                     a(href='https://github.com/AmberElferink/ImageProcessing3/wiki', target="_blank") Hand detection algorithm
+                    h5.date 3 weeks part-time - Nov 2018
                   p.card-text
                     | This algorithm detects the amount of fingers and position of a hand on a table with an overlay projected by a beamer.
                     | This can be used to change the projection when a hand points at a specific spot.
@@ -124,6 +155,7 @@ block content
                 div.upper-content
                   h4.card-title
                     a(href='https://github.com/AmberElferink/LarryDragonsDen/wiki') Larry the Unsanitary Canary: Dragons Den
+                    h5.date 8 weeks part-time - Nov-Dec 2017
                   p.card-text
                     | The game starts when Larry, the trusty steed of the adventures, besmirches the wall of a dragons den. 
                     | The players are locked into the dragons dungeon, and escaping it is their only hope to freedom.
@@ -150,6 +182,7 @@ block content
                 div.upper-content
                   h4.card-title
                     a(href='#') Fast Dining Webshop
+                    h5.date 3 weeks part-time - March 2017
                   p.card-text
                     | This is a small web shop made for a web technology course.
                     | The main focus was to create a functioning webshop, with both front- and backend. 
@@ -174,13 +207,17 @@ block content
                 div.upper-content
                   h4.card-title
                     a(href='www.amberelferink.com' target='_blank') Portfolio website
+                    h5.date 2 weeks full-time - Feb 2019 + maintenance later
                   p.card-text
                     | This project is the website you are currently visiting. 
+                    | It has been built from the ground up in NodeJS with Express as backend, borrowing some elements from bootstrap.
                     | It is a very basic website, mostly front-end oriented.
-                    | I could have gone for an amazing template, but I do not want a designers website.
+                    | I could have gone for an amazing template, or a premade wordpress site. 
+                    | However, I do not want a designers website, but I do want full control since templates usually do not give much customization options.
                     | I am not a designer or front-end developer, but I like to make projects functional.
                     | It is built to be responsive and simple.
-                    | The website is running on a Raspberry pi webserver, which I set up myself.
+                    | The website was running on a Raspberry pi webserver, which I set up myself. 
+                    | Since then, I have moved it to an Oracle Cloud Compute engine VPS.
                 div.lower-content
                   h4.skills-title Specifications
                   ul.skills-list
@@ -199,6 +236,7 @@ block content
                   div.upper-content
                     h4.card-title
                       a(href='https://github.com/AmberElferink/AsteroidsInHaskell' target='_blank') Asteroids in Haskell
+                    h5.date 3 weeks part-time - Oct 2018
                     p.card-text
                       | This might seem like a very simple game. However, anyone that has programmed in Haskell can confirm it is a very hard language to work with.
                       | Haskell is a functional programming language, which requires entirely different thinking than the usual imperative programming languages.
@@ -223,6 +261,7 @@ block content
                   div.upper-content
                     h4.card-title
                       a(href='') Leather waist bag
+                    h5.date 1.5 week full-time - August 2017
                     p.card-text
                       | Aside from working on computers, I like working with my hands. 
                       | Since pockets for women are usually too small to fit a phone, wallet and keys, I made this to solve that problem.
@@ -235,4 +274,4 @@ block content
                     ul.skills-list
                       li Made from vegetable tanned cowhide.
                       li All design and processing steps are done by hand.
-                      li High quality, still functional after 2.5 years.
+                      li High quality, still functional after 3.5 years.

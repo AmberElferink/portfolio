@@ -1,3 +1,5 @@
+const develop_mode = true;
+
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
@@ -8,6 +10,15 @@ var morgan = require('morgan');
 var winston = require('./config/winston');
 var expressValidator = require('express-validator');
 
+var connectLivereload = null;
+if(develop_mode)
+{
+  const livereload = require("livereload");
+  const liveReloadServer = livereload.createServer();
+  liveReloadServer.watch(path.join(__dirname, 'public'));
+
+  connectLivereload = require("connect-livereload");
+}
 
 
 //for loading the sendgrid API key:
@@ -32,6 +43,11 @@ app.set('view engine', 'pug');
 //Middleware for the reCAPTCHA part:
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
+
+if (develop_mode)
+{
+  app.use(connectLivereload());
+}
 
 
 // Express Validator Middleware
