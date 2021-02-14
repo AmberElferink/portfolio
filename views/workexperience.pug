@@ -119,32 +119,82 @@ block content
                 p.card-text
                   | Official prerequisites are a bachelor mechanical engineering. Therefore I started out with some deficiencies I quickly caught up (good grades still, GPA unknown for Delft). 
                   | Courses completed:
-                ul 
-                  li #[strong Human Robot Interaction] (Matlab)
-                    br
-                    | McRuer theory, Design cycle and metrics, ironies/pitfalls of automation, training and selection,
-                    | haptic shared control, biosignals (eye tracking), tactile interfaces, motion comfort,
-                    | interactive learning, social robots.
-                  li #[strong Dynamics & Control] (Python)
-                    br
-                    | Simulating double pendulum after deriving equations of motions (Langrange).
-                    | Non-holonomic constraints and car derivations
-                    | PID controller trajectory control
-                  li #[strong Machine Learning for robotics] (Python tensorflow)
-                    br
-                    | Regression, classification, Unsupervised learning, SVM's, Random Forest, Bayesian, PCA,
-                    | Neural Networks
-                  li #[strong Machine Perception] (Python)
-                    br
-                    | Working with RADAR & LiDAR, stereo camera to 3D data, haptic sensors, 
-                    | data filtering, particle, bayesian and kalman filters.
-                  li #[strong Planning and decision making] (Coppeliasim (V-rep) and Python)
-                    br
-                    | Graph-search (Dijkstra/A*), RRT*, collision avoidance by potential fields,
-                    | velocity obstacles. Trajectory optimization, MPC, uncertainty (MDP, POMDP) and multi robot planning.
-                  li #[strong Electronics for Physicists]
-                    br
-                    | Practical course on analog electronic basics in lab on basic components, signals, noise, interferance, microwaves, SPICE simulations, oscilloscopes, generators and network analyzers.
+                #accordion
+                  .card
+                    .card-header
+                      a.card-link(data-toggle='collapse', href='#hri')
+                        |  Human Robot Interaction  (Matlab)
+                    #hri.show.collapse.in(data-parent='#accordion')
+                      .card-body
+                        | McRuer theory, Design cycle and metrics, ironies/pitfalls of automation, training and selection,
+                        | haptic shared control, biosignals (eye tracking), tactile interfaces, motion comfort,
+                        | interactive learning, social robots.
+                  .card
+                    .card-header
+                      a.collapsed.card-link(data-toggle='collapse', href='#dynamics')
+                        |  Dynamics & Control (Python)
+                    #dynamics.collapse(data-parent='#accordion')
+                      .card-body
+                        | Simulating double pendulum after deriving equations of motions (Langrange).
+                        | Non-holonomic constraints and car derivations
+                        | PID controller trajectory control
+                  .card
+                    .card-header
+                      a.collapsed.card-link(data-toggle='collapse', href='#ML')
+                        | Machine Learning for robotics (Python tensorflow)
+                    #ML.collapse(data-parent='#accordion')
+                      .card-body
+                        | Regression, classification, Unsupervised learning, SVM's, Random Forest, Bayesian, PCA,
+                        | Neural Networks.
+                  .card
+                    .card-header
+                      a.collapsed.card-link(data-toggle='collapse', href='#MP')
+                        | Machine Perception (Python)
+                    #MP.collapse(data-parent='#accordion')
+                      .card-body
+                        | Working with RADAR & LiDAR, stereo camera to 3D data, haptic sensors, 
+                        | data filtering, particle, bayesian and kalman filters.
+                  .card
+                    .card-header
+                      a.collapsed.card-link(data-toggle='collapse', href='#Planning')
+                        | Planning and decision making (Coppeliasim (V-rep) and Python)
+                    #Planning.collapse(data-parent='#accordion')
+                      .card-body
+                        | Graph-search (Dijkstra/A*), RRT*, collision avoidance by potential fields,
+                        | velocity obstacles. Trajectory optimization, MPC, uncertainty (MDP, POMDP) and multi robot planning.  
+                  .card
+                    .card-header
+                      a.collapsed.card-link(data-toggle='collapse', href='#Planning')
+                        | Electronics for Physicists
+                    #Planning.collapse(data-parent='#accordion')
+                      .card-body
+                        | Practical course on analog electronic basics in the lab. Topics include basic components, amplifiers signals, noise, interferance, microwaves, SPICE simulations, oscilloscopes, generators and network analyzers.      
+                //- ul 
+                //-   li #[strong Human Robot Interaction] (Matlab)
+                //-     br
+                //-     | McRuer theory, Design cycle and metrics, ironies/pitfalls of automation, training and selection,
+                //-     | haptic shared control, biosignals (eye tracking), tactile interfaces, motion comfort,
+                //-     | interactive learning, social robots.
+                //-   li #[strong Dynamics & Control] (Python)
+                //-     br
+                //-     | Simulating double pendulum after deriving equations of motions (Langrange).
+                //-     | Non-holonomic constraints and car derivations
+                //-     | PID controller trajectory control
+                //-   li #[strong Machine Learning for robotics] (Python tensorflow)
+                //-     br
+                //-     | Regression, classification, Unsupervised learning, SVM's, Random Forest, Bayesian, PCA,
+                //-     | Neural Networks.
+                //-   li #[strong Machine Perception] (Python)
+                //-     br
+                //-     | Working with RADAR & LiDAR, stereo camera to 3D data, haptic sensors, 
+                //-     | data filtering, particle, bayesian and kalman filters.
+                //-   li #[strong Planning and decision making] (Coppeliasim (V-rep) and Python)
+                //-     br
+                //-     | Graph-search (Dijkstra/A*), RRT*, collision avoidance by potential fields,
+                //-     | velocity obstacles. Trajectory optimization, MPC, uncertainty (MDP, POMDP) and multi robot planning.
+                //-   li #[strong Electronics for Physicists]
+                //-     br
+                //-     | Practical course on analog electronic basics in lab on basic components, signals, noise, interferance, microwaves, SPICE simulations, oscilloscopes, generators and network analyzers.
                 p.
                   Courses planned:
                 ul
@@ -205,7 +255,7 @@ block content
                   source(srcset="/images/logo-uu-chem.webp" type="image/webp")
                   img.card-img-top(src='/images/logo-uu-chem.png' type="image/png" alt='Utrecht University Bachelor Chemistry logo')  
               .card-body
-                h4.card-title Game and Media technology master
+                h4.card-title Bachelor Chemistry
                 h5.date September 2014 - July 2017
                 p.card-text
                   | Minor in Nanomaterials

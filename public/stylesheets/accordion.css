@@ -1,0 +1,17 @@
+.card-header a:after {
+    font-family: "FontAwesome";
+    content: "\f00d";
+    float: right;
+    color: grey;
+}
+
+.card-header a.collapsed:after {
+    content: "\f0dd";
+}
+
+.card-header a {
+    position: relative;
+    display: block;
+    padding: rem(10px) rem(20px);
+    transition: all .8s;
+}
