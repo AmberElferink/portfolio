@@ -1,4 +1,4 @@
-const develop_mode = true;
+const develop_mode = false;
 
 var createError = require('http-errors');
 var express = require('express');

@@ -4,11 +4,169 @@ block append stylesheets
   link(rel='stylesheet' defer, href='/stylesheets/bootstrap-reboot.css')
   link(rel='stylesheet' defer, href='/stylesheets/projectBoxes.css')
   link(rel='stylesheet' defer, href='/stylesheets/working-experience.css')
+  <link defer href="/stylesheets/carousel.css" rel="stylesheet">
+  <link defer href="/stylesheets/profileImage.css" rel="stylesheet">
+  <link defer href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
 
 //-images should be 700x464 to be the same size
 block content
       section.work-overview
-        h1 Working Experience
+        //-adapted from: https://bootsnipp.com/snippets/featured/responsive-quote-carousel
+        //------------------------CAROUSEL------------------------------
+        .row
+          .col-md-offset-2.col-md-8.text-center
+            h1 Reviews from former employers
+        .row.bordercarr
+          .col-md-offset-2.col-md-8
+            #quote-carousel.carousel.slide(data-ride='carousel')
+              // Bottom Carousel Indicators
+              ol.carousel-indicators
+                li.active(data-target='#quote-carousel', data-slide-to='0')
+                li(data-target='#quote-carousel', data-slide-to='1')
+                li(data-target='#quote-carousel', data-slide-to='2')
+                li(data-target='#quote-carousel', data-slide-to='3')
+
+              // Carousel Slides / Quotes
+              .carousel-inner
+                // Quote 1
+                .item.active
+                  blockquote
+                    .row
+                      .col-sm-3.text-center
+                        picture
+                          source(srcset="/images/Portrait-ChristianKoppe.webp" type="image/webp" style='width: 100px;height:100px;')
+                          img.img-circle(src='/images/Portrait-ChristianKoppe.jpg' type="image/jpeg" style='width: 100px;height:100px;')                      
+                      .col-sm-9
+                        p 
+                          |Amber assisted me in various computer science modules for pupils from upper secondary education as part of the U-Talent programme at the Utrecht University. She helped the pupils during practical exercises and used her thorough knowledge of Arduino development, Unity, Sonic Pi and Processing in a very constructive, friendly and supportive way. Especially her proactive approach was valued by both me and the pupils.
+                        small 
+                          a(href="https://www.linkedin.com/in/christian-k%C3%B6ppe-0810529/" target="_blank")
+                            <img class="inline LI-icon" src='/images/LinkedIn-Logo.png'> <span class="inline"> Christian Köppe - Lecturer Computer Science at the U-Talent program </span>
+                .item
+                  blockquote
+                    .row
+                      .col-sm-3.text-center
+                        picture
+                          source(srcset="/images/Portrait-PaulienVanBentum.webp" type="image/webp"  style='width: 100px;height:100px;')
+                          img.img-circle(src='/images/Portrait-PaulienVanBentum.jpg' type="image/jpeg" style='width: 100px;height:100px;')                      
+                      .col-sm-9
+                        p
+                          | Amber is a hardworking person and she takes her responsibilities seriously. 
+                          | She is a real team player, because she solved multiple (unexpected) problems together with her teammates during a traveling chemistry practical. 
+                          br
+                          | She is sometimes a bit uncertain at the start of a new assignment, but she quickly acquires new knowledge and skills and her end results are very good. 
+                          | She made, for example, a handy, accessible database of schools. 
+                          br
+                          | She shows initiative by proposing improvements, which were incorporated in a manual for assistants. 
+                          | I'm very satisfied with her work and I highly recommend her for any endeavor she chooses to pursue!
+                        small 
+                          a(href="https://www.linkedin.com/in/paulien-van-bentum-1485aa51/" target="_blank")
+                            <img class="inline LI-icon" src='/images/LinkedIn-Logo.png'> <span class="inline"> Paulien van Bentum, chemistry education coordinator - Utrecht University </span>
+
+
+                // Quote 2
+                .item
+                  blockquote
+                    .row
+                      .col-sm-3.text-center
+                        picture
+                          source(srcset="/images/Portrait-PeterDuifhuis.webp" type="image/webp" style='width: 100px;height:100px;')
+                          img.img-circle(src='/images/Portrait-PeterDuifhuis.jpg' type="image/jpeg" style='width: 100px;height:100px;')     
+                      .col-sm-9
+                        p.
+                          Amber has worked with me as a student assistent in a short course for high school students about making projects with Arduino's and electrical components. With little help, Amber got to know the material beforehand (ie. building projects with the Arduino). Amber showed interest in the course and aligned her own approach to students with the goals and didactics. She was punctual, proactive in helping students and communicative concerning to where she did and didn't have the knowledge to help. So all in all: a great addition to the teaching team!
+                        small 
+                          a(href="https://www.linkedin.com/in/peter-duifhuis-2162998/" target="_blank")
+                            <img class="inline LI-icon" src='/images/LinkedIn-Logo.png'> <span class="inline"> Peter Duifhuis - Coordinator U-talent Arduino course - Utrecht University </span>
+                            
+                // Quote 3
+                .item
+                  blockquote
+                    .row
+                      .col-sm-3.text-center
+                        picture
+                          source(srcset="/images/Portrait-ManonThijssen.webp" type="image/webp" style='width: 100px;height:100px;')
+                          img.img-circle(src='/images/Portrait-ManonThijssen.jpg' type="image/jpeg" style='width: 100px;height:100px;')     
+                      .col-sm-9
+                        p
+                          | As coordinator of Project Werfkracht where Amber participated as teaching assistant, I have learned to know her as a great student to work with. Amber is clear in her communication, is intelligent and quickly sees what is needed somewhere. She is patient and friendly and is always prepared to take on extra tasks. She works hard and good.
+                        small 
+                            span.inline Manon Thijssen - Coordinator Project Werfkracht - Utrecht University
+              // Carousel Buttons Next/Prev
+              a.left.carousel-control(data-slide='prev', href='#quote-carousel')
+                i.fa.fa-chevron-left
+              a.right.carousel-control(data-slide='next', href='#quote-carousel')
+                i.fa.fa-chevron-right
+
+
+
+
+
+
+
+
+      h1 Education
+      section.work-overview
+        .row
+          .col-lg-4.col-sm-6.portfolio-item
+            .card.h-100
+              a(href='#').div-img-top
+                picture
+                  source(srcset="/images/TUDelft-logo-robot.webp" type="image/webp")
+                  img.card-img-top(src='/images/TUDelft-logo-robot.png' type="image/png" alt='TU Delft Robotics logo')  
+              .card-body
+                h4.card-title Robotics master
+                p.card-text
+                  | Mostly focussed on the fundamental engines behind games, not producing games (although I would be able to).
+                  | For example, learning state-of-the-art methods on animation, graphics and physics engines. Courses completed:
+                ul 
+                  li Motion and manipulation
+                  li Scientific Perspectives
+          .col-lg-4.col-sm-6.portfolio-item
+            .card.h-100
+              a(href='#').div-img-top
+                picture
+                  source(srcset="/images/logo-uu-game.webp" type="image/webp")
+                  img.card-img-top(src='/images/logo-uu-game.png' type="image/png" alt='Utrecht University Game and media technology logo')  
+              .card-body
+                h4.card-title Game and Media technology master
+                h5.date September 2019 - July 2022 (expected)
+                p.card-text
+                  | Mostly focussed on the fundamental engines behind games, not producing games (although I would be able to).
+                  | For example, learning state-of-the-art methods on animation, graphics and physics engines. Courses completed:
+                ul 
+                  li Computer Vision (Tracking people in 3D by multiple cameras and recognition with machine learning.)
+                  li Computer Animation (Building an animation engine that reads skeleton and skin files and renders animations from scratch.)
+                  li Optimization and vectorization (Speeding up programs by making better use of the hardware.)
+                  li Advanced Graphics (Path tracer and speed up techniques for ray tracing.)
+                  li Game Physics (Rigid body, Soft body and constraints simulations.)
+                  li Motion and manipulation (Building a virtual 2D tabletennis robot competing against others.)
+                  li Mobile interaction (Performed research on orientation via audio only in 3DOF VR on a mobile phone.)
+                  li Scientific Perspectives (Performing a weekly research with different requirement.)
+          .col-lg-4.col-sm-6.portfolio-item
+            .card.h-100
+              a(href='#').div-img-top
+                picture
+                  source(srcset="/images/logo-uu-chem.webp" type="image/webp")
+                  img.card-img-top(src='/images/logo-uu-chem.png' type="image/png" alt='Utrecht University Bachelor Chemistry logo')  
+              .card-body
+                h4.card-title Game and Media technology master
+                h5.date September 2019 - July 2022 (expected)
+                p.card-text
+                  | Mostly focussed on the fundamental engines behind games, not producing games (although I would be able to).
+                  | For example, learning state-of-the-art methods on animation, graphics and physics engines. Courses completed:
+                ul 
+                  li Computer Vision (Tracking people in 3D by multiple cameras and recognition with machine learning.)
+                  li Computer Animation (Building an animation engine that reads skeleton and skin files and renders animations from scratch.)
+                  li Optimization and vectorization (Speeding up programs by making better use of the hardware.)
+                  li Advanced Graphics (Path tracer and speed up techniques for ray tracing.)
+                  li Game Physics (Rigid body, Soft body and constraints simulations.)
+                  li Motion and manipulation (Building a virtual 2D tabletennis robot competing against others.)
+                  li Mobile interaction (Performed research on orientation via audio only in 3DOF VR on a mobile phone.)
+                  li Scientific Perspectives (Performing a weekly research with different requirement.)
+
+
+      h1 Working Experience
       section.work-overview
         h2 Utrecht University - Werfkracht, Freudenthal Institute
           br
@@ -91,7 +249,7 @@ block content
                     With one other student I transported the GC with equipment by rental car, and installed it at the secondary school. 
                     We presented, assisted students with the measurements and answered students with questions.
       section.work-overview
-          h2 Utrecht University - Logics assistant, Departement Informatics
+          h2 Utrecht University - Logics course assistant, Departement Informatics
             br
             small November 2018 - January 2019
           p
@@ -115,7 +273,7 @@ block content
             li proposing subjects and experiments to perform on television.
             li advising the moderators about the correct explanation of the content.
           p
-          | The episodes with content were displayed on the Dutch television from April 2016.
+          | The episodes with content were displayed on the Dutch television starting April 2016.
       section.work-overview
           h2 Topselect Groep BV
             br
