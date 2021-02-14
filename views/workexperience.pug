@@ -116,15 +116,18 @@ block content
                   img.card-img-top(src='/images/TUDelft-logo-robot.png' type="image/png" alt='TU Delft Robotics logo')  
               .card-body
                 h4.card-title Robotics master
+                h5.gpa Current GPA TU Delft unknown
+                h5.date September 2020 - July 2022 (expected)
                 p.card-text
                   | Official prerequisites are a bachelor mechanical engineering. Therefore I started out with some deficiencies I quickly caught up (good grades still, GPA unknown for Delft). 
                   | Courses completed:
                 #accordion
                   .card
                     .card-header
-                      a.card-link(data-toggle='collapse', href='#hri')
-                        |  Human Robot Interaction  (Matlab)
-                    #hri.show.collapse.in(data-parent='#accordion')
+                      a.collapsed.card-link(data-toggle='collapse', href='#hri')
+                        |  #[strong Human Robot Interaction]  (Matlab)
+                    //- to toggle open on load, replace  #hri.collapse by hri.show.collapse.in and replace a.collapsed.card-link by
+                    #hri.collapse(data-parent='#accordion') 
                       .card-body
                         | McRuer theory, Design cycle and metrics, ironies/pitfalls of automation, training and selection,
                         | haptic shared control, biosignals (eye tracking), tactile interfaces, motion comfort,
@@ -132,7 +135,7 @@ block content
                   .card
                     .card-header
                       a.collapsed.card-link(data-toggle='collapse', href='#dynamics')
-                        |  Dynamics & Control (Python)
+                        |  #[strong Dynamics & Control] (Python)
                     #dynamics.collapse(data-parent='#accordion')
                       .card-body
                         | Simulating double pendulum after deriving equations of motions (Langrange).
@@ -141,7 +144,7 @@ block content
                   .card
                     .card-header
                       a.collapsed.card-link(data-toggle='collapse', href='#ML')
-                        | Machine Learning for robotics (Python tensorflow)
+                        | #[strong Machine Learning for robotics] (Python tensorflow)
                     #ML.collapse(data-parent='#accordion')
                       .card-body
                         | Regression, classification, Unsupervised learning, SVM's, Random Forest, Bayesian, PCA,
@@ -149,7 +152,7 @@ block content
                   .card
                     .card-header
                       a.collapsed.card-link(data-toggle='collapse', href='#MP')
-                        | Machine Perception (Python)
+                        | #[strong Machine Perception] (Python)
                     #MP.collapse(data-parent='#accordion')
                       .card-body
                         | Working with RADAR & LiDAR, stereo camera to 3D data, haptic sensors, 
@@ -157,44 +160,18 @@ block content
                   .card
                     .card-header
                       a.collapsed.card-link(data-toggle='collapse', href='#Planning')
-                        | Planning and decision making (Coppeliasim (V-rep) and Python)
+                        | #[strong Planning and decision making] (Coppeliasim (V-rep) and Python)
                     #Planning.collapse(data-parent='#accordion')
                       .card-body
                         | Graph-search (Dijkstra/A*), RRT*, collision avoidance by potential fields,
                         | velocity obstacles. Trajectory optimization, MPC, uncertainty (MDP, POMDP) and multi robot planning.  
                   .card
                     .card-header
-                      a.collapsed.card-link(data-toggle='collapse', href='#Planning')
-                        | Electronics for Physicists
-                    #Planning.collapse(data-parent='#accordion')
+                      a.collapsed.card-link(data-toggle='collapse', href='#Electronics')
+                        | #[strong Electronics for Physicists]
+                    #Electronics.collapse(data-parent='#accordion')
                       .card-body
                         | Practical course on analog electronic basics in the lab. Topics include basic components, amplifiers signals, noise, interferance, microwaves, SPICE simulations, oscilloscopes, generators and network analyzers.      
-                //- ul 
-                //-   li #[strong Human Robot Interaction] (Matlab)
-                //-     br
-                //-     | McRuer theory, Design cycle and metrics, ironies/pitfalls of automation, training and selection,
-                //-     | haptic shared control, biosignals (eye tracking), tactile interfaces, motion comfort,
-                //-     | interactive learning, social robots.
-                //-   li #[strong Dynamics & Control] (Python)
-                //-     br
-                //-     | Simulating double pendulum after deriving equations of motions (Langrange).
-                //-     | Non-holonomic constraints and car derivations
-                //-     | PID controller trajectory control
-                //-   li #[strong Machine Learning for robotics] (Python tensorflow)
-                //-     br
-                //-     | Regression, classification, Unsupervised learning, SVM's, Random Forest, Bayesian, PCA,
-                //-     | Neural Networks.
-                //-   li #[strong Machine Perception] (Python)
-                //-     br
-                //-     | Working with RADAR & LiDAR, stereo camera to 3D data, haptic sensors, 
-                //-     | data filtering, particle, bayesian and kalman filters.
-                //-   li #[strong Planning and decision making] (Coppeliasim (V-rep) and Python)
-                //-     br
-                //-     | Graph-search (Dijkstra/A*), RRT*, collision avoidance by potential fields,
-                //-     | velocity obstacles. Trajectory optimization, MPC, uncertainty (MDP, POMDP) and multi robot planning.
-                //-   li #[strong Electronics for Physicists]
-                //-     br
-                //-     | Practical course on analog electronic basics in lab on basic components, signals, noise, interferance, microwaves, SPICE simulations, oscilloscopes, generators and network analyzers.
                 p.
                   Courses planned:
                 ul
@@ -258,12 +235,20 @@ block content
                 h4.card-title Bachelor Chemistry
                 h5.date September 2014 - July 2017
                 p.card-text
-                  | Minor in Nanomaterials
-                  | Minor in Computer Sciences (1.5 years)
-                  | Focus on Inorganic, Analytical and Physical Chemistry
-                  | Analytical practical experience with: FTIR, Mass Spectrometry (MS), Gas Chromatography (GC), HPLC, Electron Microscopy (TEM/SEM), AAS, UV-VIS and NMR.
-                  | Courses I have taken include: Nanomaterials, Quantumchemistry, Structure of matter, Solids and surfaces, Physical Chemistry 1, 2 and Advanced Physical Chemistry,
-                  | Spectroscopy, X-ray Diffraction and Electronmicroscopy, Mass Spectrometry, NMR-spectroscopy and molecular modelling, Catalysis, Mathematics and Physics 1 and 2
+                  ul
+                    li Minor in Nanomaterials
+                    li Minor in Computer Sciences (1.5 years)
+                    li Focus on Inorganic, Analytical and Physical Chemistry
+                    li Analytical practical experience with: 
+                       br
+                       | FTIR, Mass Spectrometry (MS), Gas Chromatography (GC), HPLC, Electron Microscopy (TEM/SEM), AAS, UV-VIS and NMR.
+                  
+                | Courses I have taken include: 
+                br
+                | Nanomaterials, Quantumchemistry, Structure of matter, Solids and surfaces, Physical Chemistry 1, 2 and Advanced Physical Chemistry,
+                | Spectroscopy, X-ray Diffraction and Electronmicroscopy, Mass Spectrometry, NMR-spectroscopy and molecular modelling, Catalysis, Mathematics and Physics 1 and 2
+                br
+                br
                 h5.date September 2017 - Jan 2019
                 p.
                   I have done #[strong 1,5 years of the Computer Science Bachelor as a minor] on top of 3 years chemistry only (4.5 years total).

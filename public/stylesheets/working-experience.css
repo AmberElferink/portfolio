@@ -47,14 +47,29 @@ small {
 .card-header {
   background-color: white;
 }
+
+.card {
+  border-color:rgba(31, 177, 170, 0.52);;
+}
+
+
+
+.card-header a{
+  color: black;
+  font: auto;
+  border-bottom-color:rgba(31, 177, 170, 0.52);
+}
+
 .card-header a:after {
   font-family: "FontAwesome";
   content: "\f00d";
   float: right;
+  color: lightseagreen;
 }
 
 .card-header a.collapsed:after {
   content: "\f0dd";
+  color: lightseagreen;
 }
 
 .card-header a {
