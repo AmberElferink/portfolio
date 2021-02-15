@@ -5,27 +5,27 @@ block append scripts
 
 block append content
   section.normal-page-container
-    //- p Sorry, the contact form is currently in maintenance. Please contact me via my CV 
-    //-   a(href="https://www.linkedin.com/in/amber-elferink/" target="_blank") or via LinkedIn.
-    ul.errors
-      each error in errs
-        li= error.msg
-    <form action="/contact" method="post">
-    <label for="name">Name</label>
-    <input type="text" id="name" name="name" placeholder="Your name..." value=#{name}>
+    p Sorry, the contact form is currently in maintenance. Please contact me via my CV 
+      a(href="https://www.linkedin.com/in/amber-elferink/" target="_blank") or via LinkedIn.
+  //-   ul.errors
+  //-     each error in errs
+  //-       li= error.msg
+  //-   <form action="/contact" method="post">
+  //-   <label for="name">Name</label>
+  //-   <input type="text" id="name" name="name" placeholder="Your name..." value=#{name}>
 
-    <label for="email">Email address</label>
-    <input type="text" id="email" name="email" placeholder="Your email..." value=#{email}>
+  //-   <label for="email">Email address</label>
+  //-   <input type="text" id="email" name="email" placeholder="Your email..." value=#{email}>
 
-    <label for="subject">Subject</label>
-    <input id="subject" name="subject" placeholder="Subject..." value=#{subject}>
+  //-   <label for="subject">Subject</label>
+  //-   <input id="subject" name="subject" placeholder="Subject..." value=#{subject}>
 
-    <label for="content">Content</label>
-    <textarea id="content" name="content" placeholder="Write something..." style="height:400px">#{content}</textarea>
+  //-   <label for="content">Content</label>
+  //-   <textarea id="content" name="content" placeholder="Write something..." style="height:400px">#{content}</textarea>
 
-    //online key: 6LchEZEUAAAAAGTXMp5ZRhTpK8iM7aafYopIBXuJ
-    //test key: 6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI
-    <div class="g-recaptcha" data-sitekey="6LchEZEUAAAAAGTXMp5ZRhTpK8iM7aafYopIBXuJ" ></div>
+  //-   //online key: 6LchEZEUAAAAAGTXMp5ZRhTpK8iM7aafYopIBXuJ
+  //-   //test key: 6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI
+  //-   <div class="g-recaptcha" data-sitekey="6LchEZEUAAAAAGTXMp5ZRhTpK8iM7aafYopIBXuJ" ></div>
     
-    <input type="submit" class="btn-inline" value="Submit">
-  </form>
+  //-   <input type="submit" class="btn-inline" value="Submit">
+  //- </form>
