@@ -116,10 +116,11 @@ block content
                   img.card-img-top(src='/images/TUDelft-logo-robot.png' type="image/png" alt='TU Delft Robotics logo')  
               .card-body
                 h4.card-title Robotics master
-                h5.gpa Current GPA TU Delft unknown
+                h5.gpa Current GPA TU Delft unknown, grade 8.3/10
                 h5.date September 2020 - July 2022 (expected)
                 p.card-text
-                  | Official prerequisites are a bachelor mechanical engineering. Therefore I started out with some deficiencies I quickly caught up (good grades still, GPA unknown for Delft). 
+                  | Official prerequisites are a bachelor mechanical engineering. Therefore I started out with some deficiencies, but I quickly caught up. 
+                  br
                   | Courses completed:
                 #accordion
                   .card
@@ -185,7 +186,7 @@ block content
                   li Robots & Society
                   li Software Robotics Practicals 
                     br
-                    | Did not fit with Utrecht course
+                    | (Did not fit in P1 with Utrecht course)
                   
           .col-lg-4.col-sm-6.portfolio-item
             .card.h-100
@@ -195,11 +196,11 @@ block content
                   img.card-img-top(src='/images/logo-uu-game.png' type="image/png" alt='Utrecht University Game and media technology logo')  
               .card-body
                 h4.card-title Game and Media technology master 
-                h5.gpa Current GPA 4.0/4.0
+                h5.gpa Current GPA 4.0/4.0, grade 
                 h5.date September 2019 - July 2022 (expected)
                 p.card-text
                   | Mostly focussed on the fundamental engines behind games, not producing games (although I would be able to).
-                  | For example, learning state-of-the-art methods on animation, graphics and physics engines. All courses already completed:
+                  | For example, learning state-of-the-art methods on animation, graphics and physics engines. All courses are already completed:
                 ul 
                   li #[strong Computer Vision] (C++, OpenCV, OpenGL, Tensorflow/python)
                     br 
@@ -240,18 +241,16 @@ block content
                     li Minor in Computer Sciences (1.5 years)
                     li Focus on Inorganic, Analytical and Physical Chemistry
                     li Analytical practical experience with: 
-                       br
                        | FTIR, Mass Spectrometry (MS), Gas Chromatography (GC), HPLC, Electron Microscopy (TEM/SEM), AAS, UV-VIS and NMR.
-                  
-                | Courses I have taken include: 
+                  | Courses I have taken include: 
+                  | Nanomaterials, Quantumchemistry, Structure of matter, Solids and surfaces, Physical Chemistry 1, 2 and Advanced Physical Chemistry,
+                  | Spectroscopy, X-ray Diffraction and Electronmicroscopy, Mass Spectrometry, NMR-spectroscopy and molecular modelling, Catalysis, Mathematics and Physics 1 and 2
                 br
-                | Nanomaterials, Quantumchemistry, Structure of matter, Solids and surfaces, Physical Chemistry 1, 2 and Advanced Physical Chemistry,
-                | Spectroscopy, X-ray Diffraction and Electronmicroscopy, Mass Spectrometry, NMR-spectroscopy and molecular modelling, Catalysis, Mathematics and Physics 1 and 2
-                br
-                br
+                h4.card-title Minor Computer science
+                h5.gpa GPA 4.0/4.0
                 h5.date September 2017 - Jan 2019
                 p.
-                  I have done #[strong 1,5 years of the Computer Science Bachelor as a minor] on top of 3 years chemistry only (4.5 years total).
+                  I have done 1,5 years of the Computer Science Bachelor as a minor on top of 3 years chemistry (4.5 years total).
                 ul
                   li Image processing (C#)
                   li Webtechnology (NodeJS, Javascript, HTML/CSS)
@@ -265,6 +264,26 @@ block content
 
 
       h1 Working Experience
+
+      section.work-overview
+        h2 Fair2Media
+          br
+          small May 2019 - August 2019
+        p.
+          Filling the time between bachelor and master, I worked on the Ditou table at Fair2Media. 
+          Fair2Media is a small company with total of 5 people (excluding me). 
+          The Ditou table is an interactive table where a beamer projects a map of real places via Unity. 
+          On this map, you move round disks as a cursor to place objects such as windmills and solar panels.
+          The round disks are tracked by a camera above the table. 
+          My responsibility was to develop a new tracking algorithm for round disks on the Ditou table (C++ and OpenCV), and to make an environment in Unity loading, customizing and saving the map. 
+          Thereby, by using the tracked positions, 3D windmills and solar panels could be built on the map. 
+          The tracking and Unity environment communicated via NodeJS. 
+          The table is currently used to demonstrate the outcomes for building windmills and solar panels for citizens’ initiatives. 
+        p(style="text-align:center;")
+          iframe(type='text/html' height="350px" width="500px" allowfullscreen
+              src='http://www.youtube.com/embed/wf3DLiy3XF4?playlist=wf3DLiy3XF4&autoplay=1&loop=1&mute=1&playsinline=1&origin=http://www.amberelferink.com/'
+              frameborder='0')
+
       section.work-overview
         h2 Utrecht University - Werfkracht, Freudenthal Institute
           br
@@ -315,8 +334,8 @@ block content
           .col-lg-4.col-sm-6.portfolio-item
             .card.h-100
               a(href='#').div-img-top
-                div.iframe-container
-                  <iframe src="https://www.youtube.com/embed/v8pd4UzvIew?autoplay=1&mute=1&loop=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" id="iFrame1"></iframe>
+                div.iframe-container 
+                  <iframe src="https://www.youtube.com/embed/v8pd4UzvIew?autoplay=1&mute=1&loop=1" frameborder="0" allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" id="iFrame1"></iframe>
               .card-body
                 div.upper-content
                   h4.card-title Music Programming
@@ -331,7 +350,7 @@ block content
             .card.h-100
               a(href='#').div-img-top
                  div.iframe-container
-                  <iframe src="https://www.youtube.com/embed/yMgKDpvvL-w?autoplay=1&mute=1&loop=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" id="iFrame1"></iframe>
+                  <iframe src="https://www.youtube.com/embed/yMgKDpvvL-w?autoplay=1&mute=1&loop=1" frameborder="0" allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" id="iFrame1"></iframe>
               .card-body
                 div.upper-content
                   h4.card-title

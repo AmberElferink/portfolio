@@ -16,34 +16,8 @@ block content
             .card.h-100
               a(href='#').div-img-top
                 picture
-                  source(srcset="/images/VR-exo arm design.webp" type="image/webp")
-                  img.card-img-top(src='/images/VR-exo arm design.png', alt='VR-exo elbow force feedback design' type="image/png")
-              .card-body
-                div.upper-content
-                  h4.card-title
-                    a(href='#') VR-exo, an exoskeleton for Virtual Reality
-                  p.card-text
-                    | Wat if we were to make an exoskeleton for the entire body, that can be tilted as well?
-                    | We would be able to simulate anything in VR. Walk, step onto things, step in a plane and fly away. 
-                    | Feel all the forces in a virtual world.
-                    | Since 2018 I tried to fully customize my education to work towards this goal.
-                    | The image above is from a project to create haptic force feedback for the elbow (to shoot a bow in VR).
-                    | Designing an exoskeleton counteracting human movements is hard due to the high torque and speed requirements for the motors.
-                    | Another problem is that you should be able to move without the motor counteracting your forces.
-                    | Both of these difficulties prove to be most challenging for the legs.
-                    | The research I have done up untill now on the legs is downloadable in a PDF below.
-                div.lower-content
-                  h4.skills-title Specifications
-                  ul.skills-list
-                    li I am currently studying towards this goal.
-                <button class ="btn-box" onclick="window.open('files/VR-exo-Research-sensored.pdf', '_blank');"><i class="fa fa-download"></i> Research PDF VR-exo</button>
-
-          .col-lg-4.col-sm-6.portfolio-item
-            .card.h-100
-              a(href='#').div-img-top
-                picture
-                  source(srcset="/images/VR-exo arm design.webp" type="image/webp")
-                  img.card-img-top(src='/images/VR-exo arm design.png', alt='VR-exo first design image' type="image/png")
+                  source(srcset="/images/VR-exo.webp" type="image/webp")
+                  img.card-img-top(src='/images/VR-exo.png', alt='VR-exo first design image' type="image/png")
               .card-body
                 div.upper-content
                   h4.card-title
@@ -63,8 +37,41 @@ block content
                 div.lower-content
                   h4.skills-title Specifications
                   ul.skills-list
+                    li Done in my spare time.
+                    li I researched it in 2018 (see download below).
                     li I am currently studying towards this goal.
-                <button class ="btn-box" onclick="window.open('files/VR-exo-Research-sensored.pdf', '_blank');"><i class="fa fa-download"></i> Research PDF VR-exo</button>
+                <button class ="btn-box" onclick="window.open('/files/2019-Feb-Vision-of-VRexo-BLDCrevised.pdf', '_blank');"><i class="fa fa-download"></i> Research PDF VR-exo</button>
+
+
+          .col-lg-4.col-sm-6.portfolio-item
+            .card.h-100
+              a(href='#').div-img-top
+                video(autoplay loop muted playsinline width="100%").card-img-top
+                  source(src="/videos/fast-put-together-exo-arm-video.webm" type="video/webm")
+                  source(src="/videos/fast-put-together-exo-arm-video.mp4" type="video/mp4")              
+              .card-body
+                div.upper-content
+                  h4.card-title
+                    a(href='#') VR-exo force feedback elbow
+                    h5.date 10 weeks part-time - Feb 2019 - April 2019
+                  p.card-text
+                    | To make a simple proof of concept I started to build a haptic feedback for the elbow joint.
+                    | The idea was to have force feedback for instance for shooting a bow in VR.
+                    | I never fully finished it, since there were some (solvable) issues with both electronics and welding.
+                    | Thereby, I had to start my master which left little time to spend entire days in the workshop.
+                    | The above video is only a tiny selection of all the things I worked on. 
+                    | I have yet to compile it to a tutorial when I finish it.
+                div.lower-content
+                  h4.skills-title Specifications
+                  ul.skills-list
+                    li Done in my spare time.
+                    li Mechanical arm, completed until it only had to be welded.
+                    li Torque controller (current sensor and current regulator with H-bridge). Sadly due to a mistake this shorted later.
+                    li Loadcell to measure force.
+                    li All should be easily to control from an Arduino.
+
+                <button class ="btn-box" onclick="window.open('/files/2019-Feb-Vision-of-VRexo-BLDCrevised.pdf', '_blank');"><i class="fa fa-download"></i> Research PDF VR-exo</button>
+
       
           .col-lg-4.col-sm-6.portfolio-item
             .card.h-100
