@@ -23,7 +23,7 @@ block content
                 div.upper-content
                   h4.card-title
                     a(href='#') VR-exo, an exoskeleton for Virtual Reality
-                  h5.date 3 weeks full-time - Dec 2018
+                  h5.date 3 weeks full-time - December 2018
                   p.card-text
                     | Wat if we were to make an exoskeleton for the entire body, that can be tilted as well?
                     | We would be able to simulate anything in VR. Walk, step onto things, step in a plane and fly away. 
@@ -55,14 +55,15 @@ block content
                 div.upper-content
                   h4.card-title
                     a(href='#') VR-exo force feedback elbow
-                    h5.date 10 weeks part-time - Feb 2019 - April 2019
+                    h5.date 10 weeks part-time - Feb to April 2019
                   p.card-text
                     | To make a simple proof of concept I started to build a haptic feedback for the elbow joint.
                     | The idea was to have force feedback for instance for shooting a bow in VR.
                     | I never fully finished it, since there were some (solvable) issues with both electronics and welding.
                     | Thereby, I had to start my master which left little time to spend entire days in the workshop.
+                    | Since doing my master, I have learned a lot and would redesign most of the exoskeleton.
                     | The above video is only a tiny selection of all the things I worked on. 
-                    | I have yet to compile it to a tutorial when I finish it.
+              
                 div.lower-content
                   h4.skills-title Specifications
                   ul.skills-list
@@ -75,31 +76,95 @@ block content
 
                 <button class ="btn-box" onclick="window.open('/files/2019-Feb-Vision-of-VRexo-BLDCrevised.pdf', '_blank');"><i class="fa fa-download"></i> Research PDF VR-exo</button>
 
+
+          .col-lg-4.col-sm-6.portfolio-item
+            .card.h-100
+              a(href='#').div-img-top
+                video(autoplay loop muted playsinline width="100%").card-img-top
+                  source(src="/videos/Game-Physics.webm" type="video/webm")
+                  source(src="/videos/Game-Physics.mp4" type="video/mp4") 
+              .card-body
+                div.upper-content
+                  h4.card-title
+                    a(href='https://github.com/AmberElferink/GamePhysics', target="_blank") Game Physics
+                  h5.date 8 weeks part-time - March to April 2019
+                  p.card-text
+                    |In the game physics course in the Game and Media technology master, we implemented rigid body dynamics, soft body dynamics and a ragdoll cloth simulation. 
+                    |The task was to implement rigid and soft body dynamics in the framework of our teacher, which already could detect collisions, but not solve them. 
+
+                div.lower-content
+                  h4.skills-title Specifications
+                  ul.skills-list
+                    li Rigid body (C++), grade 10/10:
+                      ul
+                        li Features: Including friction, air drag, interpenetration with additional rotational movement, interaction with mouse.
+                    li Soft body Features (C++), grade 10/10: 
+                      ul
+                        li Features: allow user squeezing, corotational elements 
+                    li Ragdoll and cloth simulation 
+                      ul
+                        li Simulation built in Unity without RigidBody components (implementing physics ourselves).
+                        li Cloth simulated as vertices connected by springs. Ragdoll as balls with distance constraints.
+                <button class ="btn-box" ><i class="fa fa-github-square"></i> No Github, copyright </button>
+ 
       
           .col-lg-4.col-sm-6.portfolio-item
             .card.h-100
               a(href='https://github.com/AmberElferink/Raytracer/wiki', target="_blank").div-img-top
                 //-iframe(width="700" height="400" src="https://www.youtube.com/embed/xG2lreUPnFQ?controls=0&autoplay=1&mute=1&loop=1&modestbranding=0" frameborder="0").card-img-top
-                picture
-                  source(srcset="/images/RayTracerScreenshot.webp" type="image/webp")
-                  img.card-img-top(src='/images/RayTracerScreenshot.png', alt='Raytracer with triangles, spheres, spotlight, checkboard and glass.' type="image/png")  
+                video(autoplay loop muted playsinline width="100%").card-img-top
+                  source(src="/videos/Raytracer.webm" type="video/webm")
+                  source(src="/videos/Raytracer.mp4" type="video/mp4") 
               .card-body
                 div.upper-content
                   h4.card-title
-                    a(href='https://github.com/AmberElferink/Raytracer/wiki', target="_blank") Ray-Tracer
-                  h5.date 3 weeks part-time - May 2018
+                    a(href='https://github.com/AmberElferink/Raytracer/wiki', target="_blank") Ray Tracing and Path Tracing
+                  h5.date part-time: 3 weeks - May 2018, 8 weeks Nov to Jan 2019
                   p.card-text
-                    | A 3D environment that does not have real-time performance as priority, but how physically accurate shadows, lighting and reflections can be rendered. This method is mostly used in rendering software.
-                    | It was made from a template where you could color individual pixels on the screen.
-                    | From there, a ray was shot from each pixel into a virtual space and the intersection with the closests object and its color is determined. 
-                    | Then, further rays can be shot to obtain shadow, reflections and refractions.
+                    | A 3D environment that does not have real-time performance as priority, but is physically accurate. This method is mostly used in rendering software.
+                    | A ray is shot from each pixel into a virtual space and the intersection with the closests object, bouncing further and its color is determined. 
                 div.lower-content
                   h4.skills-title Specifications
                   ul.skills-list
-                    li Built in C#
-                    li Features: Glass, mirrors, spotlights, anti-aliasing and triangles.
-                    li Graded with a 10/10
+                    li Whitted Raytracers C# (bachelor) and C++ (master):
+                      ul
+                        li Whitted: Rays going from camera to light source.
+                        li C# Features: Glass, mirrors, spotlights, anti-aliasing, and triangles.
+                        li C++ also features: Lambert-Beer, textures, area lights, multithreading (205% speedup on dual core h)
+                        li BVH = Bounding Volume Hierarchy. Dividing scene in nested boxes, and walking through them with a tree.
+                        li With BVH: 360794 triangles, 1280x720px in 180 ms quad core hyperthreaded (no threadpool) and in 2.45 seconds single core
+                    li Path tracer
+                      ul
+                        li Path tracer: Rays are rendered from light source to camera -> Capable of caustics and color bleeding
+                        li Implemented SIMD (AVX) to speed up intersection function.
+
                 <button class ="btn-box" onclick="window.open('https://github.com/AmberElferink/Raytracer/wiki', '_blank');"><i class="fa fa-github-square"></i> Checkout Github </button>
+        
+      
+          //- .col-lg-4.col-sm-6.portfolio-item
+          //-   .card.h-100
+          //-     a(href='https://github.com/AmberElferink/Raytracer/wiki', target="_blank").div-img-top
+          //-       //-iframe(width="700" height="400" src="https://www.youtube.com/embed/xG2lreUPnFQ?controls=0&autoplay=1&mute=1&loop=1&modestbranding=0" frameborder="0").card-img-top
+          //-       picture
+          //-         source(srcset="/images/RayTracerScreenshot.webp" type="image/webp")
+          //-         img.card-img-top(src='/images/RayTracerScreenshot.png', alt='Raytracer with triangles, spheres, spotlight, checkboard and glass.' type="image/png")  
+          //-     .card-body
+          //-       div.upper-content
+          //-         h4.card-title
+          //-           a(href='https://github.com/AmberElferink/Raytracer/wiki', target="_blank") Ray-Tracer
+          //-         h5.date 3 weeks part-time - May 2018
+          //-         p.card-text
+          //-           | A 3D environment that does not have real-time performance as priority, but how physically accurate shadows, lighting and reflections can be rendered. This method is mostly used in rendering software.
+          //-           | It was made from a template where you could color individual pixels on the screen.
+          //-           | From there, a ray was shot from each pixel into a virtual space and the intersection with the closests object and its color is determined. 
+          //-           | Then, further rays can be shot to obtain shadow, reflections and refractions.
+          //-       div.lower-content
+          //-         h4.skills-title Specifications
+          //-         ul.skills-list
+          //-           li Built in C#
+          //-           li Features: Glass, mirrors, spotlights, anti-aliasing and triangles.
+          //-           li Graded with a 10/10
+          //-       <button class ="btn-box" onclick="window.open('https://github.com/AmberElferink/Raytracer/wiki', '_blank');"><i class="fa fa-github-square"></i> Checkout Github </button>
  
           .col-lg-4.col-sm-6.portfolio-item
             .card.h-100
@@ -111,7 +176,7 @@ block content
                 div.upper-content
                   h4.card-title
                     a(href='#') Rasterization Engine
-                  h5.date 3 weeks part-time - Jun 2018
+                  h5.date 3 weeks part-time - June 2018
                   p.card-text
                     | A 3D environment that has real-time performance as priority. 
                     | However, shadows, lighting and reflections will be less accurate. This rendering method is mostly used in games.
