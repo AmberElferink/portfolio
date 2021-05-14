@@ -11,7 +11,7 @@ block append scripts
 block content
       section.project-page-container
         h1.page-header #{title}
-        p(style="text-align:center;") This page gives an overview of projects from 2017 to April 2019 (so only bachelor projects and exoskeleton research). Projects made in my masters Robotics and Game and Media Technology will follow soon.
+        //- p(style="text-align:center;") This page gives an overview of some project I did. Many will be added soon.
         .row
           .col-lg-4.col-sm-6.portfolio-item
             .card.h-100
@@ -36,6 +36,7 @@ block content
                     | Both of these difficulties prove to be most challenging for the legs.
                     | The research I have during this time is downloadable in a PDF below. 
                     | Please keep in mind that during this time I only had chemistry and 1.5 years computer science experience.
+                    | Since attending courses on the subject, I have other ideas, but my passion remains.
                 div.lower-content
                   h4.skills-title Specifications
                   ul.skills-list
@@ -106,7 +107,34 @@ block content
                         li Simulation built in Unity without RigidBody components (implementing physics ourselves).
                         li Cloth simulated as vertices connected by springs. Ragdoll as balls with distance constraints.
                 <button class ="btn-box" ><i class="fa fa-github-square"></i> No Github, copyright </button>
- 
+
+          .col-lg-4.col-sm-6.portfolio-item
+            .card.h-100
+              a(href='https://github.com/AmberElferink/Raytracer/wiki', target="_blank").div-img-top
+                //-iframe(width="700" height="400" src="https://www.youtube.com/embed/xG2lreUPnFQ?controls=0&autoplay=1&mute=1&loop=1&modestbranding=0" frameborder="0").card-img-top
+                video(autoplay loop muted playsinline width="100%").card-img-top
+                  source(src="/videos/Planning_video.webm" type="video/webm")
+                  source(src="/videos/Planning_video.mp4" type="video/mp4") 
+              .card-body
+                div.upper-content
+                  h4.card-title
+                    a(href='https://github.com/AmberElferink/PDM-python-RRT', target="_blank") Drone packet delivery RRT*
+                  h5.date part-time: 8 weeks - November 2020 to January 2021
+                  p.card-text.
+                    For the path planning and decision making course, we built a project to simulate dropping of packages on balconies in New York.
+                    The visualisation was done with CoppeliaSim (previously V-rep). We linked this to python, and modified an existing RRT* library to speed up significantly.
+                    RRT* forms a tree through 3D space by randomly placing a point, and connecting it to the closest point in the tree. It then reconnects some branches to reorganise.
+                    We did this by searching in a cone towards the end point. It will first try to fit points in this area, if it cannot find a point closer to the goal
+                    within a few iterations, it will enlargen the angle of the cone. In addition to the cone, there is a box around the drone so it can find options when it is close to a building.
+                    It then flies over the path by actual drone dynamics with PID velocity control.
+                div.lower-content
+                  h4.skills-title Specifications
+                  ul.skills-list
+                    li Graded with a 9.1/10
+                    li Built in python, linked with Coppeliasim (V-rep)
+                    li Full paper available on Github
+                <button class ="btn-box" onclick="window.open('https://github.com/AmberElferink/PDM-python-RRT', '_blank');"><i class="fa fa-github-square"></i> Checkout Github </button>
+            
       
           .col-lg-4.col-sm-6.portfolio-item
             .card.h-100
@@ -123,49 +151,23 @@ block content
                   p.card-text
                     | A 3D environment that does not have real-time performance as priority, but is physically accurate. This method is mostly used in rendering software.
                     | A ray is shot from each pixel into a virtual space and the intersection with the closests object, bouncing further and its color is determined. 
+                    | Some implemented features are: Glass, mirrors, spotlights, anti-aliasing, triangles in C# whitted. The C++ whitted additionally contains Lambert-Beer, textures, area lights and multithreading (205% speedup on dual core h).
+                    | The car consists of 360794 triangles. To render it fast, BVH (bounding volume hierarchy is implemented, which is dividing scene in nested boxes, and walking through them with a tree. The car can render on 1280x720px in 180 ms quad core hyperthreaded (no threadpool) and in 2.45 seconds single core. This is very fast for a whitted raytracer on CPU.
+                    | Path tracer: Rays are rendered from light source to camera and is capable of caustics and color bleeding, which the other whitted raytracers are not.
+                    | To speed this up, I implemented SIMD (AVX) to speed up the triangle intersection function.
                 div.lower-content
                   h4.skills-title Specifications
                   ul.skills-list
-                    li Whitted Raytracers C# (bachelor) and C++ (master):
-                      ul
-                        li Whitted: Rays going from camera to light source.
-                        li C# Features: Glass, mirrors, spotlights, anti-aliasing, and triangles.
-                        li C++ also features: Lambert-Beer, textures, area lights, multithreading (205% speedup on dual core h)
-                        li BVH = Bounding Volume Hierarchy. Dividing scene in nested boxes, and walking through them with a tree.
-                        li With BVH: 360794 triangles, 1280x720px in 180 ms quad core hyperthreaded (no threadpool) and in 2.45 seconds single core
-                    li Path tracer
-                      ul
-                        li Path tracer: Rays are rendered from light source to camera -> Capable of caustics and color bleeding
-                        li Implemented SIMD (AVX) to speed up intersection function.
+                    li Whitted Raytracers C# (bachelor), graded with 10/10
+                    li Whitted C++ (master)
+                    li Whitted C++ (master) with BVH, which is many triangles fast
+                    li Path tracer (master) which can handle caustics and color bleeding
 
-                <button class ="btn-box" onclick="window.open('https://github.com/AmberElferink/Raytracer/wiki', '_blank');"><i class="fa fa-github-square"></i> Checkout Github </button>
+                <button class ="btn-box" onclick="window.open('https://github.com/AmberElferink/Raytracer/wiki', '_blank');"><i class="fa fa-github-square"></i> Checkout Github bachelor </button>
+                <button class ="btn-box" onclick="window.open('https://github.com/AmberElferink/AdvancedGraphics', '_blank');"><i class="fa fa-github-square"></i> Checkout Github master </button>
         
-      
-          //- .col-lg-4.col-sm-6.portfolio-item
-          //-   .card.h-100
-          //-     a(href='https://github.com/AmberElferink/Raytracer/wiki', target="_blank").div-img-top
-          //-       //-iframe(width="700" height="400" src="https://www.youtube.com/embed/xG2lreUPnFQ?controls=0&autoplay=1&mute=1&loop=1&modestbranding=0" frameborder="0").card-img-top
-          //-       picture
-          //-         source(srcset="/images/RayTracerScreenshot.webp" type="image/webp")
-          //-         img.card-img-top(src='/images/RayTracerScreenshot.png', alt='Raytracer with triangles, spheres, spotlight, checkboard and glass.' type="image/png")  
-          //-     .card-body
-          //-       div.upper-content
-          //-         h4.card-title
-          //-           a(href='https://github.com/AmberElferink/Raytracer/wiki', target="_blank") Ray-Tracer
-          //-         h5.date 3 weeks part-time - May 2018
-          //-         p.card-text
-          //-           | A 3D environment that does not have real-time performance as priority, but how physically accurate shadows, lighting and reflections can be rendered. This method is mostly used in rendering software.
-          //-           | It was made from a template where you could color individual pixels on the screen.
-          //-           | From there, a ray was shot from each pixel into a virtual space and the intersection with the closests object and its color is determined. 
-          //-           | Then, further rays can be shot to obtain shadow, reflections and refractions.
-          //-       div.lower-content
-          //-         h4.skills-title Specifications
-          //-         ul.skills-list
-          //-           li Built in C#
-          //-           li Features: Glass, mirrors, spotlights, anti-aliasing and triangles.
-          //-           li Graded with a 10/10
-          //-       <button class ="btn-box" onclick="window.open('https://github.com/AmberElferink/Raytracer/wiki', '_blank');"><i class="fa fa-github-square"></i> Checkout Github </button>
- 
+
+
           .col-lg-4.col-sm-6.portfolio-item
             .card.h-100
               a(href='#').div-img-top
