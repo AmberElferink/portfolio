@@ -15,100 +15,9 @@ block content
         .row
           .col-lg-4.col-sm-6.portfolio-item
             .card.h-100
-              a(href='#').div-img-top
-                picture
-                  source(srcset="/images/VR-exo.webp" type="image/webp")
-                  img.card-img-top(src='/images/VR-exo.png', alt='VR-exo first design image' type="image/png")
-              .card-body
-                div.upper-content
-                  h4.card-title
-                    a(href='#') VR-exo, an exoskeleton for Virtual Reality
-                  h5.date 3 weeks full-time - December 2018
-                  p.card-text
-                    | Wat if we were to make an exoskeleton for the entire body, that can be tilted as well?
-                    | We would be able to simulate anything in VR. Walk, step onto things, step in a plane and fly away. 
-                    | Feel all the forces in a virtual world. Holotron and the AxonVR skeleton are similar to this idea, which I discovered later (see Homepage).
-                    | This would also be particulary useful for training, rehabilitation and telerobotics.
-                    | I spent a few weeks doing research and designing ideas to solve the locomotion problem with haptic feedback in my spare time.
-                    | Since this project I tried to fully customize my education to work towards this goal.
-                    | Designing an exoskeleton counteracting human movements is hard due to the high torque and speed requirements for the motors.
-                    | Another problem is that you should be able to move without the motor counteracting your forces.
-                    | Both of these difficulties prove to be most challenging for the legs.
-                    | The research I have during this time is downloadable in a PDF below. 
-                    | Please keep in mind that during this time I only had chemistry and 1.5 years computer science experience.
-                    | Since attending courses on the subject, I have a better idea about what is possible, and would work towards a similar endgoal in a different way.
-                div.lower-content
-                  h4.skills-title Specifications
-                  ul.skills-list
-                    li Done in my spare time.
-                    li I researched it in 2018 (see download below).
-                    li I am currently studying towards this goal.
-                <button class ="btn-box" onclick="window.open('/files/2019-Feb-Vision-of-VRexo-BLDCrevised.pdf', '_blank');"><i class="fa fa-download"></i> Research PDF VR-exo</button>
-
-
-          .col-lg-4.col-sm-6.portfolio-item
-            .card.h-100
-              a(href='#').div-img-top
-                video(autoplay loop muted playsinline width="100%").card-img-top
-                  source(src="/videos/exo-arm.webm" type="video/webm")
-                  source(src="/videos/exo-arm.mp4" type="video/mp4")              
-              .card-body
-                div.upper-content
-                  h4.card-title
-                    a(href='#') VR-exo force feedback elbow
-                    h5.date 10 weeks part-time - Feb to April 2019
-                  p.card-text
-                    | To make a simple proof of concept I started to build a haptic feedback for the elbow joint.
-                    | The idea was to have force feedback for instance for shooting a bow in VR.
-                    | I never fully finished it, since there were some (solvable) issues with both electronics and welding.
-                    | Thereby, I had to start my master which left little time to spend entire days in the workshop.
-                    | Since doing my master, I have learned a lot and would redesign most of the exoskeleton.
-                    | The above video is only a tiny selection of all the things I worked on. 
-              
-                div.lower-content
-                  h4.skills-title Specifications
-                  ul.skills-list
-                    li Done in my spare time.
-                    li Mechanical arm, completed until it only had to be welded.
-                    li Torque controller (current sensor and current regulator with H-bridge). Sadly due to a mistake this shorted later.
-                    li Old drill for battery and motor, strong enough to counter maximum human force.
-                    li Loadcell to measure force.
-                    li All should be easily to control from an Arduino.
-                <button class ="btn-box" onclick="window.open('/files/2019-Feb-Vision-of-VRexo-BLDCrevised.pdf', '_blank');"><i class="fa fa-download"></i> Research PDF VR-exo</button>
-
-
-          .col-lg-4.col-sm-6.portfolio-item
-            .card.h-100
-              a(href='#').div-img-top
-                video(autoplay loop muted playsinline width="100%").card-img-top
-                  source(src="/videos/Game-Physics.webm" type="video/webm")
-                  source(src="/videos/Game-Physics.mp4" type="video/mp4") 
-              .card-body
-                div.upper-content
-                  h4.card-title
-                    a(href='https://github.com/AmberElferink/GamePhysics', target="_blank") Game Physics
-                  h5.date part-time, group of 2/3: 8 weeks - March to April 2019
-                  p.card-text.
-                    In the game physics course in the Game and Media technology master, we implemented rigid body dynamics, soft body dynamics and a ragdoll cloth simulation. 
-                    The task was to implement rigid and soft body dynamics in the framework of our teacher, which already could detect collisions, but not solve them. 
-                    For the rigid body dynamics, the CR coefficient is how elastic the collision is, the lower, the more energy gets lost. Other built in features: Including friction, air drag, interpenetration with additional rotational movement, interaction with mouse.
-                    The soft body simulation works by connecting the vertices via springs in tetrahedral structure. To quickly calculate for all springs simultaneously, the simulation uses matrices for mass, stiffness and damping constants, for which each entry in the matrix matches to a spring.
-                    Together with volume preservation forces, this yields a soft body simulation. It allows allow user squeezing and corotational elements 
-                    Then we have a cloth and ragdoll simulation. The simulation is built in Unity without RigidBody components (implementing physics ourselves). Due to only two weeks to build it part time, we did not get to angular constraints and inverse kinematics.
-                    Cloth simulated as vertices connected by springs. Ragdoll as balls with distance constraints.
-                div.lower-content
-                  h4.skills-title Specifications
-                  ul.skills-list
-                    li Rigid body (C++), grade 10/10:
-                    li Soft body Features (C++), grade 10/10: 
-                    li Ragdoll and cloth simulation 
-                <button class ="btn-box" ><i class="fa fa-github-square"></i> No Github, copyright </button>
-
-          .col-lg-4.col-sm-6.portfolio-item
-            .card.h-100
-              a(href='https://github.com/AmberElferink/Raytracer/wiki', target="_blank").div-img-top
+              a(href='', target="_blank").div-img-top
                 //-iframe(width="700" height="400" src="https://www.youtube.com/embed/xG2lreUPnFQ?controls=0&autoplay=1&mute=1&loop=1&modestbranding=0" frameborder="0").card-img-top
-                video(autoplay loop muted playsinline width="100%").card-img-top
+                video(autoplay loop controls muted playsinline width="100%").card-img-top
                   source(src="/videos/Planning_video.webm" type="video/webm")
                   source(src="/videos/Planning_video.mp4" type="video/mp4") 
               .card-body
@@ -135,7 +44,33 @@ block content
             .card.h-100
               a(href='https://github.com/AmberElferink/Raytracer/wiki', target="_blank").div-img-top
                 //-iframe(width="700" height="400" src="https://www.youtube.com/embed/xG2lreUPnFQ?controls=0&autoplay=1&mute=1&loop=1&modestbranding=0" frameborder="0").card-img-top
-                video(autoplay loop muted playsinline width="100%").card-img-top
+                video(autoplay loop controls muted playsinline width="100%").card-img-top
+                  source(src="/videos/Animation_engine.webm" type="video/webm")
+                  source(src="/videos/Animation_engine.mp4" type="video/mp4") 
+              .card-body
+                div.upper-content
+                  h4.card-title
+                    a(href='https://github.com/AmberElferink/AnimationViewer/', target="_blank") Animation engine
+                  h5.date part-time, group of 4: 8 weeks - May to June 2020
+                  p.card-text.
+                    For the Animation course, we built an animation engine from the ground up in C++ and OpenGL. 
+                    You first drag in a file containing a rigged mesh, meaning the mesh contains a basic skeletal system with joints. 
+                    To then animate it, you drag an animation file on top of the mesh which matches in the number of joints, which makes the mesh move.
+                    To correctly animate this, kinematics was implemented throughout the joint system.
+                    The animation file is usually loaded in keyframes. To make smooth animations, linear interpolate between te keyframes was implemented.
+                div.lower-content
+                  h4.skills-title Specifications
+                  ul.skills-list
+                    li Built in OpenGL and C++ from scratch
+                    li Intuitive GUI and components
+                <button class ="btn-box" onclick="window.open('https://github.com/AmberElferink/AnimationViewer/blob/master/README.md', '_blank');"><i class="fa fa-github-square"></i> Checkout Github </button>
+
+
+          .col-lg-4.col-sm-6.portfolio-item
+            .card.h-100
+              a(href='', target="_blank").div-img-top
+                //-iframe(width="700" height="400" src="https://www.youtube.com/embed/xG2lreUPnFQ?controls=0&autoplay=1&mute=1&loop=1&modestbranding=0" frameborder="0").card-img-top
+                video(autoplay loop controls muted playsinline width="100%").card-img-top
                   source(src="/videos/Computer_Vision.webm" type="video/webm")
                   source(src="/videos/Computer_Vision.mp4" type="video/mp4") 
               .card-body
@@ -160,39 +95,104 @@ block content
                   <button class ="btn-box" onclick="window.open('https://github.com/AmberElferink/ComputerVisionCube', '_blank');"><i class="fa fa-github-square"></i> Checkout Github cube </button>
                   <button class ="btn-box" onclick="window.open('https://github.com/AmberElferink/ComputerVisionReconstruction', '_blank');"><i class="fa fa-github-square"></i> Checkout Github 3D </button>
   
+
+
+
           .col-lg-4.col-sm-6.portfolio-item
             .card.h-100
-              a(href='https://github.com/AmberElferink/Raytracer/wiki', target="_blank").div-img-top
-                //-iframe(width="700" height="400" src="https://www.youtube.com/embed/xG2lreUPnFQ?controls=0&autoplay=1&mute=1&loop=1&modestbranding=0" frameborder="0").card-img-top
-                video(autoplay loop muted playsinline width="100%").card-img-top
-                  source(src="/videos/Animation_engine.webm" type="video/webm")
-                  source(src="/videos/Animation_engine.mp4" type="video/mp4") 
+              a(href='#').div-img-top
+                video(autoplay loop controls muted playsinline width="100%").card-img-top
+                  source(src="/videos/Game-Physics.webm" type="video/webm")
+                  source(src="/videos/Game-Physics.mp4" type="video/mp4") 
               .card-body
                 div.upper-content
                   h4.card-title
-                    a(href='https://github.com/AmberElferink/AnimationViewer/', target="_blank") Animation engine
-                  h5.date part-time, group of 4: 8 weeks - May to June 2020
+                    a(href='https://github.com/AmberElferink/GamePhysics', target="_blank") Game Physics
+                  h5.date part-time, group of 2/3: 8 weeks - March to April 2019
                   p.card-text.
-                    For the Animation course, we built an animation engine from the ground up in C++ and OpenGL. 
-                    You first drag in a file containing a rigged mesh, meaning the mesh contains a basic skeletal system with joints. 
-                    To then animate it, you drag an animation file on top of the mesh which matches in the number of joints, which makes the mesh move.
-                    To correctly animate this, kinematics was implemented throughout the joint system.
-                    The animation file is usually loaded in keyframes. To make smooth animations, linear interpolate between te keyframes was implemented.
-
+                    In the game physics course in the Game and Media technology master, we implemented rigid body dynamics, soft body dynamics and a ragdoll cloth simulation. 
+                    The task was to implement rigid and soft body dynamics in the framework of our teacher, which already could detect collisions, but not solve them. 
+                    For the rigid body dynamics, the CR coefficient is how elastic the collision is, the lower, the more energy gets lost. Other built in features: Including friction, air drag, interpenetration with additional rotational movement, interaction with mouse.
+                    The soft body simulation works by connecting the vertices via springs in tetrahedral structure. To quickly calculate for all springs simultaneously, the simulation uses matrices for mass, stiffness and damping constants, for which each entry in the matrix matches to a spring.
+                    Together with volume preservation forces, this yields a soft body simulation. It allows allow user squeezing and corotational elements 
+                    Then we have a cloth and ragdoll simulation. The simulation is built in Unity without RigidBody components (implementing physics ourselves). Due to only two weeks to build it part time, we did not get to angular constraints and inverse kinematics.
+                    Cloth simulated as vertices connected by springs. Ragdoll as balls with distance constraints.
                 div.lower-content
                   h4.skills-title Specifications
                   ul.skills-list
-                    li Built in OpenGL and C++ from scratch
-                    li Intuitive GUI and components
-                <button class ="btn-box" onclick="window.open('https://github.com/AmberElferink/AnimationViewer/blob/master/README.md', '_blank');"><i class="fa fa-github-square"></i> Checkout Github </button>
-  
+                    li Rigid body (C++), grade 10/10:
+                    li Soft body Features (C++), grade 10/10: 
+                    li Ragdoll and cloth simulation 
+                <button class ="btn-box" ><i class="fa fa-github-square"></i> No Github, copyright </button>  
 
-      
+          .col-lg-4.col-sm-6.portfolio-item
+            .card.h-100
+              a(href='#').div-img-top
+                picture
+                  source(srcset="/images/VR-exo.webp" type="image/webp")
+                  img.card-img-top(src='/images/VR-exo.png', alt='VR-exo first design image' type="image/png")
+              .card-body
+                div.upper-content
+                  h4.card-title
+                    a(href='#') VR-exo, an exoskeleton for Virtual Reality
+                  h5.date 3 weeks full-time - December 2018
+                  p.card-text
+                    | Wat if we were to make an exoskeleton for the entire body, that can be tilted as well?
+                    | We would be able to simulate anything in VR. Walk, step onto things, step in a plane and fly away. 
+                    | Feel all the forces in a virtual world. Holotron and the AxonVR skeleton are similar to this idea, which I discovered later (see Homepage).
+                    | This would also be particulary useful for training, rehabilitation and telerobotics.
+                    | I spent a few weeks doing research and designing ideas to solve the locomotion problem with haptic feedback in my spare time.
+                    | Since this project I tried to fully focus my education to work towards this goal.
+                    | Designing an exoskeleton counteracting human movements is hard due to the high torque and speed requirements for the motors.
+                    | Another problem is that you should be able to move without the motor counteracting your forces.
+                    | The research I have during this time is downloadable in a PDF below. 
+                    | Please keep in mind that during this time I only had chemistry and 1.5 years computer science experience.
+                    | Since attending haptics courses, I know what can and cannot be done, and work towards the endgoal differently.
+                div.lower-content
+                  h4.skills-title Specifications
+                  ul.skills-list
+                    li Done in my spare time.
+                    li I researched it in 2018 (see download below).
+                    li I am currently studying towards this goal.
+                <button class ="btn-box" onclick="window.open('/files/2019-Feb-Vision-of-VRexo-BLDCrevised.pdf', '_blank');"><i class="fa fa-download"></i> Research PDF VR-exo</button>
+
+
+          .col-lg-4.col-sm-6.portfolio-item
+            .card.h-100
+              a(href='#').div-img-top
+                video(autoplay loop controls muted playsinline width="100%").card-img-top
+                  source(src="/videos/exo-arm.webm" type="video/webm")
+                  source(src="/videos/exo-arm.mp4" type="video/mp4")              
+              .card-body
+                div.upper-content
+                  h4.card-title
+                    a(href='#') VR-exo force feedback elbow
+                    h5.date 10 weeks part-time - Feb to April 2019
+                  p.card-text
+                    | To make a simple proof of concept I started to build a haptic feedback for the elbow joint.
+                    | The idea was to have force feedback for instance for shooting a bow in VR.
+                    | I never fully finished it, since there were some (solvable) issues with both electronics and welding.
+                    | Thereby, I had to start my master which left little time to spend entire days in the workshop.
+                    | Since doing my master, I have learned a lot and would redesign most of the exoskeleton.
+                    | The above video is only a tiny selection of all the things I worked on. 
+              
+                div.lower-content
+                  h4.skills-title Specifications
+                  ul.skills-list
+                    li Done in my spare time.
+                    li Mechanical arm, completed until it only had to be welded.
+                    li Torque controller (current sensor and current regulator with H-bridge). Sadly due to a mistake this shorted later.
+                    li Old drill for battery and motor, strong enough to counter maximum human force.
+                    li Loadcell to measure force.
+                    li All should be easily to control from an Arduino.
+                <button class ="btn-box" onclick="window.open('/files/2019-Feb-Vision-of-VRexo-BLDCrevised.pdf', '_blank');"><i class="fa fa-download"></i> Research PDF VR-exo</button>
+
+     
           .col-lg-4.col-sm-6.portfolio-item
             .card.h-100
               a(href='https://github.com/AmberElferink/Raytracer/wiki', target="_blank").div-img-top
                 //-iframe(width="700" height="400" src="https://www.youtube.com/embed/xG2lreUPnFQ?controls=0&autoplay=1&mute=1&loop=1&modestbranding=0" frameborder="0").card-img-top
-                video(autoplay loop muted playsinline width="100%").card-img-top
+                video(autoplay loop controls muted playsinline width="100%").card-img-top
                   source(src="/videos/Raytracer.webm" type="video/webm")
                   source(src="/videos/Raytracer.mp4" type="video/mp4") 
               .card-body
@@ -223,7 +223,7 @@ block content
           .col-lg-4.col-sm-6.portfolio-item
             .card.h-100
               a(href='#').div-img-top
-                video(autoplay loop muted playsinline width="100%").card-img-top
+                video(autoplay loop controls muted playsinline width="100%").card-img-top
                   source(src="/videos/Rasterizer.webm" type="video/webm")
                   source(src="/videos/Rasterizer.mp4" type="video/mp4")
               .card-body
@@ -358,7 +358,7 @@ block content
           .col-lg-4.col-sm-6.portfolio-item
               .card.h-100
                 a(href='https://github.com/AmberElferink/AsteroidsInHaskell' target='_blank').div-img-top
-                  video(autoplay loop muted playsinline width="100%").card-img-top
+                  video(autoplay loop controls  muted playsinline width="100%").card-img-top
                     source(src="/videos/Asteroids.webm" type="video/webm")
                     source(src="/videos/Asteroids.mp4" type="video/mp4")
                 .card-body
