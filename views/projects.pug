@@ -87,7 +87,7 @@ block content
                 div.upper-content
                   h4.card-title
                     a(href='https://github.com/AmberElferink/GamePhysics', target="_blank") Game Physics
-                  h5.date 8 weeks part-time - March to April 2019
+                  h5.date part-time, group of 2/3: 8 weeks - March to April 2019
                   p.card-text.
                     In the game physics course in the Game and Media technology master, we implemented rigid body dynamics, soft body dynamics and a ragdoll cloth simulation. 
                     The task was to implement rigid and soft body dynamics in the framework of our teacher, which already could detect collisions, but not solve them. 
@@ -115,7 +115,7 @@ block content
                 div.upper-content
                   h4.card-title
                     a(href='https://github.com/AmberElferink/PDM-python-RRT', target="_blank") Drone packet delivery RRT*
-                  h5.date part-time: 8 weeks - November 2020 to January 2021
+                  h5.date part-time, group of 4: 8 weeks - November 2020 to January 2021
                   p.card-text.
                     For the path planning and decision making course, we built a project to simulate dropping of packages on balconies in New York.
                     The visualisation was done with CoppeliaSim (previously V-rep). We linked this to python, and modified an existing RRT* library to speed up significantly.
@@ -142,7 +142,7 @@ block content
                 div.upper-content
                   h4.card-title
                     a(href='', target="_blank") Real world vision projects
-                  h5.date part-time: 3 weeks - Feb 2020
+                  h5.date part-time, group of 2: 3 weeks - Feb 2020
                   p.card-text.
                     In the computer vision course, we learned how to incorporate simulations into the real world and the world into simulations via cameras.
                     In a first project we used OpenCV to calibrate the camera and find the orientation of the checkboard. Linking this to OpenGL, we draw in the cube.
@@ -160,29 +160,31 @@ block content
                   <button class ="btn-box" onclick="window.open('https://github.com/AmberElferink/ComputerVisionCube', '_blank');"><i class="fa fa-github-square"></i> Checkout Github cube </button>
                   <button class ="btn-box" onclick="window.open('https://github.com/AmberElferink/ComputerVisionReconstruction', '_blank');"><i class="fa fa-github-square"></i> Checkout Github 3D </button>
   
-          //- .col-lg-4.col-sm-6.portfolio-item
-          //-   .card.h-100
-          //-     a(href='https://github.com/AmberElferink/Raytracer/wiki', target="_blank").div-img-top
-          //-       //-iframe(width="700" height="400" src="https://www.youtube.com/embed/xG2lreUPnFQ?controls=0&autoplay=1&mute=1&loop=1&modestbranding=0" frameborder="0").card-img-top
-          //-       video(autoplay loop muted playsinline width="100%").card-img-top
-          //-         source(src="/videos/Computer_Vision.webm" type="video/webm")
-          //-         source(src="/videos/Computer_Vision.mp4" type="video/mp4") 
-          //-     .card-body
-          //-       div.upper-content
-          //-         h4.card-title
-          //-           a(href='https://github.com/AmberElferink/AnimationViewer/', target="_blank") Drone packet delivery RRT*
-          //-         h5.date part-time: 4 weeks - June 2020
-          //-         p.card-text.
-          //-           For the Animation course, we built an animation engine from the ground up in C++ and OpenGL. 
-          //-           You first drag in a file containing a rigged mesh, meaning the mesh contains a basic skeletal system with joints. 
-          //-           To then animate it, you drag an animation file on top of the mesh which matches in the number of joints, which makes the mesh move.
-          //-           To correctly animate this, kinematics was implemented throughout the joint system.
+          .col-lg-4.col-sm-6.portfolio-item
+            .card.h-100
+              a(href='https://github.com/AmberElferink/Raytracer/wiki', target="_blank").div-img-top
+                //-iframe(width="700" height="400" src="https://www.youtube.com/embed/xG2lreUPnFQ?controls=0&autoplay=1&mute=1&loop=1&modestbranding=0" frameborder="0").card-img-top
+                video(autoplay loop muted playsinline width="100%").card-img-top
+                  source(src="/videos/Animation_engine.webm" type="video/webm")
+                  source(src="/videos/Animation_engine.mp4" type="video/mp4") 
+              .card-body
+                div.upper-content
+                  h4.card-title
+                    a(href='https://github.com/AmberElferink/AnimationViewer/', target="_blank") Animation engine
+                  h5.date part-time, group of 4: 8 weeks - May to June 2020
+                  p.card-text.
+                    For the Animation course, we built an animation engine from the ground up in C++ and OpenGL. 
+                    You first drag in a file containing a rigged mesh, meaning the mesh contains a basic skeletal system with joints. 
+                    To then animate it, you drag an animation file on top of the mesh which matches in the number of joints, which makes the mesh move.
+                    To correctly animate this, kinematics was implemented throughout the joint system.
+                    The animation file is usually loaded in keyframes. To make smooth animations, linear interpolate between te keyframes was implemented.
 
-          //-       div.lower-content
-          //-         h4.skills-title Specifications
-          //-         ul.skills-list
-          //-           li Built in OpenGL and C++
-          //-       <button class ="btn-box" onclick="window.open('https://github.com/AmberElferink/AnimationViewer/blob/master/README.md', '_blank');"><i class="fa fa-github-square"></i> Checkout Github </button>
+                div.lower-content
+                  h4.skills-title Specifications
+                  ul.skills-list
+                    li Built in OpenGL and C++ from scratch
+                    li Intuitive GUI and components
+                <button class ="btn-box" onclick="window.open('https://github.com/AmberElferink/AnimationViewer/blob/master/README.md', '_blank');"><i class="fa fa-github-square"></i> Checkout Github </button>
   
 
       
@@ -197,7 +199,7 @@ block content
                 div.upper-content
                   h4.card-title
                     a(href='https://github.com/AmberElferink/Raytracer/wiki', target="_blank") Ray Tracing and Path Tracing
-                  h5.date part-time: 3 weeks - May 2018, 8 weeks Nov to Jan 2019
+                  h5.date part-time, group of 2: 3 weeks - May 2018, 8 weeks Nov to Jan 2019
                   p.card-text
                     | A 3D environment that does not have real-time performance as priority, but is physically accurate. This method is mostly used in rendering software.
                     | A ray is shot from each pixel into a virtual space and the intersection with the closests object, bouncing further and its color is determined. 
@@ -228,7 +230,7 @@ block content
                 div.upper-content
                   h4.card-title
                     a(href='#') Rasterization Engine
-                  h5.date 3 weeks part-time - June 2018
+                  h5.date 3 weeks part-time, group of 2 - June 2018
                   p.card-text
                     | A 3D environment that has real-time performance as priority. 
                     | However, shadows, lighting and reflections will be less accurate. This rendering method is mostly used in games.
