@@ -88,23 +88,20 @@ block content
                   h4.card-title
                     a(href='https://github.com/AmberElferink/GamePhysics', target="_blank") Game Physics
                   h5.date 8 weeks part-time - March to April 2019
-                  p.card-text
-                    |In the game physics course in the Game and Media technology master, we implemented rigid body dynamics, soft body dynamics and a ragdoll cloth simulation. 
-                    |The task was to implement rigid and soft body dynamics in the framework of our teacher, which already could detect collisions, but not solve them. 
-
+                  p.card-text.
+                    In the game physics course in the Game and Media technology master, we implemented rigid body dynamics, soft body dynamics and a ragdoll cloth simulation. 
+                    The task was to implement rigid and soft body dynamics in the framework of our teacher, which already could detect collisions, but not solve them. 
+                    For the rigid body dynamics, the CR coefficient is how elastic the collision is, the lower, the more energy gets lost. Other built in features: Including friction, air drag, interpenetration with additional rotational movement, interaction with mouse.
+                    The soft body simulation works by connecting the vertices via springs in tetrahedral structure. To quickly calculate for all springs simultaneously, the simulation uses matrices for mass, stiffness and damping constants, for which each entry in the matrix matches to a spring.
+                    Together with volume preservation forces, this yields a soft body simulation. It allows allow user squeezing and corotational elements 
+                    Then we have a cloth and ragdoll simulation. The simulation is built in Unity without RigidBody components (implementing physics ourselves). Due to only two weeks to build it part time, we did not get to angular constraints and inverse kinematics.
+                    Cloth simulated as vertices connected by springs. Ragdoll as balls with distance constraints.
                 div.lower-content
                   h4.skills-title Specifications
                   ul.skills-list
                     li Rigid body (C++), grade 10/10:
-                      ul
-                        li Features: Including friction, air drag, interpenetration with additional rotational movement, interaction with mouse.
                     li Soft body Features (C++), grade 10/10: 
-                      ul
-                        li Features: allow user squeezing, corotational elements 
                     li Ragdoll and cloth simulation 
-                      ul
-                        li Simulation built in Unity without RigidBody components (implementing physics ourselves).
-                        li Cloth simulated as vertices connected by springs. Ragdoll as balls with distance constraints.
                 <button class ="btn-box" ><i class="fa fa-github-square"></i> No Github, copyright </button>
 
           .col-lg-4.col-sm-6.portfolio-item
@@ -145,7 +142,7 @@ block content
                 div.upper-content
                   h4.card-title
                     a(href='', target="_blank") Real world vision projects
-                  h5.date part-time: 4 weeks - June 2020
+                  h5.date part-time: 3 weeks - Feb 2020
                   p.card-text.
                     In the computer vision course, we learned how to incorporate simulations into the real world and the world into simulations via cameras.
                     In a first project we used OpenCV to calibrate the camera and find the orientation of the checkboard. Linking this to OpenGL, we draw in the cube.
@@ -153,15 +150,16 @@ block content
                     The other assignment was to show 3D reconstruction from four cameras on a prebuilt C++ template. 
                     We extracted a mask of the subject, and turned a voxel (a 3D pixel) on when it was visible from all four cameras. 
                     This way you get a 3D reconstruction in voxels, from which a mesh can be generated via the marching cubes algorithm.
-                  div.lower-content
-                    h4.skills-title Specifications
-                    ul.skills-list
-                      li Cube built in OpenGL, OpenCV and C++ 
-                      li 3D reconstruction in OpenCV and C++ (OpenGL already in template)
-                      li Both projects graded 10/10
-                    <button class ="btn-box" onclick="window.open('https://github.com/AmberElferink/ComputerVisionCube', '_blank');"><i class="fa fa-github-square"></i> Checkout Github cube </button>
-                    <button class ="btn-box" onclick="window.open('https://github.com/AmberElferink/ComputerVisionReconstruction', '_blank');"><i class="fa fa-github-square"></i> Checkout Github reconstruction </button>
-    
+                div.lower-content
+                  h4.skills-title Specifications
+                  ul.skills-list
+                    li Cube built in OpenGL, OpenCV and C++ 
+                    li 3D reconstruction in OpenCV and C++ (OpenGL already in template)
+                    li Both projects graded 10/10
+                div
+                  <button class ="btn-box" onclick="window.open('https://github.com/AmberElferink/ComputerVisionCube', '_blank');"><i class="fa fa-github-square"></i> Checkout Github cube </button>
+                  <button class ="btn-box" onclick="window.open('https://github.com/AmberElferink/ComputerVisionReconstruction', '_blank');"><i class="fa fa-github-square"></i> Checkout Github 3D </button>
+  
           //- .col-lg-4.col-sm-6.portfolio-item
           //-   .card.h-100
           //-     a(href='https://github.com/AmberElferink/Raytracer/wiki', target="_blank").div-img-top
