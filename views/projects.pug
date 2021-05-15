@@ -29,9 +29,9 @@ block content
                     For the path planning and decision making course, we built a project to simulate dropping of packages on balconies in New York.
                     The visualisation was done with CoppeliaSim (previously V-rep). We linked this to python, and modified an existing RRT* library to speed up significantly.
                     RRT* forms a tree through 3D space by randomly placing a point, and connecting it to the closest point in the tree. It then reconnects some branches to reorganise.
-                    We did this by searching in a cone towards the end point. It will first try to fit points in this area, if it cannot find a point closer to the goal
+                    The speed up was achieved by searching in a cone towards the end point. It will first try to fit points in a small cone, if it cannot find a point closer to the goal
                     within a few iterations, it will enlargen the angle of the cone. In addition to the cone, there is a box around the drone so it can find options when it is close to a building.
-                    It then flies over the path by actual drone dynamics with PID velocity control.
+                    When a path is found, the drone then flies over the path by actual drone dynamics with PID velocity control.
                 div.lower-content
                   h4.skills-title Specifications
                   ul.skills-list
@@ -55,20 +55,20 @@ block content
                   p.card-text.
                     For the Animation course, we built an animation engine from the ground up in C++ and OpenGL. 
                     You first drag in a file containing a rigged mesh, meaning the mesh contains a basic skeletal system with joints. 
-                    To then animate it, you drag an animation file on top of the mesh which matches in the number of joints, which makes the mesh move.
-                    To correctly animate this, kinematics was implemented throughout the joint system.
+                    Then drag an animation file on top of the mesh to make it move. The mesh vertices are then moved with the corresponding bones.
+                    To correctly animate the skeletons, kinematics was implemented throughout the joint system.
                     The animation file is usually loaded in keyframes. To make smooth animations, linear interpolate between te keyframes was implemented.
                 div.lower-content
                   h4.skills-title Specifications
                   ul.skills-list
                     li Built in OpenGL and C++ from scratch
-                    li Intuitive GUI and components
+                    li Intuitive GUI and component system
                 <button class ="btn-box" onclick="window.open('https://github.com/AmberElferink/AnimationViewer/blob/master/README.md', '_blank');"><i class="fa fa-github-square"></i> Checkout Github </button>
 
 
           .col-lg-4.col-sm-6.portfolio-item
             .card.h-100
-              a(href='', target="_blank").div-img-top
+              a(href='https://github.com/AmberElferink/ComputerVisionCube', target="_blank").div-img-top
                 //-iframe(width="700" height="400" src="https://www.youtube.com/embed/xG2lreUPnFQ?controls=0&autoplay=1&mute=1&loop=1&modestbranding=0" frameborder="0").card-img-top
                 video(autoplay loop controls muted playsinline width="100%").card-img-top
                   source(src="/videos/Computer_Vision.webm" type="video/webm")
@@ -79,16 +79,16 @@ block content
                     a(href='', target="_blank") Real world vision projects
                   h5.date part-time, group of 2: 3 weeks - Feb 2020
                   p.card-text.
-                    In the computer vision course, we learned how to incorporate simulations into the real world and the world into simulations via cameras.
-                    In a first project we used OpenCV to calibrate the camera and find the orientation of the checkboard. Linking this to OpenGL, we draw in the cube.
-                    In GLSL fragment shader, reflections to a virtual light source is simulated. 
+                    In the computer vision course, we learned how to incorporate simulations into the real world and the other way around.
+                    In the first project we used OpenCV to calibrate the camera and find the orientation of the checkboard. Linking this to OpenGL, the cube is drawn after tranforming it to the checkboard space.
+                    In the GLSL fragment shader, reflections to a virtual light source is simulated. 
                     The other assignment was to show 3D reconstruction from four cameras on a prebuilt C++ template. 
                     We extracted a mask of the subject, and turned a voxel (a 3D pixel) on when it was visible from all four cameras. 
                     This way you get a 3D reconstruction in voxels, from which a mesh can be generated via the marching cubes algorithm.
                 div.lower-content
                   h4.skills-title Specifications
                   ul.skills-list
-                    li Cube built in OpenGL, OpenCV and C++ 
+                    li Cube AR built in OpenGL, OpenCV and C++ 
                     li 3D reconstruction in OpenCV and C++ (OpenGL already in template)
                     li Both projects graded 10/10
                 div
@@ -201,10 +201,10 @@ block content
                     a(href='https://github.com/AmberElferink/Raytracer/wiki', target="_blank") Ray Tracing and Path Tracing
                   h5.date part-time, group of 2: 3 weeks - May 2018, 8 weeks Nov to Jan 2019
                   p.card-text
-                    | A 3D environment that does not have real-time performance as priority, but is physically accurate. This method is mostly used in rendering software.
-                    | A ray is shot from each pixel into a virtual space and the intersection with the closests object, bouncing further and its color is determined. 
-                    | Some implemented features are: Glass, mirrors, spotlights, anti-aliasing, triangles in C# whitted. The C++ whitted additionally contains Lambert-Beer, textures, area lights and multithreading (205% speedup on dual core h).
-                    | The car consists of 360794 triangles. To render it fast, BVH (bounding volume hierarchy is implemented, which is dividing scene in nested boxes, and walking through them with a tree. The car can render on 1280x720px in 180 ms quad core hyperthreaded (no threadpool) and in 2.45 seconds single core. This is very fast for a whitted raytracer on CPU.
+                    | A raytracer is a 3D environment that does not have real-time performance as priority, but is physically accurate. This method is mostly used in rendering software.
+                    | A ray is shot from each pixel into a virtual space. The intersection with the closests object is registered, bouncing further until the final pixel color is determined. 
+                    | In the bachelor, with C#, implemented features are: Glass, mirrors, spotlights, anti-aliasing and triangles. The C++ whitted additionally contains Lambert-Beer, textures, area lights and multithreading (205% speedup on dual core h).
+                    | The car consists of 360794 triangles. To render it fast, BVH (bounding volume hierarchy) is implemented, which divides the scene in nested boxes. During intersection checks, the algorithm can walk through the tree quickly and skip checks. The car can render on 1280x720px in 180 ms quad core hyperthreaded (no threadpool) and in 2.45 seconds single core. This is very fast for a whitted raytracer on CPU.
                     | Path tracer: Rays are rendered from light source to camera and is capable of caustics and color bleeding, which the other whitted raytracers are not.
                     | To speed this up, I implemented SIMD (AVX) to speed up the triangle intersection function.
                 div.lower-content
@@ -232,7 +232,7 @@ block content
                     a(href='#') Rasterization Engine
                   h5.date 3 weeks part-time, group of 2 - June 2018
                   p.card-text
-                    | A 3D environment that has real-time performance as priority. 
+                    | A rasterizer is rendering a 3D environment that has real-time performance as priority. 
                     | However, shadows, lighting and reflections will be less accurate. This rendering method is mostly used in games.
                     | Implemented many basic engine features from a template that could load a basic 3D meshes.
                     | One of the features implemented is a scenegraph, which enables rotation and translation with respect to parent objects and finally transforming to camera space.
