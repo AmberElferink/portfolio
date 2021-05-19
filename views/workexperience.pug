@@ -140,7 +140,7 @@ block content
                     #dynamics.collapse(data-parent='#accordion')
                       .card-body
                         | Simulating double pendulum after deriving equations of motions (Langrange).
-                        | Non-holonomic constraints and car derivations
+                        | Non-holonomic constraints and car derivations,
                         | PID controller trajectory control
                   .card
                     .card-header
@@ -276,7 +276,8 @@ block content
           On this map, you move round disks as a cursor to place objects such as windmills and solar panels.
           The round disks are tracked by a camera above the table. 
           My responsibility was to develop a new tracking algorithm for round disks on the Ditou table (C++ and OpenCV), and to make an environment in Unity loading, customizing and saving the map. 
-          Thereby, by using the tracked positions, 3D windmills and solar panels could be built on the map. 
+          Thereby, by using the tracked positions, 3D windmills and solar panels could be built on the map. Before I started, there was a table, a camera and a beamer. The previous solution they had, used infrared lights on battery charged disks to track them.
+          So the entire tracking and also the map projection on the table was built from the ground up.
           The tracking and Unity environment communicated via NodeJS. 
           The table is currently used to demonstrate the outcomes for building windmills and solar panels for citizens’ initiatives. 
         div(style="text-align:center;")

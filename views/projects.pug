@@ -13,32 +13,6 @@ block content
         h1.page-header #{title}
         //- p(style="text-align:center;") This page gives an overview of some project I did. Many will be added soon.
         .row
-          .col-lg-4.col-sm-6.portfolio-item
-            .card.h-100
-              a(href='', target="_blank").div-img-top
-                //-iframe(width="700" height="400" src="https://www.youtube.com/embed/xG2lreUPnFQ?controls=0&autoplay=1&mute=1&loop=1&modestbranding=0" frameborder="0").card-img-top
-                video(autoplay loop controls muted playsinline width="100%").card-img-top
-                  source(src="/videos/Planning_video.webm" type="video/webm")
-                  source(src="/videos/Planning_video.mp4" type="video/mp4") 
-              .card-body
-                div.upper-content
-                  h4.card-title
-                    a(href='https://github.com/AmberElferink/PDM-python-RRT', target="_blank") Drone packet delivery RRT*
-                  h5.date part-time, group of 4: 8 weeks - November 2020 to January 2021
-                  p.card-text.
-                    For the path planning and decision making course, we built a project to simulate dropping of packages on balconies in New York.
-                    The visualisation was done with CoppeliaSim (previously V-rep). We linked this to python, and modified an existing RRT* library to speed up significantly.
-                    RRT* forms a tree through 3D space by randomly placing a point, and connecting it to the closest point in the tree. It then reconnects some branches to reorganise.
-                    The speed up was achieved by searching in a cone towards the end point. It will first try to fit points in a small cone, if it cannot find a point closer to the goal
-                    within a few iterations, it will enlargen the angle of the cone. In addition to the cone, there is a box around the drone so it can find options when it is close to a building.
-                    When a path is found, the drone then flies over the path by actual drone dynamics with PID velocity control.
-                div.lower-content
-                  h4.skills-title Specifications
-                  ul.skills-list
-                    li Graded with a 9.1/10
-                    li Built in python, linked with Coppeliasim (V-rep)
-                    li Full paper available on Github
-                <button class ="btn-box" onclick="window.open('https://github.com/AmberElferink/PDM-python-RRT', '_blank');"><i class="fa fa-github-square"></i> Checkout Github </button>
 
           .col-lg-4.col-sm-6.portfolio-item
             .card.h-100
@@ -57,7 +31,7 @@ block content
                     You first drag in a file containing a rigged mesh, meaning the mesh contains a basic skeletal system with joints. 
                     Then drag an animation file on top of the mesh to make it move. The mesh vertices are then moved with the corresponding bones.
                     To correctly animate the skeletons, kinematics was implemented throughout the joint system.
-                    The animation file is usually loaded in keyframes. To make smooth animations, linear interpolate between te keyframes was implemented.
+                    The animation file is usually loaded in keyframes. To make smooth animations, linear interpolation between te keyframes was implemented.
                 div.lower-content
                   h4.skills-title Specifications
                   ul.skills-list
@@ -82,8 +56,8 @@ block content
                     In the computer vision course, we learned how to incorporate simulations into the real world and the other way around.
                     In the first project we used OpenCV to calibrate the camera and find the orientation of the checkboard. Linking this to OpenGL, the cube is drawn after tranforming it to the checkboard space.
                     In the GLSL fragment shader, reflections to a virtual light source is simulated. 
-                    The other assignment was to show 3D reconstruction from four cameras on a prebuilt C++ template. 
-                    We extracted a mask of the subject, and turned a voxel (a 3D pixel) on when it was visible from all four cameras. 
+                    The other assignment was to show 3D reconstruction from four cameras on a prebuilt C++ template. Via calibration the transformation from each camera to the room space was obtained.
+                    We extracted a mask of the subject, and turned a voxel (a 3D pixel) on when the a 3D point transformed to camera space is visible (white mask) from all four cameras. 
                     This way you get a 3D reconstruction in voxels, from which a mesh can be generated via the marching cubes algorithm.
                 div.lower-content
                   h4.skills-title Specifications
@@ -114,9 +88,9 @@ block content
                     The task was to implement rigid and soft body dynamics in the framework of our teacher, which already could detect collisions, but not solve them. 
                     For the rigid body dynamics, the CR coefficient is how elastic the collision is, the lower, the more energy gets lost. Other built in features: Including friction, air drag, interpenetration with additional rotational movement, interaction with mouse.
                     The soft body simulation works by connecting the vertices via springs in tetrahedral structure. To quickly calculate for all springs simultaneously, the simulation uses matrices for mass, stiffness and damping constants, for which each entry in the matrix matches to a spring.
-                    Together with volume preservation forces, this yields a soft body simulation. It allows allow user squeezing and corotational elements 
+                    Together with volume preservation forces, this yields a soft body simulation. It allows user squeezing and corotational elements. 
                     Then we have a cloth and ragdoll simulation. The simulation is built in Unity without RigidBody components (implementing physics ourselves). Due to only two weeks to build it part time, we did not get to angular constraints and inverse kinematics.
-                    Cloth simulated as vertices connected by springs. Ragdoll as balls with distance constraints.
+                    The cloth is simulated as vertices connected by springs, the ragdoll as balls with distance constraints.
                 div.lower-content
                   h4.skills-title Specifications
                   ul.skills-list
@@ -124,6 +98,35 @@ block content
                     li Soft body Features (C++), grade 10/10: 
                     li Ragdoll and cloth simulation 
                 <button class ="btn-box" ><i class="fa fa-github-square"></i> No Github, copyright </button>  
+
+          .col-lg-4.col-sm-6.portfolio-item
+            .card.h-100
+              a(href='', target="_blank").div-img-top
+                //-iframe(width="700" height="400" src="https://www.youtube.com/embed/xG2lreUPnFQ?controls=0&autoplay=1&mute=1&loop=1&modestbranding=0" frameborder="0").card-img-top
+                video(autoplay loop controls muted playsinline width="100%").card-img-top
+                  source(src="/videos/Planning_video.webm" type="video/webm")
+                  source(src="/videos/Planning_video.mp4" type="video/mp4") 
+              .card-body
+                div.upper-content
+                  h4.card-title
+                    a(href='https://github.com/AmberElferink/PDM-python-RRT', target="_blank") Drone packet delivery RRT*
+                  h5.date part-time, group of 4: 8 weeks - November 2020 to January 2021
+                  p.card-text.
+                    For the path planning and decision making course, we built a project to simulate dropping of packages on balconies in New York.
+                    The visualisation was done with CoppeliaSim (previously V-rep). We linked this to python, and modified an existing RRT* library to speed up significantly.
+                    RRT* forms a tree through 3D space by randomly placing a point, and connecting it to the closest point in the tree. It then reconnects some branches to reorganise.
+                    The speed up was achieved by searching in a cone towards the end point. It will first try to fit points in a small cone, if it cannot find a point closer to the goal
+                    within a few iterations, it will enlargen the angle of the cone. In addition to the cone, there is a box around the drone so it can find options when it is close to a building.
+                    When a path is found, the drone then flies over the path by actual drone dynamics with PID velocity control.
+                div.lower-content
+                  h4.skills-title Specifications
+                  ul.skills-list
+                    li Graded with a 9.1/10
+                    li Built in python, linked with Coppeliasim (V-rep)
+                    li Full paper available on Github
+                <button class ="btn-box" onclick="window.open('https://github.com/AmberElferink/PDM-python-RRT', '_blank');"><i class="fa fa-github-square"></i> Checkout Github </button>
+
+
 
           .col-lg-4.col-sm-6.portfolio-item
             .card.h-100
@@ -273,34 +276,7 @@ block content
                     li No external libraries used
                     li Graded with 8.7/10    
                 <button class ="btn-box" onclick="window.open('https://github.com/AmberElferink/ImageProcessing3/wiki', '_blank');"><i class="fa fa-github-square"></i> Checkout Github </button>
- 
-          .col-lg-4.col-sm-6.portfolio-item
-            .card.h-100
-              a(href='https://github.com/AmberElferink/LarryDragonsDen/wiki').div-img-top
-                picture
-                  source(srcset="/images/Larry.webp" type="image/webp")
-                  img.card-img-top(src='/images/Larry.png', alt='Image from story and screenshot from Larry the Unsanitary canary' type="image/png")  
-              .card-body
-                div.upper-content
-                  h4.card-title
-                    a(href='https://github.com/AmberElferink/LarryDragonsDen/wiki') Larry the Unsanitary Canary: Dragons Den
-                    h5.date 8 weeks part-time - Nov-Dec 2017
-                  p.card-text
-                    | The game starts when Larry, the trusty steed of the adventures, besmirches the wall of a dragons den. 
-                    | The players are locked into the dragons dungeon, and escaping it is their only hope to freedom.
-                    | This game was made as a first year introduction project. It was made within two months with a team of seven first year students.
-                    | It is a co-op puzzle dungeon crawler, where the players need to find colored keys to unlock doors and each player can only pick up keys of his own color.
-                    | Some doors can be opened by levers, which a player can hold down to open doors for eachother.
-                    | Along the way, players will encounter evil bunnies and pinguins they must defeat.
-                div.lower-content
-                  h4.skills-title Specifications
-                  ul.skills-list
-                    li Built in C# and Monogame
-                    li Teamleader
-                    li Worked mostly on planning, menu's, story art (upper image) and controller input
-                    li Personal grade: 8.5/10   
-                <button class ="btn-box" onclick="window.open('https://github.com/AmberElferink/LarryDragonsDen/wiki', '_blank');"><i class="fa fa-github-square"></i> Checkout Github</button>
-            
+
           .col-lg-4.col-sm-6.portfolio-item
             .card.h-100
               a(href='#').div-img-top
@@ -325,7 +301,7 @@ block content
                     li Made using HTML, CSS, Javascript, NodeJs with ExpressJs and an SQLite database.
                     li Graded with 9.75/10
                 <button class ="btn-box" onclick="window.open('https://github.com/AmberElferink/fastdiningshop', '_blank');"><i class="fa fa-github-square"></i> Checkout Github</button>
- 
+
           .col-lg-4.col-sm-6.portfolio-item
             .card.h-100
               a(href='www.amberelferink.com' target='_blank').div-img-top
@@ -355,6 +331,36 @@ block content
                     li Running on a self setup Raspberry webserver
                 <button class ="btn-box" onclick="window.open('https://github.com/AmberElferink/Portfolio', '_blank');"><i class="fa fa-github-square"></i> Checkout Github</button>
  
+
+          .col-lg-4.col-sm-6.portfolio-item
+            .card.h-100
+              a(href='https://github.com/AmberElferink/LarryDragonsDen/wiki').div-img-top
+                picture
+                  source(srcset="/images/Larry.webp" type="image/webp")
+                  img.card-img-top(src='/images/Larry.png', alt='Image from story and screenshot from Larry the Unsanitary canary' type="image/png")  
+              .card-body
+                div.upper-content
+                  h4.card-title
+                    a(href='https://github.com/AmberElferink/LarryDragonsDen/wiki') Larry the Unsanitary Canary: Dragons Den
+                    h5.date 8 weeks part-time - Nov-Dec 2017
+                  p.card-text
+                    | The game starts when Larry, the trusty steed of the adventures, besmirches the wall of a dragons den. 
+                    | The players are locked into the dragons dungeon, and escaping it is their only hope to freedom.
+                    | This game was made as a first year introduction project. It was made within two months with a team of seven first year students.
+                    | It is a co-op puzzle dungeon crawler, where the players need to find colored keys to unlock doors and each player can only pick up keys of his own color.
+                    | Some doors can be opened by levers, which a player can hold down to open doors for eachother.
+                    | Along the way, players will encounter evil bunnies and pinguins they must defeat.
+                div.lower-content
+                  h4.skills-title Specifications
+                  ul.skills-list
+                    li Built in C# and Monogame
+                    li Teamleader
+                    li Worked mostly on planning, menu's, story art (upper image) and controller input
+                    li Personal grade: 8.5/10   
+                <button class ="btn-box" onclick="window.open('https://github.com/AmberElferink/LarryDragonsDen/wiki', '_blank');"><i class="fa fa-github-square"></i> Checkout Github</button>
+            
+
+
           .col-lg-4.col-sm-6.portfolio-item
               .card.h-100
                 a(href='https://github.com/AmberElferink/AsteroidsInHaskell' target='_blank').div-img-top
