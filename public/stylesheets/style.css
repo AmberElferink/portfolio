@@ -7,6 +7,10 @@ a {
   color: #00B7FF;
 }
 
+.img-circle {
+  width: 33%;
+}
+
 .page-header {
   margin: 30pt 0pt 30pt 0pt;
   text-align: center;

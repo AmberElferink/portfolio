@@ -99,12 +99,6 @@ block content
                 i.fa.fa-chevron-right
 
 
-
-
-
-
-
-
       h1 Education
       section.work-overview
         .row
@@ -121,8 +115,31 @@ block content
                 p.card-text
                   | Official prerequisites are a bachelor mechanical engineering. Therefore I started out with some deficiencies, but I quickly caught up. 
                   br
-                  | Courses completed:
+                  | Completed:
                 #accordion
+                  .card
+                    .card-header
+                      a.collapsed.card-link(data-toggle='collapse', href='#CHRI')
+                        | #[strong Control in Human-Robot Interaction ] (Python, Unity)
+                    #CHRI.collapse(data-parent='#accordion')
+                      .card-body
+                        p.
+                          This course focuses on telerobotics (manipulation of robots at a distance), as well as haptics (feeling the virtual world).
+                          It discusses impedance control, manipulability, scaling force feedback, contact and friction, haptic rendering, vibrotactile, ultrasonic, electroadhesion, force feedback, haptic guidance, different sensors and actuators and much more.
+                          There were also three practica. Two focussed on creating a force feedback simulation with teleoperation (with friction and collisions). The other focussed on creating your own research on haptics. We looked at the effect of vibration instead of visual feedback in VR controllers for precision in following a line.
+                  .card
+                    .card-header
+                      a.collapsed.card-link(data-toggle='collapse', href='#Medical')
+                        | #[strong  Medical Device Prototyping ] (Arduino, Electronics, Matlab)
+                    #Medical.collapse(data-parent='#accordion')
+                      .card-body
+                        p. 
+                          For this course we developed a way to detect and display the force on a silicon tube when clipped. 
+                          It is important to train students in surgery clip application on the correct amount of force to close a vessel, but not cause damage by excessive force,.
+                          For this goal, we designed a force sensing technique with a team of three, based on detection of light through the silicon tube.
+                          In this project, I was personally responsible for electronics and embedded code, while jointly with everyone in the team contributing to the design concepts,
+                          prototyping and evaluation. The resulting paper is downloadable here: <button class ="btn-box" onclick="window.open('/files/ForceClip - Medical Device Prototyping - Final Paper.pdf', '_blank');"><i class="fa fa-download"></i> ForceClip </button>
+                  
                   .card
                     .card-header
                       a.collapsed.card-link(data-toggle='collapse', href='#hri')
@@ -133,6 +150,8 @@ block content
                         | McRuer theory, Design cycle and metrics, ironies/pitfalls of automation, training and selection,
                         | haptic shared control, biosignals (eye tracking), tactile interfaces, motion comfort,
                         | interactive learning, social robots.
+
+
                   .card
                     .card-header
                       a.collapsed.card-link(data-toggle='collapse', href='#dynamics')
@@ -173,20 +192,47 @@ block content
                     #Electronics.collapse(data-parent='#accordion')
                       .card-body
                         | Practical course on analog electronic basics in the lab. Topics include basic components, amplifiers signals, noise, interferance, microwaves, SPICE simulations, oscilloscopes, generators and network analyzers.      
-                p.
-                  Courses planned:
-                ul
-                  li Control in Human-Robot Interaction
-                  li Applied Experimental Methods
-                  li Multi-Disciplinary Project
-                  li Musculoskeletal Modelling and Simulation
-                  li Medical Device Prototyping 
-                    | Developing force sensor for haptics for training in vessel phantoms
-                  li Deep Learning
-                  li Robots & Society
-                  li Software Robotics Practicals 
-                    br
-                    | (Did not fit in P1 with Utrecht course)
+                  .card
+                    .card-header
+                      a.collapsed.card-link(data-toggle='collapse', href='#AEM')
+                        | #[strong Applied Experimental Methods ] (Unity)
+                    #AEM.collapse(data-parent='#accordion')
+                      .card-body
+                        p. 
+                          Applied experimental methods is a course where in a short time period, students execute their own research on a human factors experiment.
+                          We set up our own research question, methods, experimental setup, data collection, result interpretation and writing a paper.
+                          Our efforts were focussed on the relation of heart rate and experience of immersion in VR, with and without haptic backpack.
+                          The paper is downloadable here: <button class ="btn-box" onclick="window.open('/files/Applied_Experimental_Methods_Paper.pdf', '_blank');"><i class="fa fa-download"></i> Paper Applied Experimental methods </button>
+                  .card
+                    .card-header
+                      a.collapsed.card-link(data-toggle='collapse', href='#Multi-disciplinary')
+                        | #[strong  Multi-Disciplinary Project ] (ROS, Python)
+                    #Multi-disciplinary.collapse(data-parent='#accordion')
+                      .card-body
+                        | In the multi-disciplinary project, we work with a group of 4 students to program a real robot (Tiago) to operate in a supermarket.
+                  .card
+                    .card-header
+                      a.collapsed.card-link(data-toggle='collapse', href='#DL')
+                        | #[strong  Deep Learning ] (Python, PyTorch)
+                    #DL.collapse(data-parent='#accordion')
+                      .card-body
+                        | Deep learning contains theory on: feed forward networks, back-propagation, optimization, convolutional neural networks (CNNs), recurrent neural networks, self-attention, and unsupervised methods.
+                        | Additionally we read 14 papers on neural networks, and presented one (I presented a paper on #[a (href="https://arxiv.org/abs/1703.10593") Cycle-Consistent Adversarial networks]).
+                  .card
+                    .card-header
+                      a.collapsed.card-link(data-toggle='collapse', href='#Society')
+                        | #[strong  Robots & Society]
+                    #Society.collapse(data-parent='#accordion')
+                      .card-body
+                        | In this ethics course, we look at different ethical arguments presented on the increased use of robots (including more humanoid robots) in lectures and papers. We also have discussions on what these outcomes could be, and what policies we think should be created to mitigate negative results.
+                        | We also wrote an ethical paper, which in my case was about the use of Codec Avatars in VR (very realistic human avatars). 
+                  .card
+                    .card-header
+                      a.collapsed.card-link(data-toggle='collapse', href='#RSP')
+                        | #[strong  Robot Software Practicals] (ROS, C++, Linux)
+                    #RSP.collapse(data-parent='#accordion')
+                      .card-body
+                        | This course introduces people to the basics of the Linux environment, C++ and compilation with CMake, and ROS. The final result is a programmed self-driving car in ROS, that detects and steers around barrels and stops for pedestrians through Lidar data and computer vision.
                   
           .col-lg-4.col-sm-6.portfolio-item
             .card.h-100
@@ -275,8 +321,38 @@ block content
 
       section.work-overview
         h1 Working Experience
-      section.work-overview
-        h2 Fair2Media
+        h2 Freeaim - Lead Software & Co-founder
+          br
+          small October 2021 - Current
+        p. 
+            Freeaim is startup with a team of passionate people creating VR shoes. With Freeaim VR shoes, you can walk naturally in virtual reality, while the shoes keep you centred within your living room. Our goal is to make them affordable and compact, and available for both businesses and consumers. For more information, check out our website: #[a(href="http://freeaim.com" target="_blank") freeaim.com].
+            My role within the company is developing the software, from embedded to SDK's, in addition to marketing (website, pitch deck), and helping to obtain funding from grants or investors.
+        div(style="text-align:center;")
+            div
+              iframe(type='text/html' allowfullscreen height="280px" width="500px" float
+                src='http://www.youtube.com/embed/6Q5PjokpVcE?playlist=6Q5PjokpVcE&autoplay=1&loop=1&mute=1&playsinline=1&origin=http://www.amberelferink.com/'
+                frameborder='0')
+        h2 SenseGlove - VR input developer
+          br
+          small Juli 2021 - September 2021
+        p.
+          For my master internship I developed an input solution for SenseGlove. 
+          SenseGlove creates haptic gloves to grab, hold and feel objects in virtual reality (VR).
+          However, most applications still use controllers as input and interactions such as teleport are not convenient with VR gloves. 
+          Adding a joystick and buttons would allow for faster interactions, and more compatibility.
+          My role in this internship was to add this hardware to the gloves. 
+          Creating the design, electronics, firmware, software and CAD were all part of this internship. 
+          This was done respectively in C, C#, Unity and Autocad Fusion 360. 
+          The joystick and button functionality was fully implemented in the current SenseGlove software. 
+          I cannot share footage of the design due to confidentiality, but the result was a great user experience and a well-received demo.
+          This is the first step to make the gloves compatible out of the box with many games and simulations available on the market.
+        div(style="text-align:center;")
+          div
+            iframe(type='text/html' allowfullscreen height="280px" width="500px" float
+                src='http://www.youtube.com/embed/TajCGQJTrT8?playlist=TajCGQJTrT8&autoplay=1&loop=1&mute=1&playsinline=1&origin=http://www.amberelferink.com/'
+                frameborder='0')
+        
+        h2 Fair2Media - Software Developer
           br
           small May 2019 - August 2019
         p.
@@ -305,7 +381,7 @@ block content
 
 
       section.work-overview
-        h2 Utrecht University - Werfkracht, Freudenthal Institute
+        h2 Utrecht University: Werfkracht, Freudenthal Institute - Teaching Assistant
           br
           small September 2017 - February 2019
         p
