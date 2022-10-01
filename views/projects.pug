@@ -16,7 +16,62 @@ block content
 
           .col-lg-4.col-sm-6.portfolio-item
             .card.h-100
-              a(href='https://github.com/AmberElferink/Raytracer/wiki', target="_blank").div-img-top
+              a(href='#', target="_blank").div-img-top
+                //-iframe(width="700" height="400" src="https://www.youtube.com/embed/xG2lreUPnFQ?controls=0&autoplay=1&mute=1&loop=1&modestbranding=0" frameborder="0").card-img-top
+                video(autoplay loop controls muted playsinline width="100%").card-img-top
+                  source(src="/videos/SelfDrivingCar.webm" type="video/webm")
+                  source(src="/videos/SelfDrivingCar.mp4" type="video/mp4") 
+              .card-body
+                div.upper-content
+                  h4.card-title
+                    a(href='#', target="_blank") Self Driving Car - Obstacle and Pedestrian detection
+                  h5.date part-time, group of 2: 3 weeks - Oktober - November 2020
+                  p.card-text.
+                    During the robotics course we combined several techniques to make a self driving car detect obstacles and pedestrians, and steer clear of them.
+                    First the ground plane PCL points were removed using RANSAC segmentation. The objects were detected in Lidar data using the Point Cloud Library (PCL) with eucledian cluster extraction.
+                    Pedestrians were detected by feeding the locations of detected lidar objects and these with the camera as a pedestrain. This information was then send to a node which made the car steer around obstacles and stop for objects and pedestrians too close in front of the car.
+                    In a later course we compared four different feature inputs (Raw pixel values, Histogram of oriented gradients (HOG) and Convolutional Neural Network (CNN, MobileNet) in combination with different classifiers (Support Vector Machine (SVM), k-NN) for pedestrian detection.
+                    CNN consistently outperformed the others.
+                    
+                div.lower-content
+                  h4.skills-title Specifications
+                  ul.skills-list
+                    li Built in Robot Operating System (ROS) with C++
+                    li Implemented using Point Cloud Library (PCL) and OpenCV
+                    li Later feature and classifier comparison with Python
+                    li Steering the car based on object and pedestrian detection
+
+
+
+          .col-lg-4.col-sm-6.portfolio-item
+            .card.h-100
+              a(href='#', target="_blank").div-img-top
+                //-iframe(width="700" height="400" src="https://www.youtube.com/embed/xG2lreUPnFQ?controls=0&autoplay=1&mute=1&loop=1&modestbranding=0" frameborder="0").card-img-top
+                video(autoplay loop controls muted playsinline width="100%").card-img-top
+                  source(src="/videos/SenseGloveJoystick.webm" type="video/webm")
+                  source(src="/videos/SenseGloveJoystick.mp4" type="video/mp4") 
+              .card-body
+                div.upper-content
+                  h4.card-title
+                    a(href='#', target="_blank") SenseGlove Joystick internship
+                  h5.date full-time, solo: 10 weeks - July - September 2021
+                  p.card-text.
+                    SenseGlove is a company developing haptic gloves, with which you can feel objects and see your hands in virtual reality.
+                    For my internship at SenseGlove, the goal was to make a physical joystick and buttons on the glove for quicker and generally compatible interactions in VR.
+                    The video above is the corresponding demonstration I created in Unity to research the user experience and give examples of its uses.
+                    The internship included prototyping the physical joystick and buttons, including contacting distributers for components, assembling the electronics, firmware and SDK implementation and creating a Unity demo.
+                    In the Unity demo, people could use one of the buttons to teleport, and another button to draw in mid-air with the color selected on the joystick.
+                    They could also edit the color of a paint roller to instantly color any full object.
+                div.lower-content
+                  h4.skills-title Specifications
+                  ul.skills-list
+                    li Including electronics
+                    li C++ (firmware), C# (SDK) and Unity integration
+
+
+          .col-lg-4.col-sm-6.portfolio-item
+            .card.h-100
+              a(href='https://github.com/AmberElferink/AnimationViewer/', target="_blank").div-img-top
                 //-iframe(width="700" height="400" src="https://www.youtube.com/embed/xG2lreUPnFQ?controls=0&autoplay=1&mute=1&loop=1&modestbranding=0" frameborder="0").card-img-top
                 video(autoplay loop controls muted playsinline width="100%").card-img-top
                   source(src="/videos/Animation_engine.webm" type="video/webm")
@@ -54,7 +109,7 @@ block content
                   h5.date part-time, group of 2: 3 weeks - Feb 2020
                   p.card-text.
                     In the computer vision course, we learned how to incorporate simulations into the real world and the other way around.
-                    In the first project we used OpenCV to calibrate the camera and find the orientation of the checkboard. Linking this to OpenGL, the cube is drawn after tranforming it to the checkboard space.
+                    In the first project we used OpenCV to calibrate the camera and find the orientation of the checkboard. Linking this to OpenGL, the cube is drawn after transforming it to the checkboard space.
                     In the GLSL fragment shader, reflections to a virtual light source is simulated. 
                     The other assignment was to show 3D reconstruction from four cameras on a prebuilt C++ template. Via calibration the transformation from each camera to the room space was obtained.
                     We extracted a mask of the subject, and turned a voxel (a 3D pixel) on when the a 3D point transformed to camera space is visible (white mask) from all four cameras. 
@@ -74,7 +129,7 @@ block content
 
           .col-lg-4.col-sm-6.portfolio-item
             .card.h-100
-              a(href='#').div-img-top
+              a(href='https://github.com/AmberElferink/GamePhysics').div-img-top
                 video(autoplay loop controls muted playsinline width="100%").card-img-top
                   source(src="/videos/Game-Physics.webm" type="video/webm")
                   source(src="/videos/Game-Physics.mp4" type="video/mp4") 
@@ -97,11 +152,10 @@ block content
                     li Rigid body (C++), grade 10/10:
                     li Soft body Features (C++), grade 10/10: 
                     li Ragdoll and cloth simulation 
-                <button class ="btn-box" ><i class="fa fa-github-square"></i> No Github, copyright </button>  
 
           .col-lg-4.col-sm-6.portfolio-item
             .card.h-100
-              a(href='', target="_blank").div-img-top
+              a(href='https://github.com/AmberElferink/PDM-python-RRT', target="_blank").div-img-top
                 //-iframe(width="700" height="400" src="https://www.youtube.com/embed/xG2lreUPnFQ?controls=0&autoplay=1&mute=1&loop=1&modestbranding=0" frameborder="0").card-img-top
                 video(autoplay loop controls muted playsinline width="100%").card-img-top
                   source(src="/videos/Planning_video.webm" type="video/webm")
@@ -130,7 +184,7 @@ block content
 
           .col-lg-4.col-sm-6.portfolio-item
             .card.h-100
-              a(href='#').div-img-top
+              a(href='/files/2019-Feb-Vision-of-VRexo-BLDCrevised.pdf').div-img-top
                 picture
                   source(srcset="/images/VR-exo.webp" type="image/webp")
                   img.card-img-top(src='/images/VR-exo.png', alt='VR-exo first design image' type="image/png")
@@ -162,7 +216,7 @@ block content
 
           .col-lg-4.col-sm-6.portfolio-item
             .card.h-100
-              a(href='#').div-img-top
+              a(href='/files/2019-Feb-Vision-of-VRexo-BLDCrevised.pdf').div-img-top
                 video(autoplay loop controls muted playsinline width="100%").card-img-top
                   source(src="/videos/exo-arm.webm" type="video/webm")
                   source(src="/videos/exo-arm.mp4" type="video/mp4")              
@@ -225,14 +279,14 @@ block content
 
           .col-lg-4.col-sm-6.portfolio-item
             .card.h-100
-              a(href='#').div-img-top
+              a(href='https://github.com/AmberElferink/Rasterizer').div-img-top
                 video(autoplay loop controls muted playsinline width="100%").card-img-top
                   source(src="/videos/Rasterizer.webm" type="video/webm")
                   source(src="/videos/Rasterizer.mp4" type="video/mp4")
               .card-body
                 div.upper-content
                   h4.card-title
-                    a(href='#') Rasterization Engine
+                    a(href='https://github.com/AmberElferink/Rasterizer') Rasterization Engine
                   h5.date 3 weeks part-time, group of 2 - June 2018
                   p.card-text
                     | A rasterizer is rendering a 3D environment that has real-time performance as priority. 
@@ -248,6 +302,8 @@ block content
                     li Features: Phong shading model, multiple light sources, normal maps and an interactive camera.
                     li Graded with a 9.7/10
                 <button class ="btn-box" onclick="window.open('https://github.com/AmberElferink/Rasterizer', '_blank');"><i class="fa fa-github-square"></i> Checkout Github</button>
+          
+          
           .col-lg-4.col-sm-6.portfolio-item
             .card.h-100
               a(href='https://github.com/AmberElferink/ImageProcessing3/wiki', target="_blank").div-img-top
@@ -279,14 +335,14 @@ block content
 
           .col-lg-4.col-sm-6.portfolio-item
             .card.h-100
-              a(href='#').div-img-top
+              a(href='https://github.com/AmberElferink/fastdiningshop').div-img-top
                 picture
                   source(srcset="/images/fastdining.webp" type="image/webp")
                   img.card-img-top(src='/images/fastdining.png', alt='Fastdining webshop image' type="image/png")
               .card-body
                 div.upper-content
                   h4.card-title
-                    a(href='#') Fast Dining Webshop
+                    a(href='https://github.com/AmberElferink/fastdiningshop') Fast Dining Webshop
                     h5.date 3 weeks part-time - March 2017
                   p.card-text
                     | This is a small web shop made for a web technology course.
