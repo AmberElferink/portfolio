@@ -16,32 +16,28 @@ block content
 
           .col-lg-4.col-sm-6.portfolio-item
             .card.h-100
-              a(href='#', target="_blank").div-img-top
+              a(href='https://github.com/AmberElferink/AnimationViewer/', target="_blank").div-img-top
                 //-iframe(width="700" height="400" src="https://www.youtube.com/embed/xG2lreUPnFQ?controls=0&autoplay=1&mute=1&loop=1&modestbranding=0" frameborder="0").card-img-top
                 video(autoplay loop controls muted playsinline width="100%").card-img-top
-                  source(src="/videos/SelfDrivingCar.webm" type="video/webm")
-                  source(src="/videos/SelfDrivingCar.mp4" type="video/mp4") 
+                  source(src="/videos/Animation_engine.webm" type="video/webm")
+                  source(src="/videos/Animation_engine.mp4" type="video/mp4") 
               .card-body
                 div.upper-content
                   h4.card-title
-                    a(href='#', target="_blank") Self Driving Car - Obstacle and Pedestrian detection
-                  h5.date part-time, group of 2: 3 weeks - Oktober - November 2020
+                    a(href='https://github.com/AmberElferink/AnimationViewer/', target="_blank") Animation engine
+                  h5.date part-time, group of 4: 8 weeks - May to June 2020
                   p.card-text.
-                    During the robotics course we combined several techniques to make a self driving car detect obstacles and pedestrians, and steer clear of them.
-                    First the ground plane PCL points were removed using RANSAC segmentation. The objects were detected in Lidar data using the Point Cloud Library (PCL) with eucledian cluster extraction.
-                    Pedestrians were detected by feeding the locations of detected lidar objects and these with the camera as a pedestrain. This information was then send to a node which made the car steer around obstacles and stop for objects and pedestrians too close in front of the car.
-                    In a later course we compared four different feature inputs (Raw pixel values, Histogram of oriented gradients (HOG) and Convolutional Neural Network (CNN, MobileNet) in combination with different classifiers (Support Vector Machine (SVM), k-NN) for pedestrian detection.
-                    CNN consistently outperformed the others.
-                    
+                    For the Animation course, we built an animation engine from the ground up in C++ and OpenGL. 
+                    You first drag in a file containing a rigged mesh, meaning the mesh contains a basic skeletal system with joints. 
+                    Then drag an animation file on top of the mesh to make it move. The mesh vertices are then moved with the corresponding bones.
+                    To correctly animate the skeletons, kinematics was implemented throughout the joint system.
+                    The animation file is usually loaded in keyframes. To make smooth animations, linear interpolation between te keyframes was implemented.
                 div.lower-content
                   h4.skills-title Specifications
                   ul.skills-list
-                    li Built in Robot Operating System (ROS) with C++
-                    li Implemented using Point Cloud Library (PCL) and OpenCV
-                    li Later feature and classifier comparison with Python
-                    li Steering the car based on object and pedestrian detection
-
-
+                    li Built in OpenGL and C++ from scratch
+                    li Intuitive GUI and component system
+                <button class ="btn-box" onclick="window.open('https://github.com/AmberElferink/AnimationViewer/blob/master/README.md', '_blank');"><i class="fa fa-github-square"></i> Checkout Github </button>
 
           .col-lg-4.col-sm-6.portfolio-item
             .card.h-100
@@ -66,33 +62,9 @@ block content
                   h4.skills-title Specifications
                   ul.skills-list
                     li Including electronics
+                    li Including basic CAD design of joystick module (Fusion 360)
                     li C++ (firmware), C# (SDK) and Unity integration
 
-
-          .col-lg-4.col-sm-6.portfolio-item
-            .card.h-100
-              a(href='https://github.com/AmberElferink/AnimationViewer/', target="_blank").div-img-top
-                //-iframe(width="700" height="400" src="https://www.youtube.com/embed/xG2lreUPnFQ?controls=0&autoplay=1&mute=1&loop=1&modestbranding=0" frameborder="0").card-img-top
-                video(autoplay loop controls muted playsinline width="100%").card-img-top
-                  source(src="/videos/Animation_engine.webm" type="video/webm")
-                  source(src="/videos/Animation_engine.mp4" type="video/mp4") 
-              .card-body
-                div.upper-content
-                  h4.card-title
-                    a(href='https://github.com/AmberElferink/AnimationViewer/', target="_blank") Animation engine
-                  h5.date part-time, group of 4: 8 weeks - May to June 2020
-                  p.card-text.
-                    For the Animation course, we built an animation engine from the ground up in C++ and OpenGL. 
-                    You first drag in a file containing a rigged mesh, meaning the mesh contains a basic skeletal system with joints. 
-                    Then drag an animation file on top of the mesh to make it move. The mesh vertices are then moved with the corresponding bones.
-                    To correctly animate the skeletons, kinematics was implemented throughout the joint system.
-                    The animation file is usually loaded in keyframes. To make smooth animations, linear interpolation between te keyframes was implemented.
-                div.lower-content
-                  h4.skills-title Specifications
-                  ul.skills-list
-                    li Built in OpenGL and C++ from scratch
-                    li Intuitive GUI and component system
-                <button class ="btn-box" onclick="window.open('https://github.com/AmberElferink/AnimationViewer/blob/master/README.md', '_blank');"><i class="fa fa-github-square"></i> Checkout Github </button>
 
 
           .col-lg-4.col-sm-6.portfolio-item
@@ -124,6 +96,33 @@ block content
                   <button class ="btn-box" onclick="window.open('https://github.com/AmberElferink/ComputerVisionCube', '_blank');"><i class="fa fa-github-square"></i> Checkout Github cube </button>
                   <button class ="btn-box" onclick="window.open('https://github.com/AmberElferink/ComputerVisionReconstruction', '_blank');"><i class="fa fa-github-square"></i> Checkout Github 3D </button>
   
+
+          .col-lg-4.col-sm-6.portfolio-item
+            .card.h-100
+              a(href='#', target="_blank").div-img-top
+                //-iframe(width="700" height="400" src="https://www.youtube.com/embed/xG2lreUPnFQ?controls=0&autoplay=1&mute=1&loop=1&modestbranding=0" frameborder="0").card-img-top
+                video(autoplay loop controls muted playsinline width="100%").card-img-top
+                  source(src="/videos/SelfDrivingCar.webm" type="video/webm")
+                  source(src="/videos/SelfDrivingCar.mp4" type="video/mp4") 
+              .card-body
+                div.upper-content
+                  h4.card-title
+                    a(href='#', target="_blank") Self Driving Car - Obstacle and Pedestrian detection
+                  h5.date part-time, group of 2: 3 weeks - Oktober - November 2020
+                  p.card-text.
+                    During the robotics course we combined several techniques to make a self driving car detect obstacles and pedestrians, and steer clear of them.
+                    First the ground plane PCL points were removed using RANSAC segmentation. The objects were detected in Lidar data using the Point Cloud Library (PCL) with eucledian cluster extraction.
+                    Pedestrians were detected by feeding the locations of detected lidar objects and these with the camera as a pedestrain. This information was then send to a node which made the car steer around obstacles and stop for objects and pedestrians too close in front of the car.
+                    In a later course we compared four different feature inputs (Raw pixel values, Histogram of oriented gradients (HOG) and Convolutional Neural Network (CNN, MobileNet) in combination with different classifiers (Support Vector Machine (SVM), k-NN) for pedestrian detection.
+                    CNN consistently outperformed the others.
+                    
+                div.lower-content
+                  h4.skills-title Specifications
+                  ul.skills-list
+                    li Built in Robot Operating System (ROS) with C++
+                    li Implemented using Point Cloud Library (PCL) and OpenCV
+                    li Later feature and classifier comparison with Python
+                    li Steering the car based on object and pedestrian detection
 
 
 
